@@ -2,9 +2,12 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+title: Telegram Bot Handbook
+titleTemplate: false
+
 hero:
-  name: 'Handbook'
-  text: 'todo'
+  name: Telegram Bot
+  text: Handbook
   tagline: My great project tagline
 
 features:
