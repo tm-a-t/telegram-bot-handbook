@@ -2,3 +2,7 @@
     background-color: var(--vp-c-brand-2);
     color: var(--vp-c-neutral-inverse);
 }
+
+.vp-doc img {
+    border-radius: 8px;
+}

@@ -3,6 +3,11 @@
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
  */
 
+:root {
+    --vp-sidebar-width: 288px;
+}
+
+
 /**
  * Colors
  *

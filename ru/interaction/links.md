@@ -19,6 +19,8 @@
 
 ## Ссылки на добавление в группу
 
+todo: ложь
+
 Ссылка [t.me/examplebot?startgroup=true](https://t.me/examplebot?startgroup=true) откроет у пользователя меню: 
 выбор группы для добавления бота.
 

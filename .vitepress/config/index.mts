@@ -7,10 +7,13 @@ export default defineConfig({
     description: 'The config on everything',
     cleanUrls: true,
     lastUpdated: true,
+    appearance: 'dark',
     sitemap: {
         hostname: 'https://handbook.tmat.me',
     },
-    head: [],
+    head: [
+        ['link', { rel: 'icon', href: 'https://vitepress.dev/favicon.ico' }]
+    ],
     locales: {
         root: {
             label: 'English',
@@ -20,7 +23,7 @@ export default defineConfig({
         ru: {
             label: 'Русский',
             lang: 'ru',
-            titleTemplate: 'Хендбук',
+            titleTemplate: ':title — хендбук',
             description: 'Как написать надёжного бота',
             themeConfig: {
                 sidebarMenuLabel: 'Меню',
@@ -58,9 +61,8 @@ export default defineConfig({
                             {text: 'Telegram API', link: '/ru/dev/api.md'},
                             {text: 'Библиотеки', link: '/ru/dev/libraries.md'},
                             {text: 'Юзернеймы', link: '/ru/dev/usernames.md'},
-                            {text: 'Регистрация', link: '/ru/dev/botfather.md'},
+                            {text: 'Настройка', link: '/ru/dev/botfather.md'},
                             {text: 'Апдейты', link: '/ru/dev/updates.md'},
-                            {text: 'Хостинг', link: '/ru/dev/host.md'},
                         ],
                     },
                     {
@@ -77,20 +79,20 @@ export default defineConfig({
                             {text: 'ЛС', link: '/ru/chats/pm.md'},
                             {text: 'Группы', link: '/ru/chats/groups.md'},
                             {text: 'Каналы', link: '/ru/chats/channels.md'},
-                            {text: 'О супергруппах', link: '/ru/chats/supergroups.md'},
                             {text: 'Форумы', link: '/ru/chats/forums.md'},
+                            {text: 'О супергруппах', link: '/ru/chats/supergroups.md'},
                             {text: 'id чатов', link: '/ru/chats/id.md'},
                         ],
                     },
                     {
                         text: 'Интерактивность', items: [
-                            {text: 'Приглашения', link: '/ru/interaction/join-requests.md'},
+                            {text: 'Заявки', link: '/ru/interaction/join-requests.md'},
                             {text: 'Ссылки на бота', link: '/ru/interaction/links.md'},
                             {text: 'Инлайн-режим', link: '/ru/interaction/inline.md'},
                             {text: 'Стикеры', link: '/ru/interaction/stickers.md'},
                             {text: 'Платежи', link: '/ru/interaction/payments.md'},
-                            {text: 'HTML-игры', link: '/ru/interaction/html-games.md'},
                             {text: 'Авторизация на сайте', link: '/ru/interaction/login-widget.md'},
+                            {text: 'HTML-игры', link: '/ru/interaction/html-games.md'},
                             {text: 'Мини-приложения', link: '/ru/interaction/mini-apps.md'},
                         ],
                     },
@@ -99,6 +101,7 @@ export default defineConfig({
         },
     },
     themeConfig: {
+        logo: { src: 'https://vitepress.dev/vitepress-logo-mini.svg', width: 24, height: 24 },
         editLink: {
             pattern: 'https://github.com/tm-a-t/handbook/edit/main/:path'
         },
