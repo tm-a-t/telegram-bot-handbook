@@ -3,7 +3,7 @@ import {defineConfig} from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: 'Telegram Bot Handbook',
-    titleTemplate: 'The Handbook',
+    titleTemplate: 'the handbook',
     description: 'The config on everything',
     cleanUrls: true,
     lastUpdated: true,
@@ -101,7 +101,8 @@ export default defineConfig({
         },
     },
     themeConfig: {
-        logo: { src: 'https://vitepress.dev/vitepress-logo-mini.svg', width: 24, height: 24 },
+        i18nRouting: false,  // change when start English version
+        logo: { src: '/logo.svg' },
         editLink: {
             pattern: 'https://github.com/tm-a-t/handbook/edit/main/:path'
         },

@@ -6,3 +6,7 @@
 .vp-doc img {
     border-radius: 8px;
 }
+
+.logo {
+    transform: translateY(-2px);
+}
