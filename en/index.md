@@ -1,5 +1,13 @@
-# English version
+---
+sidebar: false
+editLink: false
+lastUpdated: false
+---
 
-Still working on it.
+<div style="margin-top: 32px">
 
-If you need anything, please contact me: [tmat](https://t.me/tm_a_t).
+# Still working on the English version
+
+Feel free to contact me: [tmat](https://t.me/tm_a_t).
+
+</div>

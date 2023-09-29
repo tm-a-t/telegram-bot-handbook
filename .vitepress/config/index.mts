@@ -4,7 +4,7 @@ import {defineConfig} from 'vitepress'
 export default defineConfig({
     title: 'Telegram Bot Handbook',
     titleTemplate: 'the handbook',
-    description: 'The config on everything',
+    description: 'Explore Telegram features, bot limitations, and API tricks.',
     cleanUrls: true,
     lastUpdated: true,
     appearance: 'dark',
@@ -12,7 +12,10 @@ export default defineConfig({
         hostname: 'https://handbook.tmat.me',
     },
     head: [
-        ['link', { rel: 'icon', href: 'https://vitepress.dev/favicon.ico' }]
+        ['link', {rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png'}],
+        ['link', {rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png'}],
+        ['link', {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png'}],
+        ['link', {rel: 'manifest', href: '/site.webmanifest'}],
     ],
     locales: {
         root: {
@@ -24,7 +27,7 @@ export default defineConfig({
             label: 'Русский',
             lang: 'ru',
             titleTemplate: ':title — хендбук',
-            description: 'Как написать надёжного бота',
+            description: 'Карманное руководство разработчика ботов о фичах Телеграма и полезных приёмах',
             themeConfig: {
                 sidebarMenuLabel: 'Меню',
                 returnToTopLabel: 'Наверх',
@@ -102,7 +105,7 @@ export default defineConfig({
     },
     themeConfig: {
         i18nRouting: false,  // change when start English version
-        logo: { src: '/logo.svg' },
+        logo: {dark: '/logo.svg', light: '/logo-dark.svg', alt: 'Handbook'},
         editLink: {
             pattern: 'https://github.com/tm-a-t/handbook/edit/main/:path'
         },

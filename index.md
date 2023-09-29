@@ -8,7 +8,7 @@ titleTemplate: false
 hero:
   name: Handbook
   text: How to develop a reliable Telegram bot
-  tagline: Read about Telegram features, unexpected limitations, and API tricks.
+  tagline: Explore Telegram features, unexpected limitations, and API tricks.
   actions:
     - theme: brand
       text: Russian version
