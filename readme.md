@@ -10,9 +10,14 @@
 
 **Developing reliable Telegram bots: features, limitations, tricks.**
 
-<br>
-<br>
-
-[Read in Russian](https://handbook.tmat.me/ru/) ⸻ English version coming soon
-
 </div>
+
+<br>
+
+---
+
+**Russian: https://handbook.tmat.me/ru/**
+
+**English:** coming soon
+
+---
