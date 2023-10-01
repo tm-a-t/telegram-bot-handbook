@@ -4,12 +4,12 @@ comments: 841727
 
 # Как выбрать библиотеку для Телеграм-бота и не ошибиться
 
-todo: fix
-
 ## Простые библиотеки
 
 Если вы загуглите, как написать Телеграм-бота на Питоне, то
 в первую очередь увидите библиотеки `python-telegram-bot` и `telebot`.
+
+telebot — плохой. Иногда он просто падает
 
 Я не советую использовать эти библиотеки в серьёзных проектах. По двум причинам:
 
@@ -18,7 +18,7 @@ todo: fix
 
 Но если вам нужно написать простого бота, не заморачиваясь — ок.
 
-## Нормальные библиотеки
+## Хорошие библиотеки
 
 Самая популярная продвинутая библиотека для разработки ботов на Питоне —
 это [aiogram](https://github.com/aiogram/aiogram). Она асинхронная, использует декораторы и содержит удобные инструменты
@@ -89,8 +89,8 @@ if __name__ == "__main__":
 
 :::
 
-Кроме этого, ботов часто пишут на Джаваскрипте: например, на [Telegraf](https://github.com/telegraf/telegraf),
-[GramJS](https://github.com/gram-js/gramjs) или [GrammY](https://github.com/grammyjs/grammY).
+Кроме этого, ботов часто пишут на Джаваскрипте; например, на [Telegraf](https://github.com/telegraf/telegraf)
+и [GrammY](https://github.com/grammyjs/grammY).
 
 Для многих других языков тоже есть библиотеки. На официальном сайте есть
 [списочек](https://core.telegram.org/bots/samples), который даже вроде поддерживается в актуальном состоянии.
@@ -98,10 +98,10 @@ if __name__ == "__main__":
 
 ## Библиотеки для Telegram API
 
-Хотите использовать [Telegram API вместо Bot API](/api)?
+Хотите использовать [Telegram API вместо Bot API](./api)?
 
-Тогда осмотрите на питоновые [Telethon](https://github.com/LonamiWebs/Telethon)
-или [Pyrogram](https://github.com/pyrogram/pyrogram).
+Для Питона есть две хорошие библиотеки: [Telethon](https://github.com/LonamiWebs/Telethon)
+и [Pyrogram](https://github.com/pyrogram/pyrogram). Для Джаваскрипта — [GramJS](https://github.com/gram-js/gramjs).
+
 Библиотеки для Telegram API удобны тем, что на них можно писать и ботов, и
-[юзерботов](/api#юзерботы), не переучиваясь.
-Я, например, привык для всего использовать Telethon.
+[юзерботов](./api#юзерботы), не переучиваясь. Я так и делаю — для всего использую Telethon.
