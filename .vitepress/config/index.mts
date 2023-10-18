@@ -6,7 +6,7 @@ import sidebar from './sidebar'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: 'Telegram Bot Handbook',
-    titleTemplate: 'the handbook',
+    titleTemplate: 'Handbook',
 
     appearance: 'dark',
     cleanUrls: true,
