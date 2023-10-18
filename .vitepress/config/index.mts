@@ -28,7 +28,7 @@ export default defineConfig({
     sitemap: {
         hostname: 'https://handbook.tmat.me',
     },
-    srcExclude: ['**/README.md'],
+    srcExclude: ['readme.md'],
     markdown: {
         config: (md) => {
             md.disable('emoji')
