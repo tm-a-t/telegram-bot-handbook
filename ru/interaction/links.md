@@ -28,7 +28,7 @@
 При этом пользователь увидит только `/start`, как при обычном запуске бота.
 
 <video controls loop muted preload="auto">
-<source src="./start.webm" type="video/mp4">
+<source src="../../public/pictures/ru/start.webm" type="video/mp4">
 </video>
 
 Часто диплинки используются для реферальных программ: например, в качестве параметра можно передавать id пользователя,

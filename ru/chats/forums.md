@@ -4,7 +4,7 @@
 
 <figure>
 
-![Форум](forum.png)
+![Форум](../../public/pictures/ru/forum.png)
 
 <figcaption>На картинке открыт список веток форума, а другие чаты свернулись в узкую колонку.</figcaption>
 </figure>
