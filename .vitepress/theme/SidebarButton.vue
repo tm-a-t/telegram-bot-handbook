@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import {useSidebar} from 'vitepress/theme';
-import {defineProps} from 'vue';
 
 const {sidebar, isSidebarEnabled} = useSidebar();
 
