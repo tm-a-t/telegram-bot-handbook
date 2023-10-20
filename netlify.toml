@@ -1,3 +1,4 @@
 [[redirects]]
 from = "/"
 to = "/ru/"
+force = true
