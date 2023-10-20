@@ -53,7 +53,12 @@ export default defineConfig({
         ],
         outline: 'deep',
         search: {
-            provider: 'local',
+            provider: 'algolia',
+            options: {
+                appId: 'XWCAXSO1PW',
+                apiKey: 'baac738133a1f9099fb1aa9fce51603b',
+                indexName: 'handbook-tmat',
+            }
         },
         sidebar: sidebar,
         socialLinks: [
