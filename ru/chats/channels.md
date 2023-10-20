@@ -20,4 +20,4 @@
 
 Вот так, например:
 
-![Пост с кнопками](../../public/pictures/ru/channel-buttons.png)
+![Пост с кнопками](/pictures/ru/channel-buttons.png)

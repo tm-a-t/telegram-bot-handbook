@@ -21,7 +21,7 @@
 Когда приходит апдейт, различать такие кнопки можно по специальному параметру, который указывается при создании кнопок.
 
 <video controls loop muted preload="auto">
-<source src="../../public/pictures/ru/callback-buttons.webm" type="video/mp4">
+<source src="/pictures/ru/callback-buttons.webm" type="video/mp4">
 </video>
 
 ### URL button
@@ -31,7 +31,7 @@
 В Bot API эту кнопку можно использовать как [упоминание пользователя](./markup#mention), указав ссылку
 вида `tg://user?id=123456789`. В Telegram API для упоминания есть отдельный вид кнопок.
 
-![Кнопка-ссылка под сообщением](../../public/pictures/ru/url-button.png)
+![Кнопка-ссылка под сообщением](/pictures/ru/url-button.png)
 
 ### Switch-to-inline button
 
@@ -40,7 +40,7 @@
 текстовый запрос, который появится рядом с юзернеймом бота (но пользователь сможет его отредактировать).
 
 <video controls loop muted preload="auto">
-<source src="../../public/pictures/ru/switch-inline-button.webm" type="video/mp4">
+<source src="/pictures/ru/switch-inline-button.webm" type="video/mp4">
 </video>
 
 ### Request peer button
@@ -74,7 +74,7 @@
 и увидеть клавиатуру снова.
 
 <video controls loop muted preload="auto">
-<source src="../../public/pictures/ru/keyboard-buttons.webm" type="video/mp4">
+<source src="/pictures/ru/keyboard-buttons.webm" type="video/mp4">
 </video>
 
 Клавиатурная кнопка может не просто отправить текст, но также:
@@ -86,7 +86,7 @@
 Есть опция `resize_keyboard`, которая отвечает за то, изменять ли высоту этой «клавиатуры из кнопок».
 По умолчанию она почему-то выключена, и клавиатура выглядит растянутой. Получаются кнопки, как на этой картинке:
 
-![](../../public/pictures/ru/wide-buttons.png)
+![](/pictures/ru/wide-buttons.png)
 
 Чтобы показать клавиатурные кнопки, бот должен отправить сообщение.
 Можно показать клавиатуру, которая свернётся (но не пропадёт) после нажатия на кнопку.
