@@ -14,6 +14,7 @@
 @discussbot
 @donate
 @DurgerKingBot
+@EURegulation
 @gamebot
 @gdprbot
 @gif
@@ -21,6 +22,7 @@
 @imdb
 @jobs_bot
 @like
+@mainbot
 @MTProxybot
 @pic
 @PremiumBot

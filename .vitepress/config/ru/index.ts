@@ -4,7 +4,7 @@ import sidebar from './sidebar'
 
 const ruConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
     titleTemplate: ':title — хендбук',
-    description: 'Карманное руководство разработчика Телеграм-ботов о фичах и приёмах',
+    description: 'Карманное руководство разработчика Телеграм-ботов. Фичи и приёмы',
     head: [
 
     ],
