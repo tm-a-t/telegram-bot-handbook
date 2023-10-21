@@ -16,8 +16,9 @@ Developing reliable Telegram bots: features, limitations, tricks.
 
 </div>
 
-<br>
-<br>
+&nbsp;
+
+&nbsp;
 
 <a href="https://handbook.tmat.me/ru/">
 
