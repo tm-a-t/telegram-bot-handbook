@@ -61,7 +61,8 @@
 - Login URL button — специальная кнопка для авторизации пользователей на сайте.
   Использовалась, например, в официальном боте [@discussbot](https://t.me/discussbot) до появления
   в Telegram нативных комментариев. Работает примерно так же, как
-  и [Telegram Login Widget](../interaction/login-widget).
+  и [Telegram Login Widget](../interaction/login-widget), но пользователю не нужно вводить номер телефона 
+  и подтвержать вход, достаточно нажать на кнопку.
 
 ## Клавиатурные кнопки
 
