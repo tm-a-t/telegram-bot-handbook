@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import DefaultTheme from 'vitepress/theme';
 import {useRouter} from 'vitepress';
+import {onMounted} from 'vue';
 
 const {Layout} = DefaultTheme;
 const router = useRouter();
 
-router.onAfterRouteChanged = async (to: string) => {
-  if (!import.meta.env.SSR) {
+onMounted(() => {
+  console.log('ine')
+  router.onAfterRouteChanged = async (to: string) => {
     ym(95150339, 'hit', to);
   }
-}
+});
 </script>
 
 <template>
