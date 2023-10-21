@@ -7,13 +7,17 @@ const props = defineProps<{
   items?: any[],
 }>();
 const items = props.items || sidebar;
+
+function stripExtension(filename: string) {
+  return filename.substring(0, filename.length - '.md'.length);
+}
 </script>
 
 <template>
   <ul v-if="!isSidebarEnabled" :class="{'top-level': !props.items}">
     <template v-for="item in items">
       <li v-if="item.link !== '/ru/index.md'">
-        <a v-if="item.link" :href="item.link">{{ item.text }}</a>
+        <a v-if="item.link" :href="stripExtension(item.link)">{{ item.text }}</a>
         <b v-else>{{ item.text }}</b>
         <SidebarButton v-if="item.items" :items="item.items"/>
       </li>
