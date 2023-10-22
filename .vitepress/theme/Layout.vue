@@ -7,7 +7,7 @@ const {Layout} = DefaultTheme;
 const router = useRouter();
 
 onMounted(() => {
-  console.log('ine')
+  ym(95150339, 'hit', router.route.path);
   router.onAfterRouteChanged = async (to: string) => {
     ym(95150339, 'hit', to);
   }
