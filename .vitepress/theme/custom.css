@@ -10,3 +10,11 @@
 .logo {
     transform: translateY(-2.5px);
 }
+
+.vp-doc details tr:nth-child(2n) {
+    background: inherit;
+}
+
+.vp-doc details td {
+    border: none;
+}
