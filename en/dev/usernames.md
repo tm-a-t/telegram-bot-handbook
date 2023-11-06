@@ -1,40 +1,37 @@
-# О чём следует помнить, выбирая боту юзернейм
+# Bot usernames. What to keep in mind
 
-Когда вы будете регистрировать бота, вы должны будете выбрать для него юзернейм. Обратите внимание, что поменять
-юзернейм после этого будет сложно.
+When you register a bot, you'll need to choose its username. It will be difficult to change the username afterwards.
 
-## Какими могут быть юзернеймы
+## How should the username look
 
-Юзернеймы ботов ничем не отличаются от юзернеймов пользователей, групп и каналов. Единственное ограничение — обычно они
-должны заканчиваться на `bot`.
+Bot usernames are no different from usernames of users, groups and channels.
+The only constraint is that a username of a bot must end with "bot."
 
-Например, юзернейм может выглядеть так: `@ExampleBot`.
+Username can look like this: `@ExampleBot`.
 
-Эти требования не распространяются на официальных ботов: [@pic](https://t.me/pic), [@vid](https://t.me/vid),
-[@sticker](https://t.me/sticker). Вы же можете купить короткий юзернейм для бота на
-платформе [Fragment](https://fragment.com/).
+There are official bots with special usernames that don't follow the
+form: [@pic](https://t.me/pic), [@vid](https://t.me/vid), [@sticker](https://t.me/sticker). Also, you can buy short
+usernames on [Fragment](https://fragment.com/).
 
-## Многие юзернеймы заняты мёртвыми ботами
+## Many usernames are taken
 
-Минимальная длина бесплатного юзернейма — пять символов с учётом суффикса `bot`; но занять такой короткий юзернейм вы
-не сможете. Все такие пятибуквенные, а может быть, и все шестибуквенные юзернеймы уже используются.
+A free username must contain at least 5 characters including "bot." 
+However, you can't claim such a short username: all usernames of 5 (and maybe 6) characters are taken.
 
-Самое обидное, что почти все юзернеймы заняты нерабочими ботами. Разработчики редко готовы поддерживать ботов достаточно
-долго.
+Almost all usernames are taken by dead bots. Developers rarely support bots for a long time.
 
-## Получить короткий юзернейм можно через техподдержку
+## You can claim a short username through the support
 
-Теоретически, вы всё же можете бесплатно сменить юзернейм своего бота на более короткий — даже если он занят другим,
-неработающим,
-ботом. Нужно написать в поддержку: [@BotSupport](https://t.me/BotSupport). Поддержка проверяет бота вручную: бот должен
-быть рабочим и поддерживать английский язык.
+It is possible to change a bot username for free, even if it's claimed by other (inactive) bot.
+You will need to contact the support: [@BotSupport](https://t.me/BotSupport). They will check whether your bot works and supports 
+English language.
 
-Принято использовать такой формат обращения в поддержку:
+The common format is the following:
 
 ```
 1. @old_username
 2. @new_username
-3. Что делает бот
+3. Some bot description
 ```
 
-Если вы везунчик — вам ответят.
+If you're lucky, the support won't ignore you. 

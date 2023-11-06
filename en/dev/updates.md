@@ -1,40 +1,37 @@
-# Апдейты
+# Updates
 
-## Что такое апдейты
+## Updates?
 
-Апдейты (они же updates, то есть обновления) — это события, о которых сервер уведомляет бота.
-Это может быть апдейт о входящем сообщении, апдейт о вступлении участника в группу и так далее.
+Updates are events about which the Telegram server notifies the bot program.
+It can be an update about an incoming message, an update about a user joining a group, and so on.
 
-Я ещё много раз буду использовать это слово на страницах хендбука.
+I will use this term on the further pages.
 
-## Главная сложность разработки ботов { #limitations }
+## The main challenge of bot development { #limitations }
 
-Апдейты — почти единственный способ для вашей программы узнать что-то о чатах и сообщениях.
+Updates are almost the only one way to get any info about chats, messages, and users.
 
-Например, ваша программа не может спросить у Телеграма, каким было последнее
-сообщение от пользователя или в каких чатах состоит бот. Телеграм даёт такую информацию только вместе с апдейтами:
-например, когда пользователь присылает сообщение или бота добавляют в группу.
+Your program can't fetch the latest user's message or the list of chats where the bot belongs. 
+Telegram gives the info only in updates:
+for example, when user sends a message or the bot is added to the group.
 
-Если пользователь отправил боту сообщение, и вам нужно будет использовать текст сообщения позже, сохраните его.
+If you need a list of bot users, received messages, and so on, you should save this data. 
+(You will likely need a database.)
 
-Если вам понадобится иметь список пользователей бота, полученных сообщений и так далее —
-вам следует хранить эти данные. Скорее всего, для этого будет нужна база данных.
-
-Если вы потеряете эту информацию, больше вы никак её не получите.
+If you lose this info, you won't be able to get it again.
 
 ::: tip Telegram API
-Некоторую информацию всё-таки можно запросить, используя Telegram API в обход Bot API:
-например, так можно получить сообщение по id или полную информацию о пользователе. 
-Полный список можно посмотреть [на странице хендбука про API](../dev/api#api-difference).
+You can get some info using Telegram API without Bot API:
+for example, it is possible to fetch a message by its id or the info about a user. 
+You can see the full list [on the handbook's page on API](../dev/api#api-difference).
 :::
 
-## Получение апдейтов несколько раз
+## Getting updates multiple times
 
-Ограничения Bot API не позволяют получать одни и те же апдейты несколько раз. Если вы получили апдейт в Bot API, то
-второй раз вы его уже не получите.
+Bot API disallows getting updates multiple times. If you received an update in Bot API, 
+you won't be able to receive it again.
 
-В Telegram API такого ограничения нет. Всё потому, что Telegram API в основном предназначен для приложений:
-пользователь может пользоваться мессенджером через несколько
-приложений, каждое из которых должен получать новые сообщения. То же работает и для ботов. Если запустить несколько
-программ бота на Telegram API, каждая из них будет получать все апдейты.
-Кроме того, есть [трюк](../dev/api#old-updates), позволяющий получить старые апдейты второй раз.
+There is no such limitation in Telegram API. This is due to the fact that Telegram API is mainly used for apps:
+user can have multiple Telegram apps on multiple devices, each of them should receive new messages.
+The same thing works with bots: if you run multiple bot programs on Telegram API, they all will get the new updates.
+Also, there is [a Telegram API trick](../dev/api#old-updates) to fetch old updates.

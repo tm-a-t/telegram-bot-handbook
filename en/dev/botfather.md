@@ -1,53 +1,49 @@
-# Как зарегистрировать и настроить Телеграм-бота
+# How to set up a Telegram bot
 
-## Регистрация бота
+## Registration
 
-Чтобы зарегистрировать бота, напишите специальному боту [@BotFather](https://t.me/BotFather).
+Use [@BotFather](https://t.me/BotFather) to register your bot.
 
-Он предложит создать бота с помощью команды `/new_bot`. Вы выберете название и
-[юзернейм](./usernames) бота, и тогда он создаст профиль бота.
+It will suggest to create a bot with the `/new_bot` command.
+You will choose bot's name and [username](./usernames) and then BotFather will create the bot's profile.
 
-Вы получите токен бота: что-то вроде `1553279091:AAGLECcm23ihHRomX3PrKHc-IMQcIti6afA`. Токен — это ключ, с помощью
-которого вы будете управлять ботом.
+You will obtain the bot token: something like `1553279091:AAGLECcm23ihHRomX3PrKHc-IMQcIti6afA`.
+The token is a key to control the bot.
 
-![Пример создания бота](/pictures/ru/botfather.png)
+![Example of creating a bot](/pictures/ru/botfather.png)
 
-## Настройка бота
+## Settings
 
-Также в [@BotFather](https://t.me/BotFather) вы можете использовать команду `/mybots`, чтобы изменять настройки своих
-ботов.
-Можно
-менять оформление профиля и настраивать специальные фичи: например, контролировать возможность
-добавлять бота в группы.
+In [@BotFather](https://t.me/BotFather), you can use the `/mybots` command to edit bot settings.
 
-Один пользователь может зарегистрировать до 20 ботов.
+It is useful to customize the bot profile and control special features, such as
+forbidding being added to groups.
 
-### Оформление { #customization }
+One may register up to 20 bots.
 
-Чтобы поменять оформление бота, откройте меню `/mybots`, выберите бота и нажмите на `Edit bot`. Там вы сможете настроить
-профиль бота:
+### Customization { #customization }
 
-![Аватарка, имя, описание бота и «о себе»](/pictures/ru/customization.png){ style="max-width: 480px" }
+Open the `/mybots` menu, choose the bot and click `Edit bot`. Here are the customizable settings:
 
-Описание — это текст, который пользователь увидит перед перепиской в личном чате с ботом.
-К описанию вы можете добавить картинку, в том числе гифку.
+![Avatar, name, description and about](/pictures/ru/customization.png){ style="max-width: 480px" }
+
+Description is the text that users will see in before starting personal messages.
+It may contain a picture, including a GIF.
 { style="margin-top: 32px" }
 
 ::: tip
-Потратьте свое время на оформление бота, чтобы пользователям было проще его использовать.
-Поставьте аватарку, чтобы бота было проще отличать от других чатов в
-приложении. В описании можете свои контакты.
+Spend some time to fill the bot profile: that will be helpful and convenient for users.
+Add a profile picture to make the bot more distinguishable in the chat list. 
+It may be a good idea to include your contacts in "About".
 :::
 
 ::: info
-Там же вы можете поменять [подсказки команд](../messages/commands)
-или [placeholder для инлайн-режима](../interaction/inline).
+In the same menu, you can edit [command hints](../messages/commands)
+or [inline mode placeholder](../interaction/inline).
 :::
 
-### Передача бота
+### Transferring
 
-В настройках бота в BotFather можно передать право на владение ботом другому человеку. Для этого на вашем аккаунте
-должна быть включена двухфакторная авторизация — не менее, чем за 7 дней до передачи. Передать бота можно только
-пользователю, который что-либо ему писал.
-
-
+In BotFather's bot settings you can transfer the ownership to another person. 
+For that, you must have 2FA enabled (for at least 7 days.) The other person should have started 
+a dialog with the bot.
