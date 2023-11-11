@@ -5,7 +5,7 @@
 Updates are events about which the Telegram server notifies the bot program.
 It can be an update about an incoming message, an update about a user joining a group, and so on.
 
-I will use this term on the further pages.
+I will use this term further.
 
 ## The main challenge of bot development { #limitations }
 

@@ -1,30 +1,29 @@
-# Как запустить бота на сервере
+# Hosting. How to run your bot on a server
 
-## Хостинг
+## Host
 
-Скорее всего, вы захотите запустить вашу программу со стабильным питанием и стабильным интернетом,
-так что вам понадобится сервер.
+You will likely need a server, because you will want to get your program running with a stable power and internet
+connection.
 
-Для этого нужно будет купить хостинг. Программы для ботов обычно не требуют много ресурсов, поэтому вам хватит
-простого тарифа.
+For that, you will need to buy a host. Bot programs usually need a small amount of resources, so 
+a simple plan from any hosting provider will probably be fine.
 
 <div class="tip custom-block" style="padding: 16px">
-Здесь может быть реклама вашего хорошего хостинга :)
+This is a place for your hosting ad :)
 </div>
 
-## Запросы к серверу или вебхуки
+## Long-polling vs webhooks
 
-Настройка хостинга зависит от режима работы вашего бота. По умолчанию, чтобы получить апдейты, ваша программа должна
-регулярно делать запрос к серверу. Но если вы используете Bot API, то программа может работать как вебхук:
-тогда сервера Телеграма будут делать запрос к программе, чтобы сообщить об апдейтах.
+Setting up a server depends on how your bot works. The default option is long-polling, meaning that the program 
+regularly sends requests to the server to get new updates. But if you use Bot API, your program can alternatively
+be a webhook, meaning that Telegram servers will make requests to the program whenever there are updates.
 
-Чтобы реализовать вебхук, вам нужно будет веб-приложение, которое будет принимать запросы с апдейтами.
-Если вы используете библиотеку aiogram, вы можете
-использовать [встроенные функции](https://docs.aiogram.dev/en/latest/dispatcher/webhook.html) с aiohttp или другим 
-асинхронным веб-фреймворком.
+To set up a webhook, you will need to receive requests through a web application. For aiogram library, there
+are [built-in features](https://docs.aiogram.dev/en/latest/dispatcher/webhook.html) to integrate with aiohttp 
+or any other asynchronous web framework.
 
-## Бесплатный хостинг
+## Free hosting
 
-Если вы совсем не готовы тратить деньги за хостинг, можете запустить код
-на [PythonAnywhere](https://www.pythonanywhere.com/) (он нестабильный) или
-на [Yandex Cloud Functions](https://cloud.yandex.ru/docs/functions/tutorials/telegram-bot-serverless).
+If you are unable to get paid hosting, you can try [PythonAnywhere](https://www.pythonanywhere.com/) 
+(which works unstably) or
+[Yandex Cloud Functions](https://cloud.yandex.ru/docs/functions/tutorials/telegram-bot-serverless).

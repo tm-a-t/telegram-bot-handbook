@@ -1,27 +1,28 @@
-# How Telegram bots work
+# Basics. How Telegram bots work
 
 Bot is a Telegram user account controlled by a server program.
 
-Bots can have dialogs with users and be members of groups and channels. They can send messages, reply to commands 
-from users, send pictures, and so on.
+Bots can have dialogs with users, send messages, reply to commands
+from users, send pictures, be members of groups and channels, and so on.
 
-Bots have some limits in order to keep users' privacy. For example, bots can't join groups and have to be added by users.
+Still, bots have some limitations compared to real users, mainly in order to keep users' privacy. For example, bots
+can't join groups and have to be added by users.
 
 ::: info
-Although technically bots are users too, in this handbook by "users" I usually mean real users.
+Although technically bots are users too, in this handbook I use the term "users" to refer to real users.
 :::
 
-## How to write a bot
+## How to program a bot
 
 Short answer:
 
 1. Register a bot.
-2. Choose a library for your favorite library.
-3. Write code with the help of docs and this handbook.
+2. Choose a library for your favorite programming language.
+3. Write code with the help of the library docs and this handbook.
 
-You can run the bot program on your computer, but you will want to use hosting when the code is ready.
+Note that although you can run the bot program on your computer, you will want to use hosting when the code is ready.
 
-Long answer is the following pages.
+The next pages in "Development" section of the handbook describe these steps in details.
 
 ## Related links
 

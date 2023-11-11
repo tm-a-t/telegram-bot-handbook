@@ -7,23 +7,24 @@ When you register a bot, you'll need to choose its username. It will be difficul
 Bot usernames are no different from usernames of users, groups and channels.
 The only constraint is that a username of a bot must end with "bot."
 
-Username can look like this: `@ExampleBot`.
+A username can look like this: `@ExampleBot`
 
 There are official bots with special usernames that don't follow the
-form: [@pic](https://t.me/pic), [@vid](https://t.me/vid), [@sticker](https://t.me/sticker). Also, you can buy short
+form: [@pic](https://t.me/pic), [@vid](https://t.me/vid), [@sticker](https://t.me/sticker). Also, you can now buy short
 usernames on [Fragment](https://fragment.com/).
 
 ## Many usernames are taken
 
-A free username must contain at least 5 characters including "bot." 
+A free username must contain at least 5 characters including "bot."
 However, you can't claim such a short username: all usernames of 5 (and maybe 6) characters are taken.
 
-Almost all usernames are taken by dead bots. Developers rarely support bots for a long time.
+All these registered bots are mostly dead. Developers rarely support bots for a long time.
 
 ## You can claim a short username through the support
 
 It is possible to change a bot username for free, even if it's claimed by other (inactive) bot.
-You will need to contact the support: [@BotSupport](https://t.me/BotSupport). They will check whether your bot works and supports 
+You will need to contact the support: [@BotSupport](https://t.me/BotSupport). They will check whether your bot works and
+supports
 English language.
 
 The common format is the following:

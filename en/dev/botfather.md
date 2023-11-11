@@ -7,7 +7,7 @@ Use [@BotFather](https://t.me/BotFather) to register your bot.
 It will suggest to create a bot with the `/new_bot` command.
 You will choose bot's name and [username](./usernames) and then BotFather will create the bot's profile.
 
-You will obtain the bot token: something like `1553279091:AAGLECcm23ihHRomX3PrKHc-IMQcIti6afA`.
+Next, you will obtain the bot token: something like `1553279091:AAGLECcm23ihHRomX3PrKHc-IMQcIti6afA`.
 The token is a key to control the bot.
 
 ![Example of creating a bot](/pictures/ru/botfather.png)

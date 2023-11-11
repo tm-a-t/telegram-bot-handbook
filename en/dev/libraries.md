@@ -3,7 +3,7 @@
 ## Good libraries
 
 The most popular Python library for Telegram bots is [aiogram](https://github.com/aiogram/aiogram).
-It is appreciated because it is asynchronous, uses decorators and contains useful development tools.
+It is appreciated for being asynchronous, using decorators and containing useful development tools.
 A popular alternative option is [Rocketgram](https://github.com/rocketgram/rocketgram).
 
 ::: details aiogram code example
@@ -85,4 +85,4 @@ There are two good libraries for Python: [Telethon](https://github.com/LonamiWeb
 and [Pyrogram](https://github.com/pyrogram/pyrogram). For JavaScript, there is [GramJS](https://github.com/gram-js/gramjs).
 
 Telegram API libraries are handy if you want to write bots and
-[userbots](./api#юзерботы) without re-learning. That's why I use Telethon for everything.
+[userbots](./api#юзерботы) without re-learning — that's why I use Telethon for everything.
