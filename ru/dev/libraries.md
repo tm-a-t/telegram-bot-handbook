@@ -73,14 +73,30 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
+И на teloxide:
+```rust
+use teloxide::prelude::*;
+
+pretty_env_logger::init();
+log::info!("Starting throw dice bot...");
+
+let bot = Bot::from_env();
+
+teloxide::repl(bot, |bot: Bot, msg: Message| async move {
+    bot.send_dice(msg.chat.id).await?;
+    Ok(())
+})
+.await;
+```
+
 :::
 
 Кроме этого, ботов часто пишут на Джаваскрипте: например, на [Telegraf](https://github.com/telegraf/telegraf)
-и [GrammY](https://github.com/grammyjs/grammY).
+и [GrammY](https://github.com/grammyjs/grammY) и на Rust: [Teloxide](https://lib.rs/crates/teloxide)
 
 Для многих других языков тоже есть библиотеки. На официальном сайте есть
 [списочек](https://core.telegram.org/bots/samples), который даже вроде поддерживается в актуальном состоянии; 
-но по перечисленнам библиотекам рекомендации дать не могу.
+но по перечисленным библиотекам рекомендации дать не могу.
 
 ## Библиотеки для Telegram API
 
@@ -88,7 +104,7 @@ if __name__ == "__main__":
 основана.
 
 Для Питона есть две хорошие библиотеки: [Telethon](https://github.com/LonamiWebs/Telethon)
-и [Pyrogram](https://github.com/pyrogram/pyrogram). Для Джаваскрипта — [GramJS](https://github.com/gram-js/gramjs).
+и [Pyrogram](https://github.com/pyrogram/pyrogram). Для Джаваскрипта — [GramJS](https://github.com/gram-js/gramjs). Для Раста — [gramme.rs](https://lib.rs/crates/grammers-tl-gen)
 
 Библиотеки для Telegram API удобны тем, что на них можно писать и ботов, и
 [юзерботов](./api#юзерботы), не переучиваясь. Я так и делаю: для всего использую Telethon.
