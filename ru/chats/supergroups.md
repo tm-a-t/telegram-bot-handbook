@@ -32,6 +32,7 @@
 
 ## Ссылки по теме
 
-- [О супергруппах в блоге Telegram в 2015 году](https://telegram.org/blog/supergroups#supergroups)
-- [В каких случаях сейчас группа становится супергруппой](https://t.me/tginfo/1917)
-- [О различии обычных групп, супергрупп и broadcast groups в документации к API](https://core.telegram.org/api/channel)
+- [Особенности групп и супергрупп; когда группы становятся супегруппами](https://tginfo.me/groups_vs_supergroups/)
+<!-- - [О супергруппах в блоге Telegram в 2015 году](https://telegram.org/blog/supergroups#supergroups)
+- [В каких случаях сейчас группа становится супергруппой](https://t.me/tginfo/1917) -->
+- [О группах, супергруппах и broadcast groups в документации к API](https://core.telegram.org/api/channel)
