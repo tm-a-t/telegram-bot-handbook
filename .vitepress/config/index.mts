@@ -38,8 +38,6 @@ export default defineConfig({
         editLink: {
             pattern: 'https://github.com/tm-a-t/handbook/edit/main/:path'
         },
-        // remove next line when start English version
-        i18nRouting: false,
         lastUpdated: {
             formatOptions: {
                 // @ts-ignore
