@@ -5,7 +5,7 @@ const sidebar: DefaultTheme.Sidebar = [
     {
         text: 'Разработка',
         items: [
-            {text: 'Основы', link: '/ru/dev/basics.md'},
+            {text: 'Введение', link: '/ru/dev/basics.md'},
             {text: 'Telegram API', link: '/ru/dev/api.md'},
             {text: 'Библиотеки', link: '/ru/dev/libraries.md'},
             {text: 'Юзернеймы', link: '/ru/dev/usernames.md'},
@@ -20,7 +20,7 @@ const sidebar: DefaultTheme.Sidebar = [
             {text: 'Разметка', link: '/ru/messages/markup.md'},
             {text: 'Команды', link: '/ru/messages/commands.md'},
             {text: 'Кнопки', link: '/ru/messages/buttons.md'},
-            {text: 'id сообщений', link: '/ru/messages/id.md'},
+            {text: 'ID сообщений', link: '/ru/messages/id.md'},
         ],
     },
     {
@@ -30,7 +30,7 @@ const sidebar: DefaultTheme.Sidebar = [
             {text: 'Каналы', link: '/ru/chats/channels.md'},
             {text: 'Форумы', link: '/ru/chats/forums.md'},
             {text: 'О супергруппах', link: '/ru/chats/supergroups.md'},
-            {text: 'id чатов', link: '/ru/chats/id.md'},
+            {text: 'ID чатов', link: '/ru/chats/id.md'},
         ],
     },
     {
