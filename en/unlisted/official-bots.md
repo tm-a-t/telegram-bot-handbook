@@ -1,6 +1,6 @@
-# List of official Telegram Bots
+# List of Official Telegram Bots
 
-Made by @vanutp.
+Collected by @vanutp.
 
 ```
 @asmico_attach_bot

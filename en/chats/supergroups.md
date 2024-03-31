@@ -1,14 +1,16 @@
 # What Telegram Supergroups Are 
 
 A long time ago, Telegram developers introduced two types of groups: regular ones and supergroups.
-Supergroups were to use for big communities, having a larger member limit, public links, and other features.
+Supergroups had public links, larger limit for the number of members, and other features designed for big communities.
 
-Apparently, this idea was later considered inconvenient. Telegram apps no longer mention such term as "supergroup",
-and both group types look the same.
+Apparently, this idea has later been considered rather confusing. Telegram app interface no longer mentions 
+"supergroups" and all groups look the same there, although on the technical level two types remain distinguish.
+In fact, most of the groups you participate in are probably supergroups.
 
-Technical distinctions though remained. The main trait of supergroups is that they are a special case of channels.
+The main trait of supergroups is that API considers them a special case of channels.
 
-I use the term "groups" both for regular groups and supergroups in the handbook. 
+I use the term "groups" both for regular groups and supergroups in the handbook. I've explained developing 
+group bots [on the page about groups](../chats/groups).
 
 ## Creating supergroup
 

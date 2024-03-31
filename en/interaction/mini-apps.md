@@ -12,6 +12,6 @@ For example, this feature is used by semi-official bot [@Wallet](https://t.me/wa
 <source src="https://core.telegram.org/file/464001679/11aa9/KQx_BlPVXRo.4922145.mp4/c65433c8ac11a347a8" type="video/mp4">
 </video>
 
-## Ссылки по теме
+## Related links
 
 - [Telegram docs. Mini Apps](https://core.telegram.org/bots/webapps)

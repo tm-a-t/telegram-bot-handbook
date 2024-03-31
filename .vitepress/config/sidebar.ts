@@ -29,7 +29,7 @@ const sidebar: DefaultTheme.Sidebar = [
             {text: 'Groups', link: '/en/chats/groups.md'},
             {text: 'Channels', link: '/en/chats/channels.md'},
             {text: 'Forums', link: '/en/chats/forums.md'},
-            {text: 'About supergroups', link: '/en/chats/supergroups.md'},
+            {text: 'Supergroups', link: '/en/chats/supergroups.md'},
             {text: 'Chat IDs', link: '/en/chats/id.md'},
         ],
     },

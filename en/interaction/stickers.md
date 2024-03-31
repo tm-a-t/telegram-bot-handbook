@@ -1,22 +1,23 @@
 # Managing Sticker Sets and Custom Emoji Sets
 
-Bots (and only bots) can create sticker sets and custom emoji sets. Each pack must have a user as its owner.
+Bots (and only bots) can create sticker sets and custom emoji sets. Each pack must have a user specified as its owner.
 
 A common way for people to create and manage sticker sets is through [@Stickers](https://t.me/stickers) bot,
-but other bots can be used as well.
+but other bots can do it as well.
 
-Bots are able to create, rename, and delete sets.
+Bots are able to create, rename, edit, and delete sets.
 
-::: info Emoji
+::: info Custom emoji
 Only premium users may use custom emoji from sets. Nevertheless, custom emoji sets can be created
 by any bots and owned by any users.
 :::
 
 ## Formats
 
-Sticker sets and custom emoji set may be static (PNG or WEBP), animated (in a special format based on Lottie),
-or video (WEBM). Furthermore, a set of single color emoji may be adaptive, meaning that users with dark theme
-will see it in a light color and vice versa.
+Sticker sets and custom emoji set may be static (PNG or WEBP), video (WEBM), or animated (in a special format based on
+Lottie).
+Furthermore, a set of single color emoji may be adaptive, meaning that users will see it in the same color as the text
+regardless of their color theme.
 
 ## Related links
 

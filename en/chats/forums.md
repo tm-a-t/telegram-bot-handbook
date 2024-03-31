@@ -1,4 +1,4 @@
-# Understanding Telegram Forums for Bots 
+# Developing Telegram Bots for Forums
 
 Forums are groups splitted into multiple topics.
 

@@ -1,4 +1,4 @@
-# Making Telegram Bots Work In Groups
+# Developing Telegram Bots for Groups
 
 Users can add bots to groups, but bots cannot join groups by their own. Bot developer can forbid adding to groups 
 [in BotFather settings](../dev/botfather).

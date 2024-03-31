@@ -16,7 +16,7 @@ The user clicks on a result to send the message.
 
 A developer can enable inline mode in BotFather, as well as select a placeholder (the default is "Search...")
 
-Group admins may forbid sending inline messages for everyone or selected users. In the official Telegram apps,
+Group admins may forbid everyone or selected users sending inline messages. In the official Telegram apps,
 this group member restriction is united with the restriction to send stickers and GIFs.
 
 ## Result layout
@@ -28,8 +28,8 @@ or a vertical list (which looks good in case of text).
 
 ![List](/pictures/ru/inline-type-2.png)
 
-Two layouts may be combined, but apparently this works only in Telegram Desktop (while other official apps show 
-such results in a list.)
+Two layouts may be combined, but apparently this works correctly only in Telegram Desktop 
+(while other official apps show such results in a list.)
 
 ::: details Combination screenshot
 ![Combining two layouts](/pictures/ru/inline-both-types.png){style="max-width: 400px"}
@@ -37,7 +37,7 @@ such results in a list.)
 
 ## Inline feedback
 
-Inline feedback is updates that come when user chooses an inline result and sends a message.
+Inline feedback is updates arriving when a user chooses an inline result and sends a message.
 You will not receive them unless you explicitly turn on this setting in BotFather.
 
 Although the purpose of the inline feedback feature is collecting statistics, bot developers
@@ -45,7 +45,7 @@ sometimes use it to edit messages after they are sent. This comes handy when the
 the selected result rather then all of them. For example, a music search bot may 
 [add a song](../messages/sending#edit-media) to a sent message and not load all songs during the search.
 
-Here is a trick: You may edit a sent inline message only if it contains inline buttons. 
+Here is a trick: a bot may edit a sent inline message only if it contains inline buttons. 
 (Otherwise, the inline feedback update does not include the message ID.)
 
 ![BotFather setting to select a percent of incoming updates](/pictures/ru/inline-feedback.png)

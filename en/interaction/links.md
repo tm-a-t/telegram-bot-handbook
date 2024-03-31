@@ -2,8 +2,8 @@
 
 ## Regular links
 
-Links to bots work similarly to links to users, groups, and channels: 
-users can use the link [t.me/examplebot](https://t.me/examplebot) to open a bot with the username `@examplebot`.
+Links to bots ar similar to links to users, groups, and channels: 
+the link [t.me/examplebot](https://t.me/examplebot) opens the bot with the username `@examplebot`.
 
 There is also a direct link:
 [tg://resolve?domain=examplebot](tg://resolve?domain=examplebot)
@@ -11,7 +11,7 @@ There is also a direct link:
 ::: info About tg:// links
 
 Links starting with tg:// may replace t.me links or do special actions.
-For example, the link [tg://settings](tg://settings) opens settings.
+For example, the link [tg://settings](tg://settings) opens settings in Telegram apps.
 
 Such links are listed [in API documentation](https://core.telegram.org/api/links) and 
 in the unofficial [@DeepLink](https://t.me/deeplink) channel.

@@ -1,9 +1,9 @@
 # Telegram Login Widget
 
-Your site can feature a "Log in with Telegram" button.
+Your site may feature a "Log in with Telegram" button.
 
-Your bot will be used during the authorization. The log in button may be configured in such way that 
-authorizing users will see an "Allow the bot to contact me" check box.
+The button must be linked to your bot. The button may be configured in such way that 
+authorizing users will see an "Allow the bot contact me" check box.
 
 An alternative to Telegram Login Widget is [Login URL button](../messages/buttons), a way to authorize on a site from the Telegram app.
 
