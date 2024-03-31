@@ -57,7 +57,7 @@ This means the user has blocked the bot or the dialog has never started.
 ## User profile
 
 While keeping user profile data, keep in mind that users may have no username or no last name. In addition, all such
-profile data except for [user ID](../chats/ID) can change over time.
+profile data except for [user ID](../chats/id) can change over time.
 
 ## User languages
 
@@ -72,6 +72,6 @@ Telegram recommends to use the last known language in cases the update misses th
 Bot must have seen a user to make actions related to this user (mention them, etc.) The bot sees a user, for example,
 when the bot receives a message from the user or fetches them by the username.
 
-Technically speaking, this means API requests must include not only [user ID](./ID) but also a relevant 
+Technically speaking, this means API requests must include not only [user ID](./id) but also a relevant 
 access hash. API gives access hashes together with other user info in updates. Access hashes are cached by Bot API
 and good Telegram API libraries, so you should not worry about it.

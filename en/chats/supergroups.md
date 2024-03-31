@@ -15,11 +15,11 @@ group bots [on the page about groups](../chats/groups).
 ## Creating supergroup
 
 A regular group turns into a supergroup while certain settings are changed. As technically the group is replaced with 
-a supegroup-channel, [chat ID](../chats/ID) changes. A supergroup cannot become a regular group again.
+a supegroup-channel, [chat ID](../chats/id) changes. A supergroup cannot become a regular group again.
 
 ## Message and group IDs
 
-[Message IDs work differently in regular groups and supergroups](../messages/ID).
+[Message IDs work differently in regular groups and supergroups](../messages/id).
 In addition, in Bot API regular group IDs start with `-` prefix while supergroup IDs start with `-100`.
 
 ## Gigagroups (broadcast groups)
