@@ -1,4 +1,4 @@
-# Telegram Login Widget
+# Авторизация на сайте через Telegram Login Widget
 
 Вы можете добавить на свой сайт кнопку «Войти через Telegram».
 

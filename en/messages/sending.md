@@ -1,4 +1,4 @@
-# Sending, Editing, and Forwarding Messages with Telegram Bots
+# Telegram Bots Sending, Editing, and Forwarding Messages
 
 This page collects some tips about Telegram messages and related limitations.
 It may be a good idea to make sure that your bot works correctly in the described edge cases.

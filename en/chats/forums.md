@@ -2,6 +2,8 @@
 
 Forums are groups splitted into multiple topics.
 
+<br>
+
 <figure>
 
 ![Форум](/pictures/ru/forum.png)
