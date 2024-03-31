@@ -12,7 +12,7 @@
 
 Developing reliable Telegram bots: features, limitations, tricks.
 
-**Russian: https://handbook.tmat.me/ru/** &nbsp;&nbsp; **English:**&nbsp;coming&nbsp;soon
+**English:&nbsp;https://handbook.tmat.me/en/** &nbsp;&nbsp; **Russian:&nbsp;https://handbook.tmat.me/ru/**
 
 </div>
 
