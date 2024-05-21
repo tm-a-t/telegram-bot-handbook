@@ -79,3 +79,7 @@ MTProto. Ещё в Bot API есть фичи для упрощения разр�
 - [Bot API reference](https://core.telegram.org/bots/api)
 - [Методы Telegram API](https://core.telegram.org/methods)
 - [Канал с обновлениями Bot API](https://t.me/BotNews)
+
+## Комментарии
+
+<Comments/>
