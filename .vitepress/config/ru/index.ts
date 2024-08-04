@@ -21,11 +21,13 @@ const ruConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
             next: 'Вперёд',
         },
         nav: [
-            {text: 'Поделиться', link: 'https://t.me/share?url=handbook.tmat.me/ru/'},
+            {text: 'Book', link: '/ru/book/', activeMatch: '/ru≈/book/.*'},
+            // {text: 'Framework', link: '/en/framework/', activeMatch: '/en/framework/.*'},
+            {text: 'TGPy', link: '/ru/tgpy/', activeMatch: '/ru/tgpy/.*'},
         ],
         editLink: {
             pattern: 'https://github.com/tm-a-t/handbook/edit/main/:path',
-            text: 'Изменить',
+            text: 'Изменить страницу на Гитхабе',
         },
         lastUpdated: {
             text: 'Обновлено',

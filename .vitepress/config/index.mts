@@ -5,8 +5,8 @@ import sidebar from './sidebar'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: 'Telegram Bot Handbook',
-    titleTemplate: 'Handbook',
+    title: 'Papercraft',
+    // titleTemplate: ':title / Papercraft',
 
     appearance: 'dark',
     cleanUrls: true,
@@ -36,7 +36,8 @@ export default defineConfig({
     },
     themeConfig: {
         editLink: {
-            pattern: 'https://github.com/tm-a-t/handbook/edit/main/:path'
+            pattern: 'https://github.com/tm-a-t/handbook/edit/main/:path',
+            text: 'Edit this page on GitHub',
         },
         lastUpdated: {
             formatOptions: {
@@ -45,18 +46,16 @@ export default defineConfig({
                 forceLocale: true,
             },
         },
-        logo: {dark: '/logo.svg', light: '/logo-dark.svg', alt: 'Handbook'},
+        // logo: {dark: '/logo.svg', light: '/logo-dark.svg', alt: 'Handbook'},
         nav: [
-            {text: 'Share', link: 'https://t.me/share?url=handbook.tmat.me/en/'},
+            {text: 'Book', link: '/en/book/', activeMatch: '/en/book/.*'},
+            // {text: 'Framework', link: '/en/framework/', activeMatch: '/en/framework/.*'},
+            {text: 'TGPy', link: '/en/tgpy/', activeMatch: '/en/tgpy/.*'},
+            // {text: 'Share', link: 'https://t.me/share?url=handbook.tmat.me/en/'},
         ],
         outline: 'deep',
         search: {
-            provider: 'algolia',
-            options: {
-                appId: 'XWCAXSO1PW',
-                apiKey: 'baac738133a1f9099fb1aa9fce51603b',
-                indexName: 'handbook-tmat',
-            }
+            provider: 'local',
         },
         sidebar: sidebar,
         socialLinks: [

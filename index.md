@@ -1,5 +1,5 @@
 ---
-title: Telegram Bot Handbook
+title: Papercraft
 titleTemplate: false
 sidebar: false
 aside: false
@@ -8,7 +8,7 @@ editLink: false
 next: false
 ---
 
-# Telegram Bot Handbook
+# Papercraft
 
 [Russian version →](/ru/)
 

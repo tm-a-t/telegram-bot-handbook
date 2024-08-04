@@ -2,13 +2,21 @@
 import Theme from 'vitepress/theme'
 import './vars.css'
 import './custom.css'
-// @ts-ignore
-import Layout from './Layout.vue'
+import {h} from 'vue'
+import ProjectTitle from './ProjectTitle.vue'
+import Metric from './Metric.vue'
+import LangCookie from './LangCookie.vue'
 
 export default {
-  extends: Theme,
-  Layout: Layout,
-  enhanceApp({ app, router, siteData }) {
-    // ...
-  }
+    extends: Theme,
+    Layout() {
+        return h(Theme.Layout, null, {
+            'nav-bar-title-after': () => h(ProjectTitle),
+            'layout-bottom': () => h(Metric),
+            'layout-top': () => h(LangCookie),
+        })
+    },
+    enhanceApp({app, router, siteData}) {
+        // ...
+    }
 }
