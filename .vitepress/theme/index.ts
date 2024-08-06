@@ -2,21 +2,15 @@
 import Theme from 'vitepress/theme'
 import './vars.css'
 import './custom.css'
-import {h} from 'vue'
-import ProjectTitle from './ProjectTitle.vue'
-import Metric from './Metric.vue'
-import LangCookie from './LangCookie.vue'
+import CodeTab from '../../components/CodeTab.vue'
+import TGPy from '../../components/TGPy.vue'
+import Layout from './layout/Layout.vue'
 
 export default {
     extends: Theme,
-    Layout() {
-        return h(Theme.Layout, null, {
-            'nav-bar-title-after': () => h(ProjectTitle),
-            'layout-bottom': () => h(Metric),
-            'layout-top': () => h(LangCookie),
-        })
-    },
+    Layout: Layout,
     enhanceApp({app, router, siteData}) {
-        // ...
+        app.component('CodeTab', CodeTab);
+        app.component('TGPy', TGPy);
     }
 }

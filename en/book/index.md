@@ -4,12 +4,12 @@ titleTemplate: false
 ---
 
 <script setup>
-import BookTOC from '../../.vitepress/theme/BookTOC.vue';
+import BookTOC from '../../components/BookTOC.vue';
 </script>
 
 # Papercraft Book
 
-Welcome to Papercraft Book (ex. Telegram Bot Handbook.) 
+Welcome to Papercraft Book! 
 This is your guide to developing user-friendly, featureful, and stable bots for Telegram messenger.
 
 Here is a couple of things that you can expect:
@@ -18,9 +18,9 @@ Here is a couple of things that you can expect:
 It is designed to be used together with library docs and Telegram API reference.
 
 - **The book covers all major features of Telegram bot platform,** starting from as common as `/commands` and ending with the most specific ones:
-like managing group join requests and subtopics.
+like managing join requests and subtopics in groups.
 
-- **The book focuses on improving your bot's UX.** It describes various ways of user-bot interaction and corner cases you should consider when designing your bot's logic.
+- **The book focuses on bots' UX.** It describes various ways of user-bot interaction and corner cases you should consider when designing your bot's logic.
 
 In other words, on these pages I tried to collect everything that you will want to know but probably won't find in your library docs.
 
@@ -46,5 +46,3 @@ The sources are open on GitHub. Corrections and improvements are welcome!
 Some pictures and videos are taken from the Telegram site. Most screenshots are made in Telegram web apps.
 
 [Artyom Ivanov](https://t.me/tm_a_t) wrote this and [Ivan Filipenkov](https://t.me/vanutp) consulted.
-
-Note that [the Russian version](/ru/book/) is also available.

@@ -17,40 +17,45 @@ Say TGPy ran your message. Then you can reply to your message with this method:
 modules.add(name)
 ```
 
-Alternatively, you can add a module from a string with `#!python modules.add(name, source)`.
+Alternatively, you can add a module from a string with `modules.add(name, source)`.
 
-!!! example
+::: info EXAMPLE
 
-    1. Define a square function:
+1. Define a square function:
 
-        <div class="tgpy-code-block">
-        ```python
-        def square(x):
-           return x * x
-        ```
-        <hr>
-        ```
-        None
-        ```
-        </div>
-    
-    2. Save the definition to modules:
+    <TGPy>
+   
+    ```python
+    def square(x):
+       return x * x
+    ```
+   
+    ```
+    None
+    ```
+   
+    </TGPy>
 
-        <div class="tgpy-code-block">
-        ```python
-        # in reply to the previous message
-        modules.add('square')
-        ```
-        <hr>
-        ```
-        Added module 'square'.
-        The module will be executed every time TGPy starts.
-        ```
-        </div>
+2. Save the definition to modules:
 
-!!! Info
+    <TGPy>
 
-    If a module with this name already exists, its code will be replaced.
+   ```python
+    # in reply to the previous message
+    modules.add('square')
+    ```
+   
+    ```
+    Added module 'square'.
+    The module will be executed every time TGPy starts.
+    ```
+   
+    </TGPy>
+:::
+
+::: info
+If a module with this name already exists, its code will be replaced.
+:::
 
 ## Remove a module
 
@@ -86,9 +91,9 @@ By default, all variables from a module are saved for future use. You can specif
 
 ## Standard modules
 
-TGPy has a number of features implemented via standard modules, such as `#!python ping()`
-and `#!python restart()` functions.
-You may want to disable these features, for example to reimplement them. Use the `#!python core.disabled_modules` config 
+TGPy has a number of features implemented via standard modules, such as `ping()`
+and `restart()` functions.
+You may want to disable these features, for example to reimplement them. Use the `core.disabled_modules` config 
 key to specify the disabled modules. For example, you can use the following code to disable the `prevent_eval` module which
 provides [// and cancel](/reference/code_detection/#cancel-evaluation) features:
 

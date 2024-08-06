@@ -23,7 +23,7 @@ features:
     linkText: Read
   - icon: 🎨
     title: Framework
-    details: Coming soon.
+    details: Coming soon
 #    details: Write elegant and scalable bot apps in Python.
 #    link: /en/framework/
 #    linkText: Explore

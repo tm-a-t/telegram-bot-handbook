@@ -21,7 +21,7 @@ Just like any other chat, after a person started a dialog with a bot, it appears
 
 ::: warning
 `/start` command doesn't imply that this the user has no dialog with the bot. It may be a good idea to make sure your
-bot doesn't get broken when the user sends `/start` manually after the dialog started.
+bot doesn't get broken when the user sends `/start` when they already started the dialog.
 :::
 
 ::: tip

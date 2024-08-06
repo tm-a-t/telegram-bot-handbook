@@ -21,29 +21,29 @@ If you begin your message with `//`, the code won’t run. TGPy will delete the 
 ## Why use auto-detection?
 
 We designed TGPy for writing code snippets quickly and sequentially. Bot-like commands, 
-such as `#!python /run print('Hello World')`, would break the workflow. That's why we made TGPy automatically detect
+such as `/run print('Hello World')`, would break the workflow. That's why we made TGPy automatically detect
 your messages with syntactically correct Python code.
 
 It turns out that regular text messages are identified as code pretty rarely. In fact, TGPy ignores too simple
 expressions.
 
 
-??? note "Ignored expressions"
-    TL;DR: TGPy ignores some simple expressions, which could be email addresses, URLs or several comma- or hyphen-separated words
-    (as described in [issue 4](https://github.com/tm-a-t/TGPy/issues/4))
+::: details Ignored expressions
+TL;DR: TGPy ignores some simple expressions, which could be email addresses, URLs or several comma- or hyphen-separated words
+(as described in [issue 4](https://github.com/tm-a-t/TGPy/issues/4))
 
-    In this section, an **unknown** variable is one not present in `locals` — that is, one that was not saved in previous
-    messages and which is not built into TGPy (as `ctx`, `orig`, `msg` and `print` are). Unknown variables' attributes are
-    also considered unknown.
+In this section, an **unknown** variable is one not present in `locals` — that is, one that was not saved in previous
+messages and which is not built into TGPy (as `ctx`, `orig`, `msg` and `print` are). Unknown variables' attributes are
+also considered unknown.
 
-    **Ignored** expressions are the expressions from the list below:
+**Ignored** expressions are the expressions from the list below:
 
-    * Constants like `1` or `"abcd"` and unknown variables 
-    * Binary operations on unknown variables (recursively, i.e., `a - b -c` is also ignored in case `a`, `b`, or `c` are unknown)
-    * Unary operations on constants or unknown variables
-    * Tuples of ignored expressions
-    * Multiple ignored expressions (i.e. separated by `;` or newline)
-
+* Constants like `1` or `"abcd"` and unknown variables 
+* Binary operations on unknown variables (recursively, i.e., `a - b -c` is also ignored in case `a`, `b`, or `c` are unknown)
+* Unary operations on constants or unknown variables
+* Tuples of ignored expressions
+* Multiple ignored expressions (i.e. separated by `;` or newline)
+:::
 
 ## Disable auto-detection
 

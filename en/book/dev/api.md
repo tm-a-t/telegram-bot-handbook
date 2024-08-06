@@ -20,17 +20,18 @@ However, you won't need this :)
 You unlikely will write plain HTTP-requests: it is easier to use libraries instead. There are libraries for many
 programming languages and usually they have everything for convenient development.
 
-**So you can develop bots with either Telegram API or Bot API.**
+**In short, you can develop bots with either Telegram API or Bot API.**
 
 ## So which API to choose?
 
-On the one hand, a variety of libraries are written for the Bot API.
+There are libraries built on top of Bot API as well as libraries built on top of Telegram API. 
 
-On the other hand, Bot API is more limited. It forbids to upload large files
-by default or fetch old messages from chat history. You can check the [comparison table](../appendix/api-comparison).
-{ #api-difference }
+On the one hand, you can find many more libraries for Bot API.
 
-I prefer always using Telegram API, but there is little difference.
+On the other hand, Bot API is a bit more limited. 
+By default, it forbids uploading large files or fetching old messages from chat history 
+(you can check out [the comparison table](../appendix/api-comparison).)
+I prefer always using Telegram API, but honestly there is little difference.
 
 You can read more about choosing the right library on the next page!
 
@@ -42,7 +43,7 @@ rather than a bot.
 Such programs are called userbots. There are userbots that put current time on the user's profile picture,
 collect messages from public groups and channels, and so on.
 
-In general, userbots are useful to automate actions that users are allowed to do and bots aren't.
+In general, userbots are useful to automate actions that users are allowed to do and bots are not.
 
 ::: warning
 Usually Telegram doesn't ban for userbots, but be careful. Telegram may limit or delete spammer accounts.

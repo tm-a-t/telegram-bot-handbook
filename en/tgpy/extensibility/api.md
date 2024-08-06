@@ -15,28 +15,24 @@ import tgpy.api
 `tgpy.api.config` provides you simple key-value store for any data.
 The data, as well as some TGPy settings, is saved to <code>[tgpy/](/installation/#data-storage)config.yml</code>.
 
-<div class="tgpy-code-block">
 ```python
 tgpy.api.config.get(key: str, default: JSON = None) -> JSON
 ```
-<hr>
+
 ```python
 tgpy.api.config.set(key: str, value: JSON)
 ```
-<hr>
+
 ```python
 tgpy.api.config.unset(key: str)
 ```
-<hr>
+
 ```python
 tgpy.api.config.save()
 ```
 
-<small style="display: block; margin: -1.25rem 0 0 0.8rem; padding-bottom: .25rem; opacity: 75%">
-useful when modifying objects acquired via the <code>get</code> method
-</small>
-
-</div>
+Useful when modifying objects acquired via the <code>get</code> method
+{.code-label}
 
 ## Code processing
 

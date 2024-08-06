@@ -793,6 +793,11 @@ to-fast-properties@^2.0.0:
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
   integrity sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==
 
+vanilla-cookieconsent@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/vanilla-cookieconsent/-/vanilla-cookieconsent-3.0.1.tgz#059d1b2c712476ae4172d4ec7fa9d553a16be12d"
+  integrity sha512-gqc4x7O9t1I4xWr7x6/jtQWPr4PZK26SmeA0iyTv1WyoECfAGnu5JEOExmMEP+5Fz66AT9OiCBO3GII4wDQHLw==
+
 vite@^5.3.3:
   version "5.3.5"
   resolved "https://registry.yarnpkg.com/vite/-/vite-5.3.5.tgz#b847f846fb2b6cb6f6f4ed50a830186138cb83d8"

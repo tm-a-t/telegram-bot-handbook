@@ -4,8 +4,7 @@ description: 'Sometimes you will want to send notifications to yourself, such as
 
 # Setting up reminders   
 
-[![author](https://avatars.githubusercontent.com/u/38432588) Artyom Ivanov](https://github.com/tm-a-t)
-{.author}
+[![author](https://avatars.githubusercontent.com/u/38432588) Artyom Ivanov](https://github.com/tm-a-t){.author}
 
 Sometimes you will want to send notifications to yourself, such as reminders or logs.   
 

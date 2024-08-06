@@ -2,7 +2,7 @@
 description: You can use TGPy Context object to refer to the active TGPy message, disable showing the output, or check if the code is running from a module.
 ---
 
-# Context data
+# Context Data
 
 The `ctx` object stores some information about the context of running the code.
 
@@ -33,10 +33,10 @@ To get the message which `ctx.msg` replies to, use:
 ```python
 original = await ctx.msg.get_reply_message()
 ```
-
-!!! info
-    
-    The shortcut `ctx.orig` is planned but not implemented yet.
+ 
+::: info 
+The shortcut `ctx.orig` is planned but not implemented yet.
+:::
 
 ## Set manual output
 
@@ -51,6 +51,4 @@ ctx.is_manual_output = True
 
 ## Other
 
-`#!python ctx.is_module` is True if the code runs from a module.
-
-
+`ctx.is_module` is True if the code runs from a module.

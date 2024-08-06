@@ -64,15 +64,10 @@ const sidebar: DefaultTheme.Sidebar = {
     ],
 
     '/en/tgpy/': [
+        {text: 'Quickstart', link: '/en/tgpy/'},
+        {text: 'Installation', link: '/en/tgpy/installation'},
         {
-            text: '',
-            items: [
-                {text: 'Quickstart', link: '/en/tgpy/'},
-                {text: 'Installation', link: '/en/tgpy/installation'},
-            ],
-        },
-        {
-            text: 'Basics',
+            text: 'Beginner’s Guide',
             items: [
                 {text: 'Running Code', link: '/en/tgpy/basics/code'},
                 {text: 'Asyncio', link: '/en/tgpy/basics/asyncio'},
@@ -81,7 +76,7 @@ const sidebar: DefaultTheme.Sidebar = {
             ],
         },
         {
-            text: 'Extensibility',
+            text: 'Extensibility Guide',
             items: [
                 {text: 'Context Data', link: '/en/tgpy/extensibility/context'},
                 {text: 'Modules', link: '/en/tgpy/extensibility/modules'},

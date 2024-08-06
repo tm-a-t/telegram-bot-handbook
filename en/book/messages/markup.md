@@ -40,7 +40,7 @@ Pictures can be hidden with a spoiler as well, though this is not related to mes
 
 ## User mentions { #mention }
 
-A mention is clickable text which leads to a user profile. To insert a mention using Bot API, one can embed a link 
+A mention is clickable text which leads to a user profile. To insert a mention using Bot API, you can embed a link 
 of form `tg://user?ID=123456789`. A username of a user turns into a mention automatically.
 
 When a group member gets mentioned, they get a notification. However, if a message contains more than five mentions,
@@ -53,7 +53,7 @@ Username mentions are technically regular text. When a user clicks on
 a username mention, Telegram app fetches info about the username owner.
 On contrary, when sending ID mentions, the sender specifies the mentioned user ID which becomes a part of the message.
 Recipients get the user profile together with the message, so the mention will be clickable even if the user changes 
-its username.
+their username.
 
 ## Related links
 

@@ -29,34 +29,36 @@ it `func`. Then you should register it as following:
 tgpy.api.code_transformers.add(name, func)
 ```
 
-!!! example
+::: info EXAMPLE
 
-    Say you want to run shell commands by starting your message with `.sh`, for example:
+Say you want to run shell commands by starting your message with `.sh`, for example:
 
-    ```shell title="Your message"
-    .sh ls
-    ```
+```shell title="Your message"
+.sh ls
+```
 
-    You can implement this feature by saving a code transformer to a module:
+You can implement this feature by saving a code transformer to a module:
 
-    ```python title="Your module"
-    import os
-    import subprocess
-    import tgpy.api
-    
-    def shell(code):
-        proc = subprocess.run([os.getenv("SHELL") or "/bin/sh", "-c", code], encoding="utf-8", stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-        return proc.stdout + (f"\n\nReturn code: {proc.returncode}" if proc.returncode != 0 else "")
-    
-    def sh_trans(cmd):
-        if cmd.lower().startswith(".sh "):
-            return f"shell({repr(cmd[4:])})"
-        return cmd
-    
-    tgpy.api.code_transformers.add("shell", sh_trans)
-    ```
+```python title="Your module"
+import os
+import subprocess
+import tgpy.api
 
-    Code by [@purplesyringa](https://t.me/purplesyringa)
+def shell(code):
+    proc = subprocess.run([os.getenv("SHELL") or "/bin/sh", "-c", code], encoding="utf-8", stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    return proc.stdout + (f"\n\nReturn code: {proc.returncode}" if proc.returncode != 0 else "")
+
+def sh_trans(cmd):
+    if cmd.lower().startswith(".sh "):
+        return f"shell({repr(cmd[4:])})"
+    return cmd
+
+tgpy.api.code_transformers.add("shell", sh_trans)
+```
+
+Code by [@purplesyringa](https://t.me/purplesyringa)
+
+:::
 
 ## AST transformers
 
@@ -100,44 +102,31 @@ tgpy.api.exec_hooks.add(name, func)
 
 ## Complete flow
 
-``` mermaid
-flowchart TB
-    start(New outgoing message) --> hooks
-    start2(Outgoing message edited) -- is_edit=True --> hooks
-    hooks(Exec hooks applied) -- If hooks didn't stop execution --> code
-    code(Code transformers applied) -- If syntax is correct --> ast
-    ast(AST transformers applied) -- If not a too simple expression --> run((Code runs))
-  
-    click hooks "#exec-hooks"
-    click ast "#ast-transformers"
-    click code "#code-transformers"
-```
+![](/public/assets/tgpy/diagram.png)
 
 ## Managing
 
-TGPy stores transformers and exec hooks in `#!python TransformerStore` objects: `#!python tgpy.api.code_transformers`,
-`#!python tgpy.api.ast_transformers` and `#!python tgpy.api.exec_hooks`.
+TGPy stores transformers and exec hooks in `TransformerStore` objects: `tgpy.api.code_transformers`,
+`tgpy.api.ast_transformers` and `tgpy.api.exec_hooks`.
 
-Each of them represents a list of tuples `#!python (name, func)` or a dict in the form of `#!python {name: func}`.
+Each of them represents a list of tuples `(name, func)` or a dict in the form of `{name: func}`.
 
 While TGPy applies exec hooks in the same order they are listed, transformers are applied in reverse order.
 It's done so that the newly added transformers can emit code that uses features of an older transformer.
 
 Some examples:
 
-<div class="tgpy-code-block">
+<TGPy>
 
 ```python
 tgpy.api.code_transformers
 ```
 
-<hr>
-
 ```python
 TransformerStore({'postfix_await': <function tmp.<locals>.code_trans at 0x7f2db16cd1c0>})
 ```
 
-</div>
+</TGPy>
 
 ```python
 tgpy.api.code_transformers.remove('postfix_await')
@@ -174,3 +163,4 @@ await tgpy.api.exec_hooks.apply(message, is_edit)
 Returns False if any of the hooks returned False or a Message object that should be used instead
 of the original one otherwise
 {.code-label}
+

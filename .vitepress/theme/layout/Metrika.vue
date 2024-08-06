@@ -4,12 +4,16 @@ import {useRouter} from 'vitepress';
 
 const router = useRouter();
 
+function setPage(path) {
+  if (typeof ym !== 'undefined') {
+    ym(95150339, 'hit', path);
+  }
+}
+
 onMounted(() => {
-  ym(95150339, 'hit', router.route.path);
-  const onAfterRouteChanged = router.onAfterRouteChanged
+  setPage(router.route.path)
   router.onAfterRouteChanged = async (to) => {
-    ym(95150339, 'hit', to);
-    await onAfterRouteChanged(to);
+    setPage(to);
   }
 });
 </script>

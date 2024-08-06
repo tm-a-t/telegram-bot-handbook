@@ -46,11 +46,15 @@ export default defineConfig({
                 forceLocale: true,
             },
         },
-        // logo: {dark: '/logo.svg', light: '/logo-dark.svg', alt: 'Handbook'},
         nav: [
+            {text: 'Papercraft opened 🎉', link: '/en/papercraft-opened'},
             {text: 'Book', link: '/en/book/', activeMatch: '/en/book/.*'},
-            // {text: 'Framework', link: '/en/framework/', activeMatch: '/en/framework/.*'},
-            {text: 'TGPy', link: '/en/tgpy/', activeMatch: '/en/tgpy/.*'},
+            {text: 'Framework', link: '/en/framework/', activeMatch: '/en/framework/.*'},
+            {
+                text: 'TGPy',
+                link: '/en/tgpy/',
+                activeMatch: '/en/tgpy/.*',
+            },
             // {text: 'Share', link: 'https://t.me/share?url=handbook.tmat.me/en/'},
         ],
         outline: 'deep',
@@ -59,7 +63,7 @@ export default defineConfig({
         },
         sidebar: sidebar,
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/tm-a-t/handbook'},
+            {icon: 'github', link: 'https://github.com/tm-a-t/handbook', ariaLabel: 'GitHub'},
         ],
     },
 })

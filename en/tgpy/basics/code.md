@@ -2,43 +2,49 @@
 description: TGPy runs code when you send it to any chat. It also supports all Python capabilities and has features for convenient usage.
 ---
 
-# Running code
+# Running Code
 
 ## How to use TGPy
 
 Open any chat, type some Python code and send it. It’s that simple.
 
-<div class="tgpy-code-block">
+<TGPy>
+
 ```python
 2 + 2
 ```
-<hr>
+
 ```
 4
 ```
-</div>
 
-<div class="tgpy-code-block">
+</TGPy>
+
+<TGPy>
+
 ```python
 s = 0
 for i in range(100):
     s += i
 s
 ```
-<hr>
+
 ```
 4950
 ```
-</div>
+
+</TGPy>
 
 If you edit your message, TGPy will recalculate the result.
 
-When TGPy mistakes your plain-text message for code, type [`cancel`](/reference/code_detection/#cancel-evaluation) to
+When TGPy mistakes your plain-text message for code, type [`cancel`](../reference/code-detection/#cancel-evaluation) to
 fix that.
 
-!!! tip
+::: tip
 
-    You can experiment with TGPy in [Saved Messages](tg://resolve?domain=TelegramTips&post=242). Nobody else will see that ;)
+You can experiment with TGPy in [Saved Messages](tg://resolve?domain=TelegramTips&post=242). Nobody else will see that ;)
+
+:::
 
 ## Power of Python
 
@@ -49,48 +55,56 @@ most of Telegram features, such as sending messages. You’ll learn more about t
 
 You can explicitly return values in messages:
 
-<div class="tgpy-code-block">
+<TGPy>
+
 ```python
 x = 2 * 2
 return x
 ```
-<hr>
+
 ```
 4
 ```
-</div>
+
+</TGPy>
 
 Otherwise, all computed values will be returned automatically:
 
-<div class="tgpy-code-block">
+<TGPy>
+
 ```python
 x = 10
 x * 7
 x + 20
 ```
-<hr>
+
 ```
 [70, 30]
 ```
-</div>
 
-You can also print values. The `print` function is redefined, so that the output is added to the message.
+</TGPy>
 
-<div class="tgpy-code-block">
+You can also print values. The `print` function is redefined so that the output is added to the message.
+
+<TGPy>
+
 ```python
 print('Hello World!')
 ```
-<hr>
+
 ```
 Hello World!
 ```
-</div>
+
+</TGPy>
 
 Exceptions are also shown right in the message.
 
-!!! note
+::: info
 
-    Long messages might be truncated because of Telegram limit of 4096 symbols per message.
+Long messages might be truncated because of Telegram limit of 4096 symbols per message.
+
+:::
 
 ## More tips
 

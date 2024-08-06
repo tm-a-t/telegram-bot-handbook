@@ -2,7 +2,7 @@ import {DefaultTheme} from 'vitepress'
 
 const sidebar: DefaultTheme.Sidebar = {
     '/ru/book/': [
-        {text: 'Начало', link: '/ru/book/index'},
+        {text: 'Начало', link: '/ru/book/'},
         {
             text: 'Разработка',
             items:

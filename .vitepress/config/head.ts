@@ -4,7 +4,7 @@ const metrikaScript = `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[
 const metrikaNoscript = `<div><img src="https://mc.yandex.ru/watch/95150339" style="position:absolute; left:-9999px;" alt="" /></div>`
 
 const head: HeadConfig[] = [
-    ['script', {type: 'text/javascript'}, metrikaScript],
+    ['script', {type: 'text/plain', 'data-category': 'analytics', 'data-service': 'Yandex Metrika'}, metrikaScript],
     ['noscript', {}, metrikaNoscript],
 
     ['link', {rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png'}],

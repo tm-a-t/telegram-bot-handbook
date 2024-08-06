@@ -88,29 +88,25 @@ Follow the instructions to connect your Telegram account for the first time. Whe
 
 When new updates arrive, you can get them with a TGPy function or from  shell.
 
-=== "From Telegram message"
+::: code-group
 
-    ```python
-    update()
-    ```
+```python [From Telegram message]
+update()
+```
 
-=== "From shell using pipx"
 
-    ```shell
-    pipx upgrade tgpy
-    ```
+```shell [From shell using pipx]
+pipx upgrade tgpy
+```
 
-=== "From shell using docker"
+<CodeTab data-title="From shell using docker">
+<pre><code>docker pull tgpy/tgpy</code></pre>
+<p>Then re-run:</p>
+<pre><code>docker run -it --rm -v /tgpy_data:/data tgpy/tgpy</code></pre>
+</CodeTab>
 
-    ```shell
-    docker pull tgpy/tgpy
-    ```
-   
-    Then re-run:
+:::
 
-    ```shell
-    docker run -it --rm -v /tgpy_data:/data tgpy/tgpy
-    ```
 
 ## Running in background
 

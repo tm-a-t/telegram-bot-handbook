@@ -9,7 +9,7 @@ Copy an example and send it somewhere to run!
 These examples show how you can use TGPy in various ways.
 When you get used to it, you will be able to quickly write code snippets for your needs.
 
-By the way, if you want to delete the code message before running the code, start it with `#!python await msg.delete()`.
+By the way, if you want to delete the code message before running the code, start it with `await msg.delete()`.
 
 ## Sending messages
 
@@ -77,32 +77,32 @@ return
 
 Delete all messages starting with the message you‘re replying to and ending with the current message:
 
-=== "From all users"
+::: code-group
 
-    ```python
-    messages = await client.get_messages(
-        msg.chat,
-        min_id=orig.id - 1,
-        max_id=msg.id
-    )
-    await client.delete_messages(msg.chat, messages)
-    ```
+```python [From all users]
+messages = await client.get_messages(
+    msg.chat,
+    min_id=orig.id - 1,
+    max_id=msg.id
+)
+await client.delete_messages(msg.chat, messages)
+```
 
-=== "From a specified user"
+```python {5} [From a specified user]
+messages = await client.get_messages(
+    msg.chat,
+    min_id=orig.id - 1,
+    max_id=msg.id,
+    from_user='John Doe'
+)
+await client.delete_messages(msg.chat, messages)
+```
 
-    ```python hl_lines="5"
-    messages = await client.get_messages(
-        msg.chat,
-        min_id=orig.id - 1,
-        max_id=msg.id,
-        from_user='John Doe'
-    )
-    await client.delete_messages(msg.chat, messages)
-    ```
+:::
 
-!!! note
-
-    Of course, TGPy can delete messages only if you have the permission, for instance if you’re a group admin.
+::: info
+Of course, TGPy can delete messages only if you have the permission, for instance if you’re a group admin.
+:::
 
 ### List your drafts
 
@@ -125,7 +125,7 @@ await client.kick_participant(msg.chat, 'John Doe')
 return 'Bye!'
 ```
 
-Use `#!python 'me'` instead of the name to leave.
+Use `'me'` instead of the name to leave.
 
 ## Integrations
 

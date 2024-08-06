@@ -1,13 +1,13 @@
 # Claiming a Username for Your Bot
 
-When you register a bot, you should choose its username carefully. 
-It will be difficult to change it afterwards.
+When you register a bot, you should choose its username carefully,
+because it will be difficult to change it afterwards.
 
-When I choose a username, I often want to try different options to find the shortest and prettiest one available.
-It is uneasy to do this while actually registering a bot, so I've come up with this hack:
+I usually prefer to try different usernames to find the shortest and prettiest one available.
+This is uneasy to do while actually registering a bot, so I've come up with a hack.
 I open my own account settings and type the username I want to try — but not save the changes. 
 If the username is taken, a red message will appear. 
-This way I quickly try many usernames.
+This way I can quickly check many usernames for availability.
 
 ## How should the username look
 

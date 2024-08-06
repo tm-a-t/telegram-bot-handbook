@@ -7,9 +7,9 @@ description: 'Examples of using Context object and TGPy modules: saving shortcut
 These are examples of using [`ctx`](/extensibility/context) and [modules](/extensibility/modules).
 It may be handy to save the functions here as modules to reuse in the future.
 
-!!! Tip
-    
-    Join the Russian-speaking chat [@tgpy_flood](https://t.me/tgpy_flood) to see what modules users share.
+::: tip
+Join the Russian-speaking chat [@tgpy_flood](https://t.me/tgpy_flood) to see what modules users share.
+:::
 
 ## Shortcut for deleting messages
 

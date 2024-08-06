@@ -21,9 +21,10 @@ const ruConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
             next: 'Вперёд',
         },
         nav: [
-            {text: 'Book', link: '/ru/book/', activeMatch: '/ru≈/book/.*'},
-            // {text: 'Framework', link: '/en/framework/', activeMatch: '/en/framework/.*'},
-            {text: 'TGPy', link: '/ru/tgpy/', activeMatch: '/ru/tgpy/.*'},
+            {text: 'Встречайте Papercraft 🎉', link: ''},
+            {text: 'Book', link: '/ru/book/', activeMatch: '/ru/book/.*'},
+            {text: 'Framework <span style="color: var(--vp-c-text-2)">EN</span>', link: '/en/framework/', activeMatch: '/ru/framework/.*'},
+            {text: 'TGPy <span style="color: var(--vp-c-text-2)">EN</span>', link: '/en/tgpy/', activeMatch: '/ru/tgpy/.*'},
         ],
         editLink: {
             pattern: 'https://github.com/tm-a-t/handbook/edit/main/:path',

@@ -1,6 +1,8 @@
 # TGPy. <span style="color: var(--vp-c-text-2)">Your Pythonic Swiss Knife for Telegram</span>
 
-TGPy runs Python code in your Telegram messages. See the demo:
+TGPy runs Python code in your messages and integrates with your Telegram workspace. 
+
+See the demo:
 
 <video controls loop muted src="https://user-images.githubusercontent.com/38432588/181266550-c4640ff1-71f2-4868-ab83-6ea3690c01b6.mp4"></video>
 

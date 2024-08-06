@@ -4,7 +4,7 @@ titleTemplate: false
 ---
 
 <script setup>
-import BookTOC from '../../.vitepress/theme/BookTOC.vue';
+import BookTOC from '../../components/BookTOC.vue';
 </script>
 
 # Telegram Bot Handbook

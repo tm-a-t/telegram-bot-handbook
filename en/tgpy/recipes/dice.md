@@ -4,8 +4,7 @@ description: You can use TGPy to throw dice in Telegram and brute-force it to ge
 
 # Throwing dice (and faking the result)
 
-[![author](https://avatars.githubusercontent.com/u/38432588) Artyom Ivanov](https://github.com/tm-a-t)
-{.author}
+[![author](https://avatars.githubusercontent.com/u/38432588) Artyom Ivanov](https://github.com/tm-a-t){.author}
 
 When you send the 🎲 (dice) emoji in Telegram, it gets animated and shows a random result.
 

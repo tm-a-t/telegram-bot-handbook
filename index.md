@@ -10,6 +10,8 @@ next: false
 
 # Papercraft
 
+Hello! In production, this page automatically redirects you to the homepage of your language.
+
 [Russian version →](/ru/)
 
 [English version →](/en/)

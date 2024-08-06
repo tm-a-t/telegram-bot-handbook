@@ -4,14 +4,13 @@ description: Recipes are short tutorials and tips on TGPy. They may help you lea
 
 # About recipes
 
-Recipes are short TGPy tutorials or use cases.
+Recipes are short TGPy tutorials or use cases. 
 
-They will help you re-implement certain scenarios or better understand TGPy and Telethon features. Recipes contain code
+They will help you re-implement certain scenarios or better understand TGPy and Telethon features.
+Recipes contain code
 that you can copy easily; feel free to read into the code and change the details.
 
-Read in any order. For example, start here:
-
-[Setting up reminders](/recipes/reminders/)
+Read in any order. For example, start here: [Setting up reminders](reminders)
 
 ## How to add a recipe
 
