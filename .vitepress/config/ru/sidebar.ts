@@ -11,7 +11,7 @@ const sidebar: DefaultTheme.Sidebar = {
                     {text: 'Telegram API', link: '/ru/book/dev/api'},
                     {text: 'Библиотеки', link: '/ru/book/dev/libraries'},
                     {text: 'Юзернеймы', link: '/ru/book/dev/usernames'},
-                    {text: 'Настройка', link: '/ru/book/dev/botfather'},
+                    {text: 'BotFather', link: '/ru/book/dev/botfather'},
                     {text: 'Апдейты', link: '/ru/book/dev/updates'},
                     {text: 'Хостинг', link: '/ru/book/dev/host'},
                 ],

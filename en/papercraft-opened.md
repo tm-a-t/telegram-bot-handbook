@@ -5,21 +5,26 @@ lastUpdated: false
 editLink: false
 ---
 
-# Welcome to Papercraft
+# Introducing Papercraft
 
-three things under one name
+Now, the three things under one name
 
-## Book
+## Papercraft Book
+
+Formerly known as Telegram Bot Handbook, 
 
 renamed and reworked
 
 changelist
 
-## Framework
+## Papercraft Framework
 
-description
+Brand new framework for developing bots with Telegram API!
 
 ## TGPy 
 
 fun thing
 
+## Final words
+
+Many asked: Vitepress. Love how carefully designed it is.

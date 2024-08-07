@@ -4,8 +4,6 @@ description: Tips on fixing syntax highlighting and code autocompletion when usi
 
 # Writing TGPy programs in code editors
 
-[![author](https://avatars.githubusercontent.com/u/38432588) Artyom Ivanov](https://github.com/tm-a-t){.author}
-
 Editing complex code without syntax highlighting or code autocompletion is inconvenient. If you write a large code
 snippet for TGPy, you will want to use a code editor instead of the message input field.
 

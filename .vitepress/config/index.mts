@@ -34,6 +34,13 @@ export default defineConfig({
             md.disable('emoji')
         }
     },
+    vite: {
+        ssr: {
+            noExternal: [
+                '@nolebase/vitepress-plugin-highlight-targeted-heading',
+            ],
+        },
+    },
     themeConfig: {
         editLink: {
             pattern: 'https://github.com/tm-a-t/handbook/edit/main/:path',
@@ -59,7 +66,12 @@ export default defineConfig({
         ],
         outline: 'deep',
         search: {
-            provider: 'local',
+            provider: 'algolia',
+            options: {
+                appId: 'XWCAXSO1PW',
+                apiKey: 'baac738133a1f9099fb1aa9fce51603b',
+                indexName: 'handbook-tmat',
+            }
         },
         sidebar: sidebar,
         socialLinks: [

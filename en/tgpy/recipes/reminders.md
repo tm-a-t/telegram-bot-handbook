@@ -4,8 +4,6 @@ description: 'Sometimes you will want to send notifications to yourself, such as
 
 # Setting up reminders   
 
-[![author](https://avatars.githubusercontent.com/u/38432588) Artyom Ivanov](https://github.com/tm-a-t){.author}
-
 Sometimes you will want to send notifications to yourself, such as reminders or logs.   
 
 You basically don't get a notification when your TGPy code sends a message to any chat, pretty like you don't get a notification when you send a message from another device.   

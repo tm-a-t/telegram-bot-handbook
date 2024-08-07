@@ -5,6 +5,7 @@ import './custom.css'
 import CodeTab from '../../components/CodeTab.vue'
 import TGPy from '../../components/TGPy.vue'
 import Layout from './layout/Layout.vue'
+import '@nolebase/vitepress-plugin-highlight-targeted-heading/client/style.css'
 
 export default {
     extends: Theme,

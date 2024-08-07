@@ -4,8 +4,6 @@ description: I wrote a TGPy script that adds to contacts all members from a sele
 
 # Auto-adding group members to contacts to see their stories
 
-[![author](https://avatars.githubusercontent.com/u/38432588) Artyom Ivanov](https://github.com/tm-a-t){.author}
-
 I barely ever add people from Telegram to contacts. I chat in groups and private messages, so I have them in
 my Telegram dialog history.
 

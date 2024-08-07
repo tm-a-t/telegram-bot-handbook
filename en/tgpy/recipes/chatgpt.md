@@ -4,8 +4,6 @@ description: How to implement ChatGPT module for TGPy.
 
 # Asking ChatGPT from TGPy
 
-[![author](https://avatars.githubusercontent.com/u/38432588) Artyom Ivanov](https://github.com/tm-a-t){.author}
-
 So, I implemented ChatGPT module for TGPy.
 
 ChatGPT replies when I start my message with `ai,`:

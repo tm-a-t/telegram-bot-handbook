@@ -8,7 +8,7 @@ These are examples of using [`ctx`](/extensibility/context) and [modules](/exten
 It may be handy to save the functions here as modules to reuse in the future.
 
 ::: tip
-Join the Russian-speaking chat [@tgpy_flood](https://t.me/tgpy_flood) to see what modules users share.
+Join the Russian-speaking chat [@tgpy_flood](https://t.me/tgpy_flood) to see the modules that users share.
 :::
 
 ## Shortcut for deleting messages

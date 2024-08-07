@@ -1,6 +1,5 @@
-import {LocaleSpecificConfig} from 'vitepress/types/shared'
-import {DefaultTheme} from 'vitepress/types/default-theme'
 import sidebar from './sidebar'
+import {DefaultTheme, LocaleSpecificConfig} from "vitepress";
 
 const ruConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
     titleTemplate: ':title — хендбук',

@@ -10,7 +10,7 @@ const sidebar: DefaultTheme.Sidebar = {
                 {text: 'Telegram API', link: '/en/book/dev/api'},
                 {text: 'Libraries', link: '/en/book/dev/libraries'},
                 {text: 'Usernames', link: '/en/book/dev/usernames'},
-                {text: 'Settings', link: '/en/book/dev/botfather'},
+                {text: 'BotFather', link: '/en/book/dev/botfather'},
                 {text: 'Updates', link: '/en/book/dev/updates'},
                 {text: 'Host', link: '/en/book/dev/host'},
             ],
@@ -60,7 +60,8 @@ const sidebar: DefaultTheme.Sidebar = {
     ],
 
     '/en/framework/': [
-
+        {text: 'Guide', link: '/en/framework/'},
+        {text: 'Examples', link: '#'},
     ],
 
     '/en/tgpy/': [
