@@ -3,23 +3,25 @@
 A common way to interact with bots is through commands. Commands start with “/” and consist of latin letters, digits, 
 and underscores.
 
-The commands are highlighted similarly to links: a user can tap on a command to send it.
+The commands are highlighted similarly to links, and a user can tap on a command to send it.
 
 ![An example of using commands](/pictures/ru/commands.png)
 
 ## Command arguments
 
-It is not forbidden to ask users to enter additional text after a command, like `/weather London`.
+Of course, you can ask users to enter additional text after a command, like `/weather London`.
 
-However, it's difficult for users to enter commands such way. If a user chooses a command in the auto-completion menu, they normally send it immediately.
+However, it will be difficult for users to enter commands such way. 
+That's because when a user clicks on a command in the auto-completion menu, Telegram immediately sends this command.
 To complete the command but not send it, a user should press tab key in the desktop apps or long-tap the command
-in case of the mobile apps. This is a feature of which many users are not aware.
+in case of the mobile apps. 
+Many users are simply not aware of this feature.
 
-Telegram recommends implementing specific commands that can be used without arguments, like `/weather_london`.
+Therefore, Telegram recommends implementing specific commands that can be used without arguments, like `/weather_london`.
 
 If this is not a way for you, you can consider other ways of interaction.
 [Buttons](../messages/buttons) or [inline mode](../interaction/inline) may fit for selecting from multiple options.
-For some additional information from the user, the bot can simply ask a question in the next message.
+For some additional information from the user, the bot can just ask a question in the next message.
 
 ## Command lists
 

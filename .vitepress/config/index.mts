@@ -10,7 +10,8 @@ export default defineConfig({
 
     appearance: 'dark',
     cleanUrls: true,
-    description: 'Explore Telegram features, bot limitations, and API tricks.',
+    description: 'Learn to develop user-friendly and featureful Telegram bots.',
+
     head: head,
     lastUpdated: true,
     locales: {
@@ -42,6 +43,9 @@ export default defineConfig({
         },
     },
     themeConfig: {
+        footer: {
+            message: "Made by Artyom Ivanov"
+        },
         editLink: {
             pattern: 'https://github.com/tm-a-t/handbook/edit/main/:path',
             text: 'Edit this page on GitHub',

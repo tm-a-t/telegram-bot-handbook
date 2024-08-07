@@ -8,11 +8,15 @@ connection.
 For that, you will need to buy a host. Bot programs usually need a small amount of resources, so 
 a simple plan from any hosting provider will probably be fine.
 
+<!--
+
 <div class="tip custom-block" style="padding: 16px">
 
-This is a place for an ad of your cool hosting service. Feel free to [contact me](https://t.me/tm_a_t) :)
+Here is a place for an ad of your cool hosting service. Feel free to [contact me](https://t.me/tm_a_t) :)
 
 </div>
+
+-->
 
 ## Long-polling vs webhooks
 

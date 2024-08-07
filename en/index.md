@@ -16,7 +16,7 @@ hero:
 #      link: https://github.com/vuejs/vitepress
 
 features:
-  - icon: 🔭
+  - icon: 📘
     title: Book
     details: Learn to develop user-friendly, featureful, and stable bots.
     link: /en/book/
