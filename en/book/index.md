@@ -1,5 +1,5 @@
 ---
-title: Telegram Bot Handbook
+title: Papercraft Book
 titleTemplate: false
 ---
 
@@ -33,7 +33,7 @@ a better understanding of the Telegram features.
 
 If you plan to develop a bot with rather uncommon features or capacity, the corresponding pages will be helpful.
 
-**During development:** You can consult the handbook to dive into the details of a topic.
+**During development:** You can consult the book to dive into the details of a topic.
 
 
 <BookTOC title="Table of contents"/>

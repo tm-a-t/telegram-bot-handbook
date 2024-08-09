@@ -1,5 +1,5 @@
 ---
-title: Telegram Bot Handbook
+title: Papercraft Book
 titleTemplate: false
 ---
 

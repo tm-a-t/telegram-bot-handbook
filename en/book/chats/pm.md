@@ -1,23 +1,32 @@
-# How Your Bot Uses Personal Messages and User Profiles
+# How Personal Dialogs with Telegram Bots Work
 
-## How a personal dialog starts
+You want your bot to answer users in personal dialogs.
 
-A bot may send messages to the user only after they allowed it. Once the dialog is started, the bot can send messages
-any time.
+Even if your bot is designed to work in groups or channels, it is a good idea to implement a greeting message in PM.
+This way, the people who get interested in the bot and open its profile will not face the silence.
+You can include an "Add to your group" link using [deep links for groups](../interaction/links#deep-links-for-groups).
 
-Bots may not send messages to other bots.
 
-### 1. Starting a bot directly
+## Starting a personal dialog
 
-Normally, PM start when the user opens the bot and clicks "Start".
-The user can open the bot with a link or through the app search, for example. 
-Then they see ["What this bot can do?" description](../dev/botfather#customization) and the "Start" button.
-A click sends `/start` command.
-The bot should reply on this command with a greeting or a usage instruction.
+A bot may not send messages to the user until the user started the dialog. 
+Once the dialog is started, the bot can send messages at any time.
+(Bots may not send messages to other bots.)
 
-Just like any other chat, after a person started a dialog with a bot, it appears in their recent chat list.
+### The `/start` command
+
+Here is how a personal dialog usually starts.
+
+A user opens the bot with a link or by searching in the app, for example. 
+Then they see [the intro text](../dev/botfather#customization) and the "Start" button.
+
+When they click the button, the `/start` command is sent. 
+This command signals that the private chat has begun! 
+The bot should respond to the command with a greeting or usage instructions.
 
 ![](/pictures/ru/start.gif)
+
+Just like any other chat, the dialog with the bot appears in user's recent chat list.
 
 ::: warning
 `/start` command doesn't imply that this the user has no dialog with the bot. It may be a good idea to make sure your
@@ -28,45 +37,26 @@ bot doesn't get broken when the user sends `/start` when they already started th
 You can use [deep links](../interaction/links) so that the `/start` message contains additional information.
 :::
 
-### 2. Other ways to start a dialog
+### Alternative ways to start a dialog
 
-A bot may send messages to a user, if one of the following:
+Sometimes a bot may send messages to a user if they haven't started the dialog explicitly. 
+This happens in one of the following cases:
 
-- The user [requested to join](../interaction/join-requests) a group or channel.
+- The user [requested to join](../interaction/join-requests) a group or channel where the bot manages join requests.
 - The user [authorized on a site with Telegram Login Widget](../interaction/login-widget) through the bot.
 
-User sees the reason in the beginning of the dialog.
+When this occurs, the Telegram app shows user explanation why the bot contacts them.
 
 ## Stopping the dialog { #block }
 
 A user can stop the dialog by blocking the bot. The bot will not be able to send personal messages to the user
 until they unblock it.
 
-::: tip Checking if the bot may text to a user
+## Checking if the bot may text to a user
+
+Sometimes you may want to check if a user has blocked your bot. Here is a simple method:
+
 Try showing a "Bot is typing..." status in the dialog. If Telegram servers returned an error, the bot may not
-send messages to the user.
+send messages to the user. This means that either the user has blocked the bot or the dialog has never started.
 
-This means the user has blocked the bot or the dialog has never started.
-:::
-
-## User profile
-
-While keeping user profile data, keep in mind that users may have no username or no last name. In addition, all such
-profile data except for [user ID](../chats/id) can change over time.
-
-## User languages
-
-Bots know the language that a person has set in their Telegram app. 
-This allows your bot to speak user's native language.
-
-Still, user language is not always included in the updates. Therefore, if your bot adjusts to user languages,
-Telegram recommends to use the last known language in cases the update misses this information.
-
-## Seen users
-
-Bot must have seen a user to make actions related to this user (mention them, etc.) The bot sees a user, for example,
-when the bot receives a message from the user or fetches them by the username.
-
-Technically speaking, this means API requests must include not only [user ID](./id) but also a relevant 
-access hash. API gives access hashes together with other user info in updates. Access hashes are cached by Bot API
-and good Telegram API libraries, so you should not worry about it.
+This action has very loose rate limits, so you can do it frequently.

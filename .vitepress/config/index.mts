@@ -6,11 +6,11 @@ import sidebar from './sidebar'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: 'Papercraft',
-    // titleTemplate: ':title / Papercraft',
+    titleTemplate: ':title • Papercraft',
 
     appearance: 'dark',
     cleanUrls: true,
-    description: 'Learn to develop user-friendly and featureful Telegram bots.',
+    description: 'Tools and resources for Telegram developers. Learn to develop user-friendly, featureful, and stable Telegram bots.',
 
     head: head,
     lastUpdated: true,
@@ -27,7 +27,7 @@ export default defineConfig({
         },
     },
     sitemap: {
-        hostname: 'https://handbook.tmat.me',
+        hostname: 'https://papercraft.tmat.me',
     },
     srcExclude: ['readme.md'],
     markdown: {
@@ -43,11 +43,12 @@ export default defineConfig({
         },
     },
     themeConfig: {
+        i18nRouting: false,
         footer: {
-            message: "Made by Artyom Ivanov"
+            message: "Made by tmat."
         },
         editLink: {
-            pattern: 'https://github.com/tm-a-t/handbook/edit/main/:path',
+            pattern: 'https://github.com/tm-a-t/papercraft/edit/main/:path',
             text: 'Edit this page on GitHub',
         },
         lastUpdated: {
@@ -66,7 +67,7 @@ export default defineConfig({
                 link: '/en/tgpy/',
                 activeMatch: '/en/tgpy/.*',
             },
-            // {text: 'Share', link: 'https://t.me/share?url=handbook.tmat.me/en/'},
+            // {text: 'Share', link: 'https://t.me/share?url=papercraft.tmat.me/en/'},
         ],
         outline: 'deep',
         search: {
@@ -79,7 +80,7 @@ export default defineConfig({
         },
         sidebar: sidebar,
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/tm-a-t/handbook', ariaLabel: 'GitHub'},
+            {icon: 'github', link: 'https://github.com/tm-a-t/papercraft', ariaLabel: 'GitHub'},
         ],
     },
 })

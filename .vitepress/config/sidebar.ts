@@ -28,7 +28,8 @@ const sidebar: DefaultTheme.Sidebar = {
         {
             text: 'Chats',
             items: [
-                {text: 'Users', link: '/en/book/chats/pm'},
+                {text: 'Users', link: '/en/book/chats/users'},
+                {text: 'PM', link: '/en/book/chats/pm'},
                 {text: 'Groups', link: '/en/book/chats/groups'},
                 {text: 'Channels', link: '/en/book/chats/channels'},
                 {text: 'Forums', link: '/en/book/chats/forums'},

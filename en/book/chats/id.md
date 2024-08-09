@@ -2,8 +2,9 @@
 
 Each user, bot, group, or channel has an invariable ID. 
 
-Official Telegram apps don't show IDs. Use unofficial apps or bots [like this](https://t.me/getmyid_bot) when you need 
-to manually learn specific user or chat IDs.
+~~Official Telegram apps don't show IDs. Use unofficial apps or bots [like this](https://t.me/getmyid_bot) when you need 
+to manually learn specific user or chat IDs.~~
+You can now enable showing IDs in Telegram macOS settings or Telegram Desktop experimental settings.
 
 ::: warning
 Don't store user and chat IDs in 32-bit integers: they may be too large. 

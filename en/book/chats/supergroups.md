@@ -1,4 +1,9 @@
-# What Telegram Supergroups Are 
+# Supergroups in Telegram
+
+When you use Telegram, you deal with groups regularly. 
+The truth is that what looks like groups in Telegram UI is actually two kinds of entities: groups and supergroups.
+
+## What are supergroups
 
 A long time ago, Telegram developers introduced two types of groups: regular ones and supergroups.
 Supergroups had public links, larger limit for the number of members, and other features designed for big communities.
@@ -19,10 +24,13 @@ a supegroup-channel, [chat ID](../chats/id) changes. A supergroup cannot become 
 
 ## Message and group IDs
 
-[Message IDs work differently in regular groups and supergroups](../messages/id).
-In addition, in Bot API regular group IDs start with `-` prefix while supergroup IDs start with `-100`.
+Message IDs [work differently in regular groups and supergroups](../messages/id).
+On the next page we will discuss [how group IDs are different in Bot API](id#bot-api).
 
 ## Gigagroups (broadcast groups)
+
+Gigagroups are yet another type of groups in Telegram. 
+They are very rare though, so this paragraph is just to satisfy your curiosity.
 
 A maximal number of supergroup members is 200 000. When it's close to the limit, Telegram app suggests admins
 turn the supergroup into the gigagroup. Gigagroups may contain an unlimited number of members, 
