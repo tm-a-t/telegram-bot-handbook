@@ -91,4 +91,4 @@ Done!
 Save all the code to a module and it will always work.
 
 If you occasionally share sources of your modules with other people or publish modules in a git repo, you will want 
-to store `openai_key` in an environment variable or [`tgpy.api.config`.](/extensibility/api#config)
+to store `openai_key` in an environment variable or [`tgpy.api.config`.](../extensibility/api#config)

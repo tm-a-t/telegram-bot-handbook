@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
 Papercraft Framework is built on top of Telethon, a Telegram API library. This means it works without Bot API.
 
-**Pros:** Bots written in Papercraft have less limitations. See [explanation](/pages/book/dev/api) and [comparison table](/pages/book/appendix/api-comparison)
+**Pros:** Bots written in Papercraft have less limitations. See [explanation](/book/dev/api) and [comparison table](/book/appendix/api-comparison)
 
 **Cons:** Setting up has a couple more little steps.
 

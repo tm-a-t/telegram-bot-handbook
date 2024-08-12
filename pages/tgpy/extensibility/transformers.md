@@ -102,7 +102,7 @@ tgpy.api.exec_hooks.add(name, func)
 
 ## Complete flow
 
-![](/pages/public/assets/tgpy/diagram.png)
+![](/assets/tgpy/diagram.png)
 
 ## Managing
 

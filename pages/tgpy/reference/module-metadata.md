@@ -4,7 +4,7 @@ description: Reference on module metadata. The metadata stores settings such as 
 
 # Module metadata
 
-[Modules are stored as separate Python files.](/extensibility/modules/#storage) Module metadata is
+[Modules are stored as separate Python files.](../extensibility/modules#storage) Module metadata is
 a YAML comment in the beginning of the module file. You can safely edit it manually; the changes will apply 
 after a restart.
 

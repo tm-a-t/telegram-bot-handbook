@@ -78,12 +78,12 @@ modules or use `modules[name]` to get info about the module.
 
 ## Storage
 
-Modules are stored as separate Python files in <code>[tgpy/](/installation/#data-storage)modules</code> directory. You
+Modules are stored as separate Python files in <code>[tgpy/](../installation#data-storage)modules</code> directory. You
 can safely edit them manually.
 
 Modules run each time TGPy starts. By default, they run in the order they were added.
 
-Each module file contains [module metadata](/reference/module_metadata).
+Each module file contains [module metadata](../reference/module-metadata).
 
 ## Features
 
@@ -95,7 +95,7 @@ TGPy has a number of features implemented via standard modules, such as `ping()`
 and `restart()` functions.
 You may want to disable these features, for example to reimplement them. Use the `core.disabled_modules` config 
 key to specify the disabled modules. For example, you can use the following code to disable the `prevent_eval` module which
-provides [// and cancel](/reference/code_detection/#cancel-evaluation) features:
+provides [// and cancel](../reference/code-detection#cancel-evaluation) features:
 
 ```python
 tgpy.api.config.set('core.disabled_modules', ['prevent_eval'])

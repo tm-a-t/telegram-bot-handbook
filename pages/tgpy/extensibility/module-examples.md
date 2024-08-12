@@ -4,7 +4,7 @@ description: 'Examples of using Context object and TGPy modules: saving shortcut
 
 # Module examples
 
-These are examples of using [`ctx`](/extensibility/context) and [modules](/extensibility/modules).
+These are examples of using [`ctx`](context) and [modules](modules).
 It may be handy to save the functions here as modules to reuse in the future.
 
 ::: tip

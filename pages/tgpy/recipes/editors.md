@@ -31,7 +31,7 @@ ctx: Context
 Write your code, copy it and paste to Telegram: this should work.
 
 Unfortunately, editors won’t understand syntax tricks such
-as [`.await` property-like notation,](/basics/asyncio/#asyncio-in-tgpy) so you should use normal Python syntax.
+as [`.await` property-like notation,](../basics/asyncio#asyncio-in-tgpy) so you should use normal Python syntax.
 
 By the way, normal Python syntax also forbids top-level await. To avoid syntax errors, you can wrap your code in an
 async function. Or give up on hacks and have half of your code underlined as errors.

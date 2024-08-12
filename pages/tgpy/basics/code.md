@@ -37,7 +37,7 @@ s
 
 If you edit your message, TGPy will recalculate the result.
 
-When TGPy mistakes your plain-text message for code, type [`cancel`](../reference/code-detection/#cancel-evaluation) to
+When TGPy mistakes your plain-text message for code, type [`cancel`](../reference/code-detection#cancel-evaluation) to
 fix that.
 
 ::: tip

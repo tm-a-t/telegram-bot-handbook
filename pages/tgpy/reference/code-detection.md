@@ -47,8 +47,8 @@ also considered unknown.
 
 ## Disable auto-detection
 
-If you want to disable auto-detection, you can save the following [hook](/extensibility/transformers/#exec-hooks) 
-as a [module](/extensibility/modules/).
+If you want to disable auto-detection, you can save the following [hook](../extensibility/transformers#exec-hooks) 
+as a [module](../extensibility/modules).
 
 ```python
 import re

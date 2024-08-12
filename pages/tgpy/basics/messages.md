@@ -18,9 +18,9 @@ All you need to know is that in TGPy you can use the following objects:
 - `msg` for the current message
 - `orig` for the message you’re replying to
 
-See the [Builtin reference](/reference/builtins/#telethon-objects) for details.
+See the [Builtin reference](../reference/builtins#telethon-objects) for details.
 
-Now you can skip the rest of the page and go to the [examples](/basics/examples) :)
+Now you can skip the rest of the page and go to the [examples](examples) :)
 
 :::
 

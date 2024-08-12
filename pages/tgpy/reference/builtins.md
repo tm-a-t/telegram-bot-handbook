@@ -27,11 +27,11 @@ request to Telegram API.
 
 ## Modules
 
-[Read on modules](/extensibility/modules/)
+[Read on modules](../extensibility/modules)
 
 | Object                              | Description                                                                                                |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------|
-| `modules`                           | Object for [module management](/extensibility/modules/#manage-modules).                                    |
+| `modules`                           | Object for [module management](../extensibility/modules#manage-modules).                                   |
 | `modules.add(name: str, code: str)` | Add the given code as a module. If `code` isn’t specified, the code from the `orig` message will be added. |
 | `modules.remove(name: str)`         | Remove the module named `name`.                                                                            |
 

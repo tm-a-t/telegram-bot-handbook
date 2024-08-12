@@ -27,7 +27,9 @@
   margin-bottom: -24px;
 }
 
+/*
 .custom-code-group-tab :deep(code) {
-  //padding: 0;
+  padding: 0;
 }
+*/
 </style>

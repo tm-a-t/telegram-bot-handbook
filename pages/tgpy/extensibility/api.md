@@ -13,7 +13,7 @@ import tgpy.api
 ## Config
 
 `tgpy.api.config` provides you simple key-value store for any data.
-The data, as well as some TGPy settings, is saved to <code>[tgpy/](/installation/#data-storage)config.yml</code>.
+The data, as well as some TGPy settings, is saved to <code>[tgpy/](../installation#data-storage)config.yml</code>.
 
 ```python
 tgpy.api.config.get(key: str, default: JSON = None) -> JSON
