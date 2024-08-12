@@ -14,4 +14,4 @@ Hello! In production, this page automatically redirects you to the homepage of y
 
 [Russian version →](/ru/)
 
-[English version →](/en/)
+[English version →](/pages/)

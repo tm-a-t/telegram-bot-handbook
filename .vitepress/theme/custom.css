@@ -15,25 +15,7 @@
     color: var(--vp-c-text-2);
 }
 
-.vp-doc .author {
-    display: flex;
-    align-items: center;
-    column-gap: 12px;
-    flex-direction: row;
-    margin: -4px 0 48px;
-    width: 100%;
-    text-decoration: none;
-}
-
-.vp-doc .author img {
-    width: 24px;
-    border-radius: 50%;
-}
-
-.vp-doc details tr:nth-child(2n) {
-    background: inherit;
-}
-
-.vp-doc details td {
-    border: none;
+:root:not(.dark) .VPHero .VPImage {
+    /*filter: drop-shadow(10px 6px 24px #8d8fba);*/
+    filter: drop-shadow(2px 4px 4px #4d4f8e);
 }

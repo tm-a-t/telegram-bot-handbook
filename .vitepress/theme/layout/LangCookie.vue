@@ -1,19 +1,24 @@
 <script setup>
-import {inBrowser, useData} from 'vitepress'
+import {inBrowser, useData, useRoute} from 'vitepress'
 import { watch } from 'vue'
 import * as CookieConsent from 'vanilla-cookieconsent'
 
-const { lang } = useData()
+const { lang, params } = useData()
 
-function updateCookie() {
-  if (inBrowser && CookieConsent.acceptedCategory('functionality')) {
+function updateLangCookie() {
+  if (inBrowser && params.value.hasRussianTranslation && cookieAllowed()) {
+    console.log("!!!", lang.value)
     document.cookie = `nf_lang=${lang.value}; expires=Mon, 1 Jan 2030 00:00:00 UTC; path=/`
   }
 }
 
-watch(lang, () => {
-  updateCookie()
-})
+function cookieAllowed() {
+  return CookieConsent.acceptedCategory('functionality')
+}
+
+updateLangCookie()
+watch(lang, updateLangCookie)
+watch(() => params.value.hasRussianTranslation, updateLangCookie)
 </script>
 
 <template>

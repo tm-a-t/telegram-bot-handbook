@@ -2,10 +2,18 @@
 import {useRoute} from 'vitepress';
 import {computed} from 'vue';
 
-const names = {book: 'Book', framework: 'Framework', tgpy: 'TGPy'};
-
 const route = useRoute();
-const name = computed(() => names[route.path.split('/')[2]]);
+const name = computed(() => {
+  if (route.path.startsWith('/book') || route.path.startsWith('/ru/book')) {
+    return 'Book'
+  }
+  if (route.path.startsWith('/framework')) {
+    return 'Framework'
+  }
+  if (route.path.startsWith('/tgpy')) {
+    return 'TGPy'
+  }
+});
 </script>
 
 <template>

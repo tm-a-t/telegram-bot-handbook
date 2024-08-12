@@ -19,12 +19,6 @@ const ruConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
             prev: 'Назад',
             next: 'Вперёд',
         },
-        nav: [
-            {text: 'Встречайте Papercraft 🎉', link: ''},
-            {text: 'Book', link: '/ru/book/', activeMatch: '/ru/book/.*'},
-            {text: 'Framework', link: '/en/framework/', activeMatch: '/ru/framework/.*'},
-            {text: 'TGPy', link: '/en/tgpy/', activeMatch: '/ru/tgpy/.*'},
-        ],
         editLink: {
             pattern: 'https://github.com/tm-a-t/papercraft/edit/main/:path',
             text: 'Изменить страницу на Гитхабе',

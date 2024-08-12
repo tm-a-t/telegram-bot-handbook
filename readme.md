@@ -5,7 +5,7 @@
 <div align="center">
 
 <div>
-<img src="public/logo.svg" alt="" width="160">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pages/public/logo.svg" alt="" width="160">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 
 # Telegram Bot Handbook
@@ -22,6 +22,6 @@ Developing reliable Telegram bots: features, limitations, tricks.
 
 <a href="https://handbook.tmat.me/">
 
-![](public/screenshot.png)
+![](pages/public/screenshot.png)
 
 </a>

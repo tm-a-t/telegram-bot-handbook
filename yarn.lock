@@ -931,6 +931,11 @@ vite@^5.3.3:
   optionalDependencies:
     fsevents "~2.3.3"
 
+vitepress-plugin-tabs@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/vitepress-plugin-tabs/-/vitepress-plugin-tabs-0.5.0.tgz#2b193a72ed36b9fcd63e3907d3044fe7b6cf3e4e"
+  integrity sha512-SIhFWwGsUkTByfc2b279ray/E0Jt8vDTsM1LiHxmCOBAEMmvzIBZSuYYT1DpdDTiS3SuJieBheJkYnwCq/yD9A==
+
 vitepress@^1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-1.3.1.tgz#e0b674d5a9975d10e4af8dc3da19d95976b8f077"

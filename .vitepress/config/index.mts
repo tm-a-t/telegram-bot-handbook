@@ -2,6 +2,7 @@ import {defineConfig} from 'vitepress'
 import head from './head'
 import ruConfig from './ru'
 import sidebar from './sidebar'
+import {tabsMarkdownPlugin} from 'vitepress-plugin-tabs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -18,7 +19,6 @@ export default defineConfig({
         root: {
             label: 'English',
             lang: 'en',
-            link: '/en/',
         },
         ru: {
             label: 'Русский',
@@ -29,10 +29,12 @@ export default defineConfig({
     sitemap: {
         hostname: 'https://papercraft.tmat.me',
     },
+    srcDir: 'pages',
     srcExclude: ['readme.md'],
     markdown: {
         config: (md) => {
             md.disable('emoji')
+            md.use(tabsMarkdownPlugin)
         }
     },
     vite: {
@@ -42,10 +44,19 @@ export default defineConfig({
             ],
         },
     },
+    async transformPageData(pageData, { siteConfig }) {
+        pageData.params ||= {}
+        pageData.params.hasRussianTranslation =
+            pageData.relativePath.startsWith('book')
+            || pageData.relativePath.startsWith('ru/book')
+
+        if (pageData.params.hasRussianTranslation) {
+            pageData.frontmatter.pageClass = 'has-russian-translation'
+        }
+    },
     themeConfig: {
-        i18nRouting: false,
         footer: {
-            message: "Made by tmat."
+            message: 'Papercraft by tmat.'
         },
         editLink: {
             pattern: 'https://github.com/tm-a-t/papercraft/edit/main/:path',
@@ -59,15 +70,15 @@ export default defineConfig({
             },
         },
         nav: [
-            {text: 'Papercraft opened 🎉', link: '/en/papercraft-opened'},
-            {text: 'Book', link: '/en/book/', activeMatch: '/en/book/.*'},
-            {text: 'Framework', link: '/en/framework/', activeMatch: '/en/framework/.*'},
+            {text: 'Papercraft is here 🎉', link: '/papercraft-opened'},
+            {text: 'Book', link: '/book/', activeMatch: '/book/'},
+            {text: 'Framework', link: '/framework/', activeMatch: '/framework/'},
             {
                 text: 'TGPy',
-                link: '/en/tgpy/',
-                activeMatch: '/en/tgpy/.*',
+                link: '/tgpy/',
+                activeMatch: '/tgpy/',
             },
-            // {text: 'Share', link: 'https://t.me/share?url=papercraft.tmat.me/en/'},
+            // {text: 'Share', link: 'https://t.me/share?url=papercraft.tmat.me/'},
         ],
         outline: 'deep',
         search: {
