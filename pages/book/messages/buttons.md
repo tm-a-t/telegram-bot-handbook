@@ -105,9 +105,5 @@ a set of buttons only to mentioned users, that are:
 Both inline buttons and keyboard buttons may be aligned in multiple rows.
 A row may contain up to 8 buttons. The total limit of buttons shown at once is 100.
 
-::: tip
-
 If you place multiple buttons in a row, you should make sure that their labels look OK in the mobile apps: 
-the long labels get truncated.
-
-:::
+long labels get truncated on narrow screens.

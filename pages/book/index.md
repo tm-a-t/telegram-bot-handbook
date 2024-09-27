@@ -4,45 +4,88 @@ titleTemplate: false
 ---
 
 <script setup>
-import BookTOC from '../../components/BookTOC.vue';
+import { VPTeamMembers } from 'vitepress/theme'
+
+const members = [
+  {
+    avatar: 'https://www.github.com/tm-a-t.png',
+    name: 'Artyom Ivanov',
+    title: 'Author',
+    links: [
+      { icon: 'github', link: 'https://github.com/tm-a-t' },
+    ]
+  },
+  {
+    avatar: 'https://www.github.com/vanutp.png',
+    name: 'Ivan Filipenkov',
+    title: 'Expert',
+    links: [
+      { icon: 'github', link: 'https://github.com/tm-a-t' },
+    ]
+  },
+  {
+    name: '???',
+    title: 'Editor',
+    links: [
+      { icon: 'github', link: 'https://github.com/tm-a-t' },
+    ]
+  },
+]
 </script>
+
+
 
 # Papercraft Book
 
-Welcome to Papercraft Book! 
+Welcome to Papercraft Book!
 This is your guide to developing user-friendly, featureful, and stable bots for Telegram messenger.
+The book is independent of any specific programming language or library.
+In fact, it includes examples for different libraries,
+and I will gladly accept contributions from readers who add examples for more libraries.
 
-Here is a couple of things that you can expect:
+[//]: # (It is designed to be used together with library docs and Telegram API reference.)
 
-- **The book is independent of programming language and libraries.** 
-It is designed to be used together with library docs and Telegram API reference.
-
-- **The book covers all major features of Telegram bot platform,** starting from as common as `/commands` and ending with the most specific ones:
+We will cover all major features of Telegram bot platform,
+starting from as common as `/commands` and ending with the most specific ones,
 like managing join requests and subtopics in groups.
+In addition, we will learn about the corner cases and development tips.
 
-- **The book focuses on bots' UX.** We will discuss ways of user-bot interaction and best practices.
+Another focus of this book is user experience.
+The book describes how to make bots easy to use and when common Telegram features have better alternatives.
 
-In other words, on these pages I tried to collect everything that you will want to know but probably won't find in your library docs.
+To sum up — Papercraft Book is my attempt to collect everything you will want to learn but probably won't find
+in your library docs or API reference.
+I believe it to be the most complete and practical guide on developing bots for Telegram.
 
+## Table of contents
 
-## How to use the book
+The book is four chapters, each divided into multiple pages:
 
-**Before development:** I recommend you skim over the "Development" section before starting a bot. It covers working with API,
-choosing libraries, and other technical details. You may want to skim the following sections as well to have
-a better understanding of the Telegram features.
+1. [**Development.**](dev/basics)
+   Things to note before you start coding: API and libraries, bot configuration, some basic notions and tips.
+2. [**Messages.**](messages/sending)
+   Features of messages: sending/editing/deleting, commands, markup, buttons.
+3. [**Chats.**](chats/users) 
+   Managing user data & developing bots for different kinds of chats.
+   Rules of PM, groups, and channels. Forums and supergroups.
+4. [**Interaction.**](interaction/join-requests) 
+   Non-dialog Telegram features: join requests, deep links, payments, mini apps, etc.
 
-If you plan to develop a bot with rather uncommon features or capacity, the corresponding pages will be helpful.
+Feel free to use navigation on the left or just hit the "Next page" button below.
 
-**During development:** You can consult the book to dive into the details of a topic.
+## Book updated
 
+This site was previously called Telegram Bot Handbook and was more like a reference of Telegram features.
+Now, I've rewritten it so it became — well, a book. What changed:
+- todo
 
-<BookTOC title="Table of contents"/>
-
+The site is now called Papercraft and contains not only the book but also docs 
+for TGPy userbot and docs for my new Folds framework.
 
 ## About
 
-The sources are open on GitHub. Corrections and improvements are welcome!
+<VPTeamMembers size="small" :members="members" />
 
 Some pictures and videos are taken from the Telegram site. Most screenshots are made in Telegram web apps.
 
-[Artyom Ivanov](https://t.me/tm_a_t) wrote this and [Ivan Filipenkov](https://t.me/vanutp) consulted.
+The sources are open on GitHub. Corrections and improvements are welcome!

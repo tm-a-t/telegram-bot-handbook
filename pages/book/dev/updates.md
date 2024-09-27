@@ -7,9 +7,18 @@ There can be an update about an incoming message, an update about a user joining
 
 We will often use this term further in the book.
 
+::: tabs key:libraries
+== Folds
+== Telethon
+== Other libraries
+<HelpNeeded/>
+:::
+
 ## The main challenge of developing bots { #limitations }
 
 **Updates are almost the only way to get any info about chats, messages, and users.**
+
+[//]: # (todo mark)
 
 Your program may not fetch the latest user's message or the list of chats where the bot belongs. 
 Telegram only gives info about the current user or the current chat in updates:
@@ -38,5 +47,5 @@ The same works for bots: when you run multiple bot programs on Telegram API, the
 ::: tip
 Moreover, there is a Telegram API trick to fetch old updates.
 For instance, it may be useful to get a list of bot users if it was not saved or the database was lost.
-[Docs](https://core.telegram.org/api/updates#recovering-gaps).
+[Docs](https://core.telegram.org/api/updates#recovering-gaps)
 :::

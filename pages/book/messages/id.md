@@ -17,7 +17,7 @@ In personal dialogs and regular groups, there are no common message IDs.
 The messages are numbered separately for each user — or, in our case, a bot. 
 The first message bot received or sent in any PM or group has ID = 1, the second one has ID = 2, and so on.
 
-## Using IDs
+## Special cases
 
 Although service messages (such as 'A user entered the chat' or 'The chat title has changed') 
 don't look like normal messages in the UI, they are still messages and thus have their own IDs.

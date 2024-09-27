@@ -11,10 +11,30 @@ Just like in groups, channel admins may select bot admin rights where the defaul
 
 ## Adding buttons to posts
 
-A use case for bots in channels is adding buttons: likes, links, and other.
+One use case for bots in channels is adding buttons: likes, links, and other.
+This was especially popular before message reactions were introduced in Telegram.
 
-This works with use of the "Edit messages of others" admin right: a bot may add buttons when editing messages. 
-
-Like this:
+Such features work with use of the "Edit messages of others" admin right: a bot may add buttons when editing messages. 
+Here is an example:
 
 ![Post with buttons](/pictures/ru/channel-buttons.png)
+
+::: tabs key:libraries
+== Folds
+```python
+from folds import Message
+
+...
+
+@bot.channel_message
+async def _(message: Message):
+    await message.edit(buttons=)
+```
+== Telethon
+== Other libraries
+<HelpNeeded/>
+:::
+
+## Paid posts
+
+[//]: # (todo)

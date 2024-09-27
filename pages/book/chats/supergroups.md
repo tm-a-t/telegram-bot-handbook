@@ -14,18 +14,62 @@ In fact, most of the groups you participate in are probably supergroups.
 
 The main trait of supergroups is that API considers them a special case of channels.
 
-I use the term "groups" both for regular groups and supergroups in this book. I've explained developing 
-group bots [on the page about groups](../chats/groups).
+::: tabs key:libraries
+== Telethon & Folds
+How to check the type of chat using API types:
+```python
+from telethon.tl.types import Chat, Channel, User
 
-## Creating supergroup
+if isinstance(chat, Channel) and chat.megagroup:
+    print('This is a supergroup')  # 'megagroup' is an API term for the same thing
+if isinstance(chat, Channel) and not chat.megagroup:
+    print('This is a real channel')
+if isinstance(chat, Chat):
+    print('This is a regular group')
+if isinstance(chat, User):
+    print('This is PM')
+```
+How to check the type of chat from an update using Telethon helpers:
+```python
+if message.is_group:
+    print('This is a supergroup or a regular group')
+if message.is_channel:
+    print('This is a channel or a supergroup')
+if message.is_private:
+    print('This is PM')
+```
+== Other libraries
+<HelpNeeded/>
+:::
 
-A regular group turns into a supergroup while certain settings are changed. 
+I use the term "groups" both for regular groups and supergroups in this book. 
+For more info about group bots, see [the page about groups.](../chats/groups)
+
+
+
+
+## Turning into a supergroup
+
+A regular group becomes a supergroup while certain settings are changed. 
 As technically the group is replaced with a supegroup (which is a new channel), its [chat ID](../chats/id) changes. 
+You may want to handle this event if you store the chats in a database:
+
+::: tabs key:libraries
+== Folds
+```python
+@bot.supergroup_created
+async def _():
+```
+== Telethon
+== Other libraries
+<HelpNeeded/>
+:::
+
 A supergroup cannot become a regular group again.
 
 ## Message and group IDs
 
-On the next page we will discuss [how group IDs are different in Bot API.](id#bot-api)
+On the next page we will discuss [how group IDs are different for groups and supergroups in Bot API.](id#bot-api)
 In addition, regular groups and supergroups are different in terms of how message ID work
 which we will also [discuss further.](../messages/id)
 

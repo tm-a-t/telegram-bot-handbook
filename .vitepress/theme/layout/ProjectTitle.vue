@@ -3,27 +3,30 @@ import {useRoute} from 'vitepress';
 import {computed} from 'vue';
 
 const route = useRoute();
-const name = computed(() => {
+const config = computed(() => {
   if (route.path.startsWith('/book') || route.path.startsWith('/ru/book')) {
-    return 'Book'
+    return {name: 'Book', showDivider: false}
   }
-  if (route.path.startsWith('/framework')) {
-    return 'Framework'
+  if (route.path.startsWith('/folds')) {
+    return {name: 'Folds', showDivider: true}
   }
   if (route.path.startsWith('/tgpy')) {
-    return 'TGPy'
+    return {name: 'TGPy', showDivider: true}
   }
+  return {name: '', showDivider: false}
 });
 </script>
 
 <template>
-  <Badge class="badge" type="tip" :text="name" v-if="name"/>
+  <span v-if="config.showDivider" class="divider">›</span>
+  <span v-else>&nbsp;</span>
+  {{ config.name }}
+<!--  <Badge class="badge" type="info" :text="name" v-if="name"/>-->
 </template>
 
 <style scoped>
-.badge {
-  position: relative;
-  top: 3px;
-  margin-left: 4px;
+.divider {
+  color: var(--vp-c-text-3);
+  margin: 0 6px;
 }
 </style>

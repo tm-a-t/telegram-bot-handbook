@@ -21,7 +21,8 @@ the rest will be ignored.
 In addition to them, a message may contain any number of username mentions. 
 (Only five mentions will work as a user notification though; see below.)
 
-Bot API allows specifying message markup in HTML or Markdown. Telegram API does not have this functionality built-in,
+Bot API allows specifying message markup in HTML or Markdown. 
+Telegram API, on the other hand, does not have this functionality built-in,
 but Telegram API libraries like Telethon and Pyrogram support similar syntax.
 
 ## Monospaced text

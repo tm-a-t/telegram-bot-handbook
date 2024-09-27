@@ -16,6 +16,16 @@ const sidebar: DefaultTheme.Sidebar = {
             ],
         },
         {
+            text: 'Messages',
+            items: [
+                {text: 'Sending', link: '/book/messages/sending'},
+                {text: 'Markup', link: '/book/messages/markup'},
+                {text: 'Commands', link: '/book/messages/commands'},
+                {text: 'Buttons', link: '/book/messages/buttons'},
+                {text: 'Message IDs', link: '/book/messages/id'},
+            ],
+        },
+        {
             text: 'Chats',
             items: [
                 {text: 'Users', link: '/book/chats/users'},
@@ -25,16 +35,6 @@ const sidebar: DefaultTheme.Sidebar = {
                 {text: 'Forums', link: '/book/chats/forums'},
                 {text: 'Supergroups', link: '/book/chats/supergroups'},
                 {text: 'Chat IDs', link: '/book/chats/id'},
-            ],
-        },
-        {
-            text: 'Messages',
-            items: [
-                {text: 'Sending', link: '/book/messages/sending'},
-                {text: 'Markup', link: '/book/messages/markup'},
-                {text: 'Commands', link: '/book/messages/commands'},
-                {text: 'Buttons', link: '/book/messages/buttons'},
-                {text: 'Message IDs', link: '/book/messages/id'},
             ],
         },
         {
@@ -60,13 +60,39 @@ const sidebar: DefaultTheme.Sidebar = {
         },
     ],
 
-    '/framework/': [
-        {text: 'Guide', link: '/framework/'},
-        {text: 'Examples', link: '#'},
+    '/folds/': [
+        {text: 'Overview', link: '/folds/'},
+        {
+            text: 'Tutorial',
+            items: [
+                {text: 'Quickstart', link: '/folds/tutorial/quickstart'},
+                {text: 'Simple Rules', link: '/folds/tutorial/rules'},
+                {text: 'Rule Types', link: '/folds/tutorial/rule-types'},
+                {text: 'Getters', link: '/folds/tutorial/getters'},
+                {text: 'Multiple Files', link: '/folds/tutorial/multiple-files'},
+            ]
+        },
+        {
+            text: 'Advanced Features',
+            items: [
+                {text: 'Admin Rules', link: '/folds/tutorial/admin'},
+                {text: 'Multiple Bots', link: '/folds/tutorial/multiple-bots'},
+            ],
+        },
+        {
+            text: 'Reference',
+            items: [
+            ],
+        },
+        {
+            text: 'Examples',
+            items: [
+            ],
+        },
     ],
 
     '/tgpy/': [
-        {text: 'Quickstart', link: '/tgpy/'},
+        {text: 'Overview', link: '/tgpy/'},
         {text: 'Installation', link: '/tgpy/installation'},
         {
             text: 'Beginner’s Guide',

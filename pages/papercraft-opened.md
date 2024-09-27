@@ -17,7 +17,7 @@ renamed and reworked
 
 changelist
 
-## Papercraft Framework
+## Folds Framework
 
 Brand new framework for developing bots with Telegram API!
 

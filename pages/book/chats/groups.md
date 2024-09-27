@@ -4,13 +4,13 @@ Group bots are powerful.
 They provide features in groups — the space people talk to each other.
 There is a lot of details to consider though.
 
-## Adding bots to groups
+## Joining groups
 
 Users can add bots to groups, but bots cannot join groups by their own. 
-A bot's developer can forbid adding to groups [using BotFather settings](../dev/botfather).
+The bot's developer can forbid adding to groups [using BotFather settings.](../dev/botfather)
 
 In public groups, which means groups with usernames, bots can only be added by admins. 
-Group admins can grant the bot admin rights to allow deleting group members and doing other admin actions.
+Group admins can grant the bot the rights for deleting group members or other admin actions.
 
 A group may contain up to 20 bots.
 
@@ -22,20 +22,47 @@ async def _(chat: Chat):
     return 'Hello ' + chat.title
 ```
 == Telethon
-b content 2
 == Other libraries
 <HelpNeeded/>
 :::
 
-![Bot highlight example](/pictures/ru/highlighter.png)
-
 ## Sending messages to group members
+
+Some examples of sending messages:
+
+::: tabs key:libraries
+== Folds
+```python
+@bot.group_message
+async def _(chat: Chat):
+    return 'Hello ' + chat.title
+```
+== Telethon
+== Other libraries
+<HelpNeeded/>
+:::
 
 Group messages are visible to all members. There is no way for a bot to show a message to one person only.
 For example, if a bot greets new members, all members will receive the message.
 
-To keep the chat clean, the bot can delete auxiliary messages in some time. If your bot has to write personal messages
-to users, [join requests](../interaction/join-requests) may be useful to get PM permission.
+To keep the chat clean, the bot can delete auxiliary messages in some time.
+Here is an example of deleting greeting messages in 30 seconds (unless the program is interrupted):
+
+::: tabs key:libraries
+== Folds
+```python
+from asyncio import sleep
+
+    answer = await message.respond(f'Welcome to the group, {user.first_name}')
+    await sleep(30)
+    await answer.delete()
+```
+== Telethon
+== Other libraries
+<HelpNeeded/>
+:::
+
+Note that if your bot has to write personal messages to users, [join requests](../interaction/join-requests) may be useful to get PM permission.
 
 ## Privacy mode and visible messages { #privacy }
 
@@ -94,6 +121,51 @@ Your program should correctly handle messages sent by other entities:
 - Messages from a linked channel in a discussion group (API treats them as forwarded)
 - Messages from a group by anonymous group admins
 - Messages from public channels by premium users
+
+### Examples
+
+Determining chat type (e.g. for storing in a database:)
+
+::: tabs key:libraries
+== Folds
+```python
+from folds import UseSender
+from telethon.tl.types import Chat, Channel, User
+
+...
+
+@bot.group_message
+async def _(sender: UseSender):
+    if isinstance(sender, User):
+        print('Message from user')
+    if isinstance(sender, Chat):
+        print('Message from group')
+    if isinstance(sender, Channel):
+        print('Message from channel or supergroup')
+```
+== Telethon
+== Other libraries
+<HelpNeeded/>
+:::
+
+Getting sender's name:
+
+::: tabs key:libraries
+== Folds
+```python
+from folds import UseSender
+
+...
+
+@bot.group_commands.hello
+async def _(sender: UseSender):
+    name = sender.first_name or sender.title  # one of these is not None
+    return f'Hello {name}'
+```
+== Telethon
+== Other libraries
+<HelpNeeded/>
+:::
 
 ## Related links
 

@@ -28,8 +28,10 @@ const { Layout } = DefaultTheme
 </template>
 
 <style scoped>
-/* Hide "Russian" button if no Russian version available */
-.Layout:not(.has-russian-translation) :deep(.translations [href^='/ru/']) {
-  display: none;
+/* .Layout:not(.has-russian-translation) :deep(.translations) {
+  opacity: 0;
+  pointer-events: none;
+  cursor: inherit;
 }
+*/
 </style>

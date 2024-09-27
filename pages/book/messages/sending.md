@@ -1,4 +1,4 @@
-# Telegram Bots Sending, Editing, and Forwarding Messages
+# How Telegram Bots Send, Edit, and Forward Messages
 
 This page collects some tips about what bots can and cannot do with Telegram messages.
 In short, they can send, edit, and delete messages just like users, but all actions have some corner cases. 
@@ -12,12 +12,45 @@ pictures, videos, files, polls, voice messages, stickers, and so on.
 
 Unlike users, bots may also add [buttons](../messages/buttons) to its messages.
 
+### Examples
+
+::: tabs key:libraries
+== Telethon & Folds
+One of many ways to send a message with a file:
+
+```python
+await client.send_message(
+    chat_id,
+    'Hello World', 
+    file='path.txt'
+)
+```
+== Other libraries
+<HelpNeeded/>
+:::
+
 ### When is it forbidden to send messages?
 
-A bot may not send messages to a user who [blocked it](../chats/pm#block).
+A bot may not send messages to a user who [blocked it.](../chats/pm#block)
 A bot may not send messages in a channel or group where the bot is not a member or the admins have restricted sending messages.
 
 Premium users can forbid sending voice messages to them (including those round videos.)
+
+::: tabs key:libraries
+== Telethon & Folds
+```python
+from telethon.errors import UserIsBlockedError
+
+...
+
+try:
+    await client.send_message('')
+except UserIsBlockedError:
+    print('Bad :(')    
+```
+== Other libraries
+<HelpNeeded/>
+:::
 
 ### What are albums?
 
@@ -46,24 +79,41 @@ Developers of popular bots can contact the tech support and ask to increase the 
 
 ## Editing
 
-Unlike users, when bot edits a message, the note "Edited" does not appear on a message.
+Unlike users, when bot edits a message, the message does not get the "Edited" note.
+
+### Examples
+
+::: tabs key:libraries
+== Telethon & Folds
+== Other libraries
+<HelpNeeded/>
+:::
 
 ### How to edit media? { #edit-media }
 
 While editing a message, one can edit its media as well as the text.
 A picture, video, or file can be replaced with another picture, video, or file (music counts as files too.)
-Media can't be added to messages sent without media.
+However, media can't be added to messages sent without media.
 
 ## Forwarding
 
-When one forwards a music file, it doesn't get the "Forwarded" label. Strange Telegram rules.
+When a user or a bot forwards a music file, it doesn't get the "Forwarded" label. Strange Telegram rules.
+
+[//]: # (todo :shrug:)
 
 It is not allowed to forward messages from groups and channels with the "protected content" setting turned on.
 
+### Examples
+
+::: tabs key:libraries
+== Telethon & Folds
+== Other libraries
+<HelpNeeded/>
+:::
+
 ## Interacting with messages
 
-Bots cannot react to messages. They cannot vote in polls either: however, they can send all kinds of polls.
-
+Bots cannot react to messages. They cannot vote in polls either; however, they can send all kinds of polls.
 
 ## Related links
 

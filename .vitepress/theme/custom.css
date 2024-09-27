@@ -19,3 +19,18 @@
     /*filter: drop-shadow(10px 6px 24px #8d8fba);*/
     filter: drop-shadow(2px 4px 4px #4d4f8e);
 }
+
+
+/* Dirty tweaks for translate button */
+.VPNavBar .VPNavBarSearch {
+    order: -2;
+}
+
+.VPNavBar .translations {
+    order: -1;
+    flex-direction: row-reverse;
+}
+
+.Layout:not(.has-russian-translation) .translations {
+    display: none;
+}

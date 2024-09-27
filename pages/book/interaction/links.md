@@ -1,7 +1,7 @@
 # Creating Links to Bots
 
 Links are a common entry point to using a bot. 
-Deep links can be used for starting bot dialogs with some extra input.
+_Deep links_ can be used for starting bot dialogs with some extra input.
 
 ## Regular links
 

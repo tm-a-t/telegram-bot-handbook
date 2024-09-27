@@ -22,9 +22,9 @@ features:
     link: /book/
     linkText: Read
   - icon: 🎨
-    title: Folds
-    details: Write elegant and scalable bot apps in Python.
-    link: /framework/
+    title: Folds Framework
+    details: Develop elegant and scalable bot apps in Python.
+    link: /folds/
     linkText: Learn
   - icon: 🪄
     title: TGPy

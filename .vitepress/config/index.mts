@@ -55,8 +55,10 @@ export default defineConfig({
         }
     },
     themeConfig: {
+        logo: '/logo.png',
+        externalLinkIcon: true,
         footer: {
-            message: 'Papercraft by tmat.'
+            message: 'Papercraft. Created by tmat (Artyom Ivanov)'
         },
         editLink: {
             pattern: 'https://github.com/tm-a-t/papercraft/edit/main/:path',
@@ -72,7 +74,7 @@ export default defineConfig({
         nav: [
             {text: 'Papercraft is here 🎉', link: '/papercraft-opened'},
             {text: 'Book', link: '/book/', activeMatch: '/book/'},
-            {text: 'Framework', link: '/framework/', activeMatch: '/framework/'},
+            {text: 'Folds', link: '/folds/', activeMatch: '/folds/'},
             {
                 text: 'TGPy',
                 link: '/tgpy/',

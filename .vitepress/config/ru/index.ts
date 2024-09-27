@@ -8,6 +8,7 @@ const ruConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
 
     ],
     themeConfig: {
+        logoLink: '/',
         sidebarMenuLabel: 'Меню',
         returnToTopLabel: 'Наверх',
         darkModeSwitchLabel: 'Тёмная тема',
