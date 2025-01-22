@@ -33,7 +33,7 @@ Folds is built on top of Telethon, a Telegram API library. This means Folds work
 - Reuse code for userbots. 
   When you are familiar with Telethon concepts, 
   you can not only program bots with Folds but also program user accounts.
-  In particular, our Telegram script tool named [TGPy](/tgpy) is also based on Telethon.
+  In particular, our Telegram script tool named [TGPy](/tgpy/index) is also based on Telethon.
 
 #### Cons
 
