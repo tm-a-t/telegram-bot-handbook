@@ -1,13 +1,11 @@
 # Folds
 
-Folds is an elegant and scalable framework for bots.
+Folds is an elegant and scalable framework for bots, wrapping Telethon library.
 
-- Minimalistic when you need simple features, powerful when you need complex.
-- Flexible app structure with no boilerplate and no imports in the middle of files
-- Easy support for multiple bots
+- Minimalistic when you need simple features, powerful when you need complex ones.
+- Flexible app structure with no boilerplate and no imports in the middle of files.
+- Easy support for multi-bot apps.
 - Built with Telegram API without Bot API — I explain it below.
-
-Papercraft is a wrapper for Telethon library.
 
 ```python
 from paper import create_bot, Message
@@ -25,7 +23,7 @@ if __name__ == '__main__':
 
 ## Built with Telegram API
 
-Folds is built on top of Telethon, a Telegram API library. This means it works without Bot API.
+Folds is built on top of Telethon, a Telegram API library. This means Folds works without Bot API.
 
 #### Pros
 
@@ -39,7 +37,7 @@ Folds is built on top of Telethon, a Telegram API library. This means it works w
 
 #### Cons
 
-- Setting up requires an extra little step.
+- Setting up requires a little extra step.
 
 ## Reload the app when edited
 

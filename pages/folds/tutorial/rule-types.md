@@ -1,6 +1,6 @@
-# Rule Types
+# Rule Kinds
 
-## Common rule types
+## Common rule kinds
 
 A bunch of examples for Telegram events supported in Folds.
 
@@ -58,9 +58,9 @@ async def _():
     return 'This group has just became supergroup'
 ```
 
-See Papercraft Book on [group bots](../../book/chats/groups) and [supergroups.](../../book/chats/supergroups)
+See the Papercraft Book on [group bots](../../book/chats/groups) and [supergroups.](../../book/chats/supergroups)
 
-## Combining rule types
+## Combining rule kinds
 
 Folds decorators don't change the function,
 so you can combine several of them to declare common logic:

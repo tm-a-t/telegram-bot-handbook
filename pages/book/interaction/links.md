@@ -32,7 +32,7 @@ There is a variant of deep links for groups as well.
 The link of form `t.me/examplebot?startgroup=YOUR_TEXT` opens a chat selection dialog to add the bot;
 once the bot is added, the command `/start YOUR_TEXT` will immediately be sent to the group.
 
-## About `tg://` links
+## Using `tg://` links
 
 All links that we considered above also have `tg://` equivalents. These are direct links that can be opened within the app:
 

@@ -67,7 +67,7 @@ const sidebar: DefaultTheme.Sidebar = {
             items: [
                 {text: 'Quickstart', link: '/folds/tutorial/quickstart'},
                 {text: 'Simple Rules', link: '/folds/tutorial/rules'},
-                {text: 'Rule Types', link: '/folds/tutorial/rule-types'},
+                {text: 'Rule Kinds', link: '/folds/tutorial/rule-types'},
                 {text: 'Getters', link: '/folds/tutorial/getters'},
                 {text: 'Multiple Files', link: '/folds/tutorial/multiple-files'},
             ]

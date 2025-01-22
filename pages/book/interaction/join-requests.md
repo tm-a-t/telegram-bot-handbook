@@ -1,7 +1,7 @@
 # Managing Join Requests as a Telegram Bot
 
-The "Interaction" chapter of the Papercraft Book starts here. 
-It is dedicated to using bots beyond messages and commands. 
+The "Interaction" chapter of the Papercraft Book starts here; 
+it is dedicated to using bots beyond messages and commands. 
 Let's talk about the notion of join requests in groups and channels.
 
 ## What are join requests

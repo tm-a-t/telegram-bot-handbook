@@ -58,7 +58,7 @@ export default defineConfig({
         logo: '/logo.png',
         externalLinkIcon: true,
         footer: {
-            message: 'Papercraft. Created by tmat (Artyom Ivanov)'
+            message: 'Papercraft. Created by Artyom Ivanov aka tmat'
         },
         editLink: {
             pattern: 'https://github.com/tm-a-t/papercraft/edit/main/:path',

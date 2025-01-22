@@ -52,7 +52,7 @@ except UserIsBlockedError:
 <HelpNeeded/>
 :::
 
-### What are albums?
+### Why are albums so strange?
 
 An album is multiple messages with pictures which are displayed like one message in Telegram apps.
 
@@ -64,7 +64,7 @@ to 2 GB.
 
 ### How frequently can a bot send messages?
 
-Of course, Telegram won't let you spam. The following average limits are named:
+Telegram won't let you spam, of course. The following average limits are named:
 
 - No more than a message per second in a chat.
 - No more than 30 messages per second in all chats.

@@ -52,3 +52,5 @@ async def _(message: Message, chat: UseChat):
 
 Bots can open, edit, and close topics just like users. 
 Depending on the forum settings this may require special admin rights.
+
+todo https://core.telegram.org/api/threads

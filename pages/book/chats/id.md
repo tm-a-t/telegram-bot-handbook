@@ -1,9 +1,6 @@
 # How IDs of Users and Chats Work
 
 Each user, bot, group, or channel has an invariable ID. 
-
-~~Official Telegram apps don't show IDs. Use unofficial apps or bots [like this](https://t.me/getmyid_bot) when you need 
-to manually learn specific user or chat IDs.~~
 You can now enable showing chat IDs in Telegram macOS settings or Telegram Desktop experimental settings.
 
 ::: warning
@@ -21,7 +18,7 @@ Thus, a channel with an actual ID `1356415630` has ID `-1001356415630` in Bot AP
 Although Telethon and Folds libraries don't use Bot API, sometimes they utilize the ID format from Bot API.
 Thus, `message.chat_id` starts with `-100` in case of channels or supergroups.
 
-For converting between ID formats, see functions `get_peer_id` and `resolve_id` from `telethon.utils`.
+You can convert between ID formats using `telethon.utils.get_peer_id` and `telethon.utils.resolve_id`.
 :::
 
 ## Bot ID in its token
