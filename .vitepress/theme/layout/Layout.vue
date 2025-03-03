@@ -3,7 +3,6 @@ import DefaultTheme from 'vitepress/theme'
 import ProjectTitle from './ProjectTitle.vue'
 import Metrika from './Metrika.vue'
 import LangCookie from './LangCookie.vue'
-import CookieConsent from "./CookieConsent.vue"
 import {
   NolebaseHighlightTargetedHeading,
 } from '@nolebase/vitepress-plugin-highlight-targeted-heading/client'
@@ -20,7 +19,6 @@ const { Layout } = DefaultTheme
       <ClientOnly>
         <NolebaseHighlightTargetedHeading/>
         <Metrika/>
-        <CookieConsent/>
         <LangCookie/>
       </ClientOnly>
     </template>
