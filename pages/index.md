@@ -7,22 +7,15 @@ hero:
   image:
     src: /logo.png
     alt: VitePress
-#  actions:
-#    - theme: brand
-#      text: Read the book
-#      link: /book/
-#    - theme: alt
-#      text: View on GitHub
-#      link: https://github.com/tm-a-t/papercraft
 
 features:
   - icon: 📘
-    title: Papercraft Book
+    title: Papercraft Book (Soon)
     details: Learn to develop user-friendly, featureful, and stable bots.
-    link: /book/
-    linkText: Read
+#    link: /book/
+#    linkText: Read
   - icon: 🎨
-    title: Folds Framework
+    title: Folds
     details: Develop elegant and scalable bot apps in Python.
     link: /folds/
     linkText: Learn

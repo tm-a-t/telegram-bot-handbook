@@ -23,17 +23,16 @@ const members = [
       { icon: 'github', link: 'https://github.com/tm-a-t' },
     ]
   },
-  {
-    name: '???',
-    title: 'Editor',
-    links: [
-      { icon: 'github', link: 'https://github.com/tm-a-t' },
-    ]
-  },
 ]
 </script>
 
 
+
+::: warning
+This book is incomplete. If I didn't give you the link here, I have no idea why you are here. (Uh, welcome?)
+:::
+
+<br>
 
 # Papercraft Book
 

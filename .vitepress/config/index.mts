@@ -72,8 +72,7 @@ export default defineConfig({
             },
         },
         nav: [
-            {text: 'Papercraft is here 🎉', link: '/papercraft-opened'},
-            {text: 'Book', link: '/book/', activeMatch: '/book/'},
+            // {text: 'Book', link: '/book/', activeMatch: '/book/'},
             {text: 'Folds', link: '/folds/', activeMatch: '/folds/'},
             {
                 text: 'TGPy',
