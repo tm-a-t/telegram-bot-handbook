@@ -65,28 +65,24 @@ const sidebar: DefaultTheme.Sidebar = {
         {
             text: 'Tutorial',
             items: [
-                {text: 'Quickstart', link: '/folds/tutorial/quickstart'},
+                {text: 'Quick Start', link: '/folds/tutorial/quick-start'},
                 {text: 'Simple Rules', link: '/folds/tutorial/rules'},
-                {text: 'Rule Kinds', link: '/folds/tutorial/rule-types'},
-                {text: 'Getters', link: '/folds/tutorial/getters'},
+                {text: 'Rule Kinds', link: '/folds/tutorial/rule-kinds'},
+                {text: 'Arguments', link: '/folds/tutorial/arguments'},
                 {text: 'Multiple Files', link: '/folds/tutorial/multiple-files'},
             ]
         },
         {
             text: 'Advanced Features',
             items: [
-                {text: 'Admin Rules', link: '/folds/tutorial/admin'},
-                {text: 'Multiple Bots', link: '/folds/tutorial/multiple-bots'},
+                {text: 'Admin Rules', link: '/folds/advanced/admin'},
+                {text: 'Multiple Bots', link: '/folds/advanced/multiple-bots'},
             ],
         },
         {
-            text: 'Reference',
+            text: 'Learn',
             items: [
-            ],
-        },
-        {
-            text: 'Examples',
-            items: [
+                {text: 'Examples', link: '/folds/examples'},
             ],
         },
     ],

@@ -29,4 +29,20 @@ pip install folds
 
 todo
 
-## Reload
+## Reload the app when edited
+
+::: warning
+This is an experimental feature: it may break.
+:::
+
+If your program is a Python module (which means a directory with `__init__.py`,) you can run it with command:
+
+```shell
+python -m paper.reload app
+```
+
+Now, your program will restart every time you change files in the app directory.
+
+## Session
+
+There is a special Telethon bot session file that is stored in `.folds/bot12345.session` by default.

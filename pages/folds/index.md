@@ -7,23 +7,35 @@ Folds is an elegant and scalable framework for bots, wrapping Telethon library.
 - Easy support for multi-bot apps.
 - Built with Telegram API without Bot API — I explain it below.
 
-```python
-from paper import create_bot, Message
+```python 
+from folds import Bot, Message, ThisUser
 
-bot = create_bot(...)
+bot = Bot(bot_token, api_id, api_hash, parse_mode='html')
 
-@bot.group_message
-async def _(message: Message):
-    await message.reply('Hello world')
 
-    
+@bot.added_to_group
+async def added():
+  return 'Hello!'
+
+
+@bot.group_commands.help
+async def on_help_command():
+  return 'You called for /help?'
+
+
+@bot.group_commands.hello
+async def on_hello_command(message: Message, user: ThisUser):
+  await message.reply('Hmm!')
+  await message.reply(f'Hello, {user.first_name}')
+
+
 if __name__ == '__main__':
-    bot.run()
+  bot.run()
 ```
 
 ## Built with Telegram API
 
-Folds is built on top of Telethon, a Telegram API library. This means Folds works without Bot API.
+Folds is built on top of Telethon, a Telegram API library. This means Folds doesn't use Bot API.
 
 #### Pros
 
@@ -39,60 +51,14 @@ Folds is built on top of Telethon, a Telegram API library. This means Folds work
 
 - Setting up requires a little extra step.
 
-## Reload the app when edited
-
-If your program is a Python module (which means a directory with `__init__.py`,) you can run it with command:
-
-```shell
-python -m paper.reload app
-```
-
-Now, your program will restart every time you change files in the app directory.
-
-
-
-## Multiple files
-
-You can define some rules in separate files.
-
-```python
-my_logic = Logic()
-
-@my_logic.group_message
-```
-
-## Multiple bots 
-
-Your app can handle multiple bots at once, because I believe in Unix way for Telegram bots :)
-
-```python
-app = App(...)
-bot1 = app.bot(token=...)
-bot2 = app.bot(token=...)
-
-app.run()
-```
-
-## Admin rules
-
-```python
-app = App(admin=SimpleAdmin(user_ids=[123123123], chat_id=5253151345))
-
-@bot.admin_commands
-```
-
 ## Learn
 
-- Telethon
-- Book
-- Contact me
+Here is how to get familiar with Folds:
+- Read these docs, of course. I tried to make them friendly!
+- Read [the Telethon docs](https://docs.telethon.dev) because Folds bases on Telethon. 
+  ChatGPT knows Telethon well, apparently.
+- Join the chat and ask questions: [@sdlof](https://t.me/sdlof)
 
-todo
+## Getting Started
 
-```python
-@logic.on(events.NewMessage)
-```
-
-`data/bot12345.session`
-
-context
+Head over to [Quick Start.](./tutorial/quick-start)

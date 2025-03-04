@@ -2,22 +2,23 @@
 
 With Folds, you write simple code and complicate it when needed.
 
-The most common scenario for bot to is to process a user command or another event and reply with a message.
+The most common scenario for bot to is to process a user command and reply with a message.
 So you can just return a string:
 
 ```python
 @bot.private_commands.help
-async def _():
+async def f():
     return 'I am a tutorial bot'
 ```
 
-From now on, when a user writes `/help` in private messages, the bot will answer with our text.
+With this code, whenever a user writes `/help` in private messages, the bot will answer with our text.
 
-Also notice how I used `_` as a function name here.
-This is simply because we don't need the function name. 
-If you want, you can still give your functions meaningful names.
+You may have noticed that I named the function `f`.
+We won't use the function name anywhere, so it doesn't really matter. 
+I like `f` because it's simple and looks nice.
+You can instead use `_` or give functions meaningful names.
 
-If we need a text of user's message, we can accept it as an argument:
+If we are interested in the text of the incoming message, we can accept it as an argument:
 
 ```python
 @bot.private_message
@@ -28,7 +29,7 @@ async def _(text: str):
         return "I don't know what you're talking about. Want some tea?"
 ```
 
-And for more complex scenarios, we can accept the [Message object:](https://docs.telethon.dev/en/stable/quick-references/objects-reference.html)
+And for more complex scenarios, we can accept the [Message](https://docs.telethon.dev/en/stable/quick-references/objects-reference.html) object:
 
 ```python
 from folds import Message
@@ -46,8 +47,11 @@ async def _(message: Message):
 
 As we've seen, `return '...'` is useful when you want to tell the user you're finished.
 
-If you want to send messages in other times, you can always use the Telethon methods.
-Let's quickly overview the three methods I usually use:
+Of course, you may want to send messages in other cases: 
+maybe send multiple messagees, send a message with a file, or send a message and then do something else.
+Then, you can use Telethon methods. 
+
+Here are some methods that may be helpful:
 
 - `message.respond()` is the shortcut to send a new message to the same chat as `message`
 - `message.reply()` is the shortcut to send a new message as a reply to `message`
