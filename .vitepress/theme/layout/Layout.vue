@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import DefaultTheme from 'vitepress/theme'
 import ProjectTitle from './ProjectTitle.vue'
-import Metrika from './Metrika.vue'
 import LangCookie from './LangCookie.vue'
 import {
   NolebaseHighlightTargetedHeading,
@@ -18,7 +17,6 @@ const { Layout } = DefaultTheme
     <template #nav-bar-content-before>
       <ClientOnly>
         <NolebaseHighlightTargetedHeading/>
-        <Metrika/>
         <LangCookie/>
       </ClientOnly>
     </template>
