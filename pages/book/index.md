@@ -27,13 +27,6 @@ const members = [
 </script>
 
 
-
-::: warning
-This book is incomplete. If I didn't give you the link here, I have no idea why you are here. (Uh, welcome?)
-:::
-
-<br>
-
 # Papercraft Book
 
 Welcome to Papercraft Book!
@@ -41,6 +34,10 @@ This is your guide to developing user-friendly, featureful, and stable bots for 
 The book is independent of any specific programming language or library.
 In fact, it includes examples for different libraries,
 and I will gladly accept contributions from readers who add examples for more libraries.
+
+::: warning
+Hey! This book is incomplete for now.
+:::
 
 [//]: # (It is designed to be used together with library docs and Telegram API reference.)
 

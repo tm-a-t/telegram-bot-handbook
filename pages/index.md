@@ -16,7 +16,7 @@ features:
     linkText: Learn
   - icon: 🪄
     title: TGPy
-    details: Run Python code in Telegram messages. Automate your messages and explore Telegram API.
+    details: Run Python code in Telegram chats. Automate your messages and explore Telegram API.
     link: /tgpy/
     linkText: Explore
   - icon: 📘
