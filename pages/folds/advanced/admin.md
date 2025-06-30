@@ -11,11 +11,11 @@ You can specify the list of user ids — and the chat id, if you have a group fo
 admin_config = SimpleAdmin(user_ids=[111111111, 222222222], chat_id=999999999)
 bot = Bot(..., admin=admin_config)
 
-@bot.admin.private_command.stats
+@bot.admin.private_command.stats()
 async def f():
     return 'An admin sent /stats to PM!'
 
-@bot.admin.group_command.stats
+@bot.admin.group_command.stats()
 async def f():
     return 'Someone sent /stats to the admin group!'
 ```

@@ -22,7 +22,7 @@ If we are interested in the text of the incoming message, we can accept it as an
 
 ```python
 @bot.private_message
-async def _(text: str):
+async def f(text: str):
     if text == 'hi':
         return 'Hello!'
     else:
@@ -37,7 +37,7 @@ from folds import Message
 ...
 
 @bot.private_message
-async def _(message: Message):
+async def f(message: Message):
     if message.photo is not None:
         await message.download_media()
         return f'I downloaded the photo you sent at {message.date}'
@@ -48,15 +48,15 @@ async def _(message: Message):
 As we've seen, `return '...'` is useful when you want to tell the user you're finished.
 
 Of course, you may want to send messages in other cases: 
-maybe send multiple messagees, send a message with a file, or send a message and then do something else.
+maybe send multiple messages, send a message with a file, or send a message and then do something else.
 Then, you can use Telethon methods. 
 
 Here are some methods that may be helpful:
 
 - `message.respond()` is the shortcut to send a new message to the same chat as `message`
 - `message.reply()` is the shortcut to send a new message as a reply to `message`
-- `client.send_message()` is the main function that sends any message to any chat.
-The `client` object here represents the current Telethon's Telegram client and can be imported from `folds.context`
+- `client.send_message()` is the general function that sends a message to some chat.
+The `client` object here represents the current Telethon's Telegram client and can be imported from `folds.context`.
 
 
 ```python
@@ -65,8 +65,8 @@ from folds.context import client
 
 ...
 
-@bot.private_message
-async def _(message: Message):
+@bot.private_message()
+async def f(message: Message):
     await message.respond('Searching for your query...')
     picture_url = ...  # find picture url for message.text
     await message.reply('Your result', file=picture_url)

@@ -13,7 +13,7 @@ When you declare the rules with typed parameters, Folds provides the arguments a
 ## Example
 
 ```python
-@bot.group_message
+@bot.group_message()
 async def f(chat: ThisChat):
     # Now, Telethon has resolved the chat even if 
     # the chat info didn't come with the update 
@@ -23,7 +23,7 @@ async def f(chat: ThisChat):
 If rewritten without `ThisChat`, the code becomes:
 
 ```python
-@bot.group_message
+@bot.group_message()
 async def f(message: Message):
     chat = await message.get_chat()
     return f'I got a message from {chat.title}'

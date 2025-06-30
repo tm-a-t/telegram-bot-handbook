@@ -9,7 +9,7 @@ from folds import skill
 
 skill = Skill()
 
-@skill.private_message
+@skill.private_message()
 async def f():
     return 'Hi'
 
@@ -35,7 +35,7 @@ from folds.context import bot, client
 
 skill = Skill()
 
-@skill.private_message
+@skill.private_message()
 async def f():
     print(bot, client)
     return 'You are speaking to @' + client.me.username

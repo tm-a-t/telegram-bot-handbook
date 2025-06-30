@@ -35,7 +35,7 @@ todo
 This is an experimental feature: it may break.
 :::
 
-If your program is a Python module (which means a directory with `__init__.py`,) you can run it with command:
+If your program is a Python module (which means a directory with `__init__.py`,) you can run it with the command:
 
 ```shell
 python -m paper.reload app

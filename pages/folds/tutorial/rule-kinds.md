@@ -11,18 +11,18 @@ Note that if an event satisfies multiple rules, all of them will activate.
 
 ::: code-group
 ```python [Private Message]
-@bot.private_message
-async def _():
+@bot.private_message()
+async def f():
     return 'I received a private message'
 ```
 ```python [Group Message]
-@bot.group_message
-async def _():
+@bot.group_message()
+async def f():
     return 'I received a message in a group'
 ```
 ```python [Channel Message]
-@bot.channel_message
-async def _():
+@bot.channel_message()
+async def f():
     return 'I received a message in a channel'
 ```
 :::
@@ -31,13 +31,13 @@ async def _():
 
 ::: code-group
 ```python [Command in PM]
-@bot.private_commands.hello
-async def _():
+@bot.private_commands.hello()
+async def f():
     return 'I received /hello in PM'
 ```
 ```python [Command in Group]
-@bot.group_commands.hello
-async def _():
+@bot.group_commands.hello()
+async def f():
     return 'I received /hello in a group'
 ```
 :::
@@ -46,18 +46,18 @@ async def _():
 
 ::: code-group
 ```python [Added to Group]
-@bot.added_to_group
-async def _():
+@bot.added_to_group()
+async def f():
     return 'Someone added me to a group'
 ```
 ```python [Removed from Group]
-@bot.removed_from_group
-async def _():
+@bot.removed_from_group()
+async def f():
     pass  # The bot was removed from a group
 ```
 ```python [Group Became Supergroup]
-@bot.group_became_supergroup
-async def _():
+@bot.group_became_supergroup()
+async def f():
     return 'This group has just became supergroup'
 ```
 :::
@@ -69,7 +69,7 @@ async def _():
 #### Supporting inline mode
 
 ```python
-@bot.inline_query
+@bot.inline_query()
 async def f():
     pass  # Someone used an inline mode
 ```
@@ -78,7 +78,7 @@ async def f():
 ```python
 from folds import Query
 
-@bot.inline_query
+@bot.inline_query()
 async def f(query: Query):
     await query.answer([
         query.builder.article('Option A', text='This is some text'),
@@ -92,9 +92,9 @@ async def f(query: Query):
 You may combine the decorators to declare some common logic:
 
 ```python
-@bot.group_command.help
-@bot.private_command.help
-async def _():
+@bot.group_command.help()
+@bot.private_command.help()
+async def f():
     return 'I will always help you'
 ```
 
@@ -107,6 +107,6 @@ Folds supports Telethon events:
 from telethon import events
 
 @bot.on(events.CallbackQuery())
-async def _():
+async def f():
     ...
 ```

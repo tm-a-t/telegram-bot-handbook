@@ -10,27 +10,26 @@ Folds is an elegant and scalable framework for bots, wrapping Telethon library.
 ```python 
 from folds import Bot, Message, ThisUser
 
-bot = Bot(bot_token, api_id, api_hash, parse_mode='html')
+bot = Bot(bot_token, api_id, api_hash)
 
 
-@bot.added_to_group
-async def added():
+@bot.added_to_group()
+async def handle_added():
   return 'Hello!'
 
 
-@bot.group_commands.help
-async def on_help_command():
+@bot.group_commands.help()
+async def handle_help_command():
   return 'You called for /help?'
 
 
-@bot.group_commands.hello
-async def on_hello_command(message: Message, user: ThisUser):
+@bot.group_commands.hello()
+async def handle_hello_command(message: Message, user: ThisUser):
   await message.reply('Hmm!')
   await message.reply(f'Hello, {user.first_name}')
 
 
-if __name__ == '__main__':
-  bot.run()
+bot.run()
 ```
 
 ## Built with Telegram API
@@ -40,7 +39,7 @@ Folds is built on top of Telethon, a Telegram API library. This means Folds does
 #### Pros
 
 - No limitations.
-  Bot API has natural limitations that Folds doesn't:
+  Folds doesn't have natural limitations that Bot API has:
   see [the API explanation](/book/dev/api) and [the comparison table](/book/appendix/api-comparison) for details.
 - Reuse code for userbots. 
   When you are familiar with Telethon concepts, 
@@ -50,6 +49,10 @@ Folds is built on top of Telethon, a Telegram API library. This means Folds does
 #### Cons
 
 - Setting up requires a little extra step.
+
+## Should I use it?
+
+The framework is in its early version, so the features will change. 
 
 ## Learn
 
