@@ -1,16 +1,16 @@
 # How Telegram Bots Send, Edit, and Forward Messages
 
-This page collects some tips about what bots can and cannot do with Telegram messages.
-In short, they can send, edit, and delete messages just like users, but all actions have some corner cases. 
-For example, you may encounter errors when you try to send a voice message to a premium user or add a picture 
-to a message that was already sent.
+This page provides tips about what bots can and cannot do with Telegram messages.
+In short, bots can send, edit, and delete messages just like users, but there are some limitations and corner cases. 
+For example, you may encounter errors when trying to send a voice message to a premium user or when attempting to add a picture 
+to a message that was already sent without media.
 
 ## Sending messages
 
-Bots can send and receive messages just like users. Those can be either just text messages or messages with media: 
-pictures, videos, files, polls, voice messages, stickers, and so on.
+Bots can send and receive messages just like users. These messages can be simple text or include media such as 
+pictures, videos, files, polls, voice messages, stickers, and more.
 
-Unlike users, bots may also add [buttons](../messages/buttons) to its messages.
+Unlike users, bots can also add [buttons](../messages/buttons) to their messages.
 
 ### Examples
 
@@ -32,9 +32,9 @@ await client.send_message(
 ### When is it forbidden to send messages?
 
 A bot may not send messages to a user who [blocked it.](../chats/pm#block)
-A bot may not send messages in a channel or group where the bot is not a member or the admins have restricted sending messages.
+A bot may not send messages in a channel or group where the bot is not a member or where admins have restricted sending messages.
 
-Premium users can forbid sending voice messages to them (including those round videos.)
+Premium users can restrict receiving voice messages (including round videos).
 
 ::: tabs key:libraries
 == Telethon & Folds
@@ -54,7 +54,7 @@ except UserIsBlockedError:
 
 ### Why are albums so strange?
 
-An album is multiple messages with pictures which are displayed like one message in Telegram apps.
+An album is a collection of multiple media messages (such as photos or videos) that are displayed as a single grouped message in Telegram apps.
 
 ### What are the file limits? { #file-limits }
 
@@ -70,16 +70,17 @@ Telegram won't let you spam, of course. The following average limits are named:
 - No more than 30 messages per second in all chats.
 - No more than 20 messages per minute in a group.
 
-There is no such option as sending messages to all users at once. If you want to broadcast some information among all 
-bot users, you'll have to send messages gradually.
+There is no built-in functionality to send messages to all users simultaneously. 
+If you need to broadcast information to all bot users, 
+you'll need to implement a system to send messages gradually.
 
-Note that the limits concerning more rare actions, such as editing or deleting messages, are more strict.
+Note that the limits for less common actions, such as editing or deleting messages, are more restrictive.
 
-Developers of popular bots can contact the tech support and ask to increase the limits.
+Developers of popular bots can contact Telegram support to request increased limits.
 
 ## Editing
 
-Unlike users, when bot edits a message, the message does not get the "Edited" note.
+Unlike users' edited messages, when a bot edits a message, the message does not get the "Edited" label.
 
 ### Examples
 
@@ -93,13 +94,11 @@ Unlike users, when bot edits a message, the message does not get the "Edited" no
 
 While editing a message, one can edit its media as well as the text.
 A picture, video, or file can be replaced with another picture, video, or file (music counts as files too.)
-However, media can't be added to messages sent without media.
+However, media can't be added to messages that were originally sent without media.
 
 ## Forwarding
 
-When a user or a bot forwards a music file, it doesn't get the "Forwarded" label. Strange Telegram rules.
-
-[//]: # (todo :shrug:)
+When a user or a bot forwards a music file, it doesn't receive the "Forwarded" label. Strange Telegram rules ¯\_(ツ)_/¯
 
 It is not allowed to forward messages from groups and channels with the "protected content" setting turned on.
 

@@ -1,16 +1,16 @@
 # Developing Telegram Bots for Groups
 
 Group bots are powerful. 
-They provide features in groups — the space people talk to each other.
-There is a lot of details to consider though.
+They provide features in groups — the space where people talk to each other.
+There are a lot of details to consider though.
 
 ## Joining groups
 
-Users can add bots to groups, but bots cannot join groups by their own. 
+Users can add bots to groups, but bots cannot join groups on their own. 
 The bot's developer can forbid adding to groups [using BotFather settings.](../dev/botfather)
 
-In public groups, which means groups with usernames, bots can only be added by admins. 
-Group admins can grant the bot the rights for deleting group members or other admin actions.
+In public groups (those with usernames), bots can only be added by administrators. 
+Group admins can grant the bot permissions for deleting group members or performing other administrative actions.
 
 A group may contain up to 20 bots.
 
@@ -42,11 +42,11 @@ async def _(chat: Chat):
 <HelpNeeded/>
 :::
 
-Group messages are visible to all members. There is no way for a bot to show a message to one person only.
-For example, if a bot greets new members, all members will receive the message.
+Group messages are visible to all members. A bot cannot send a message that only one person in the group can see.
+For example, when a bot greets new members, all existing members will also receive this greeting message.
 
-To keep the chat clean, the bot can delete auxiliary messages in some time.
-Here is an example of deleting greeting messages in 30 seconds (unless the program is interrupted):
+To maintain a clean chat environment, the bot can automatically delete auxiliary messages after a certain period.
+Here is an example of deleting greeting messages after 30 seconds (unless the program is interrupted):
 
 ::: tabs key:libraries
 == Folds
@@ -62,14 +62,14 @@ from asyncio import sleep
 <HelpNeeded/>
 :::
 
-Note that if your bot has to write personal messages to users, [join requests](../interaction/join-requests) may be useful to get PM permission.
+Note that if your bot needs to send personal messages to users, [join requests](../interaction/join-requests) may be useful to get PM permission.
 
 ## Privacy mode and visible messages { #privacy }
 
 Many bots are designed to react only [to commands](../messages/commands.md).
-This is why by default Telegram protects group privacy and doesn't notify bots about non-command messages.
+For this reason, Telegram protects group privacy by default and doesn't notify bots about non-command messages.
 
-In order to make your bot see all chat messages, you should turn off the privacy mode.
+If you want your bot to see all chat messages, you need to disable the privacy mode.
 
 Privacy mode is a BotFather setting and it is activated by default. 
 In this mode, the bot only gets updates about commands and other group messages that may address the bot. 
@@ -86,8 +86,8 @@ Also, if a bot is a group admin, it sees all messages regardless of the privacy 
 ![A bot that doesn't see some messages](/pictures/ru/friedrich.png){ style="" }
 
 ::: tip Troubles turning off privacy mode?
-When you turned off the privacy mode, you should delete the bot from the group and add it back 
-in order to apply changes.
+After disabling the privacy mode, you need to remove the bot from the group and add it back 
+for the changes to take effect.
 :::
 
 Mobile and desktop Telegram apps indicate whether the privacy mode is on in group member lists:
@@ -95,11 +95,11 @@ Mobile and desktop Telegram apps indicate whether the privacy mode is on in grou
 ![Пример бота](/pictures/ru/privacy.png){ style="margin: 0 auto" }
 
 ::: info Force reply {#force-reply}
-If a bot has the privacy mode enabled and asks a group member a question, the user's answer clearly
-should be a message reply so that the bot can see it.
+If a bot with privacy mode enabled asks a question in a group, the user's response must be a reply 
+for the bot to see it.
 
-Rather than ask the user to choose to "reply", a bot can send a "force reply" message which automatically makes
-the user start replying.
+To make replying easier, a bot can send a "force reply" message which automatically initiates 
+the reply interface for the user.
 
 However, I don't recommend using force reply. In my opinion, automatic replies only confuse users.
 :::
@@ -148,7 +148,7 @@ async def _(sender: UseSender):
 <HelpNeeded/>
 :::
 
-Getting sender's name:
+Getting the sender's name:
 
 ::: tabs key:libraries
 == Folds

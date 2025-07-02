@@ -2,23 +2,22 @@
 
 ## Hosting
 
-You will likely need a server, because you will want to get your program running with a stable power and internet
-connection.
+You will likely need a server to run your bot with a stable power and internet connection.
 
-For that, you will need to buy a host. Bot programs usually need a small amount of resources, so 
-a simple plan from any hosting provider will probably be fine.
+For this purpose, you'll need to purchase hosting services. Bot programs typically require minimal resources, so 
+a basic plan from most hosting providers should be sufficient.
 
-## To note: Long-polling vs webhooks
+## Long-polling vs webhooks
 
 If you are using Bot API, you may choose to use webhooks instead of long-polling updates.
-This affects how you configure your server.
+This choice will affect how you configure your server.
 
-The default option is long-polling, meaning that the program regularly sends requests to the server to get new updates. 
-If you set up a webhook instead, Telegram servers will make requests to the program whenever there are updates.
+The default option is long-polling, where your program regularly sends requests to Telegram servers to check for new updates. 
+With webhooks, Telegram servers will send HTTP requests to your program whenever there are updates available.
 
-To set up a webhook, you will need to receive requests through a web application. For aiogram library, there
-are [built-in features](https://docs.aiogram.dev/en/latest/dispatcher/webhook.html) to integrate with aiohttp 
-or any other asynchronous web framework.
+To set up a webhook, you'll need a web application capable of receiving HTTP requests. 
+For the aiogram library, there are [built-in features](https://docs.aiogram.dev/en/latest/dispatcher/webhook.html) 
+that integrate with aiohttp or other asynchronous web frameworks.
 
 ::: tabs key:libraries
 == aiogram
@@ -29,8 +28,6 @@ or any other asynchronous web framework.
 
 ## Free hosting
 
-If you are unable to pay for hosting, you can try [PythonAnywhere](https://www.pythonanywhere.com/) 
-(which works unstably) or
-[Yandex Cloud Functions](https://cloud.yandex.ru/docs/functions/tutorials/telegram-bot-serverless) (for serverless functions.)
-
-[//]: # (todo: check)
+If you are unable to pay for hosting, you can try these free alternatives:
+- [PythonAnywhere](https://www.pythonanywhere.com/) (note that it may work unstably)
+- [Yandex Cloud Functions](https://cloud.yandex.ru/docs/functions/tutorials/telegram-bot-serverless) (for serverless functions)

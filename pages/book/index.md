@@ -27,13 +27,13 @@ const members = [
 </script>
 
 
-# Papercraft Book
+# Papercraft Book <Badge type="info" text="Beta" />
 
 Welcome to Papercraft Book!
-This is your guide to developing user-friendly, featureful, and stable bots for Telegram messenger.
+This is your guide to developing user-friendly, feature-rich, and stable bots for Telegram messenger.
 The book is independent of any specific programming language or library.
-In fact, it includes examples for different libraries,
-and I will gladly accept contributions from readers who add examples for more libraries.
+It includes examples for different libraries,
+and I will gladly accept contributions from readers who add examples for additional libraries.
 
 ::: warning
 Hey! This book is incomplete for now.
@@ -41,21 +41,21 @@ Hey! This book is incomplete for now.
 
 [//]: # (It is designed to be used together with library docs and Telegram API reference.)
 
-We will cover all major features of Telegram bot platform,
-starting from as common as `/commands` and ending with the most specific ones,
-like managing join requests and subtopics in groups.
-In addition, we will learn about the corner cases and development tips.
+We will cover all major features of the Telegram bot platform,
+starting from common features like `/commands` and progressing to more specialized ones,
+such as managing join requests and subtopics in groups.
+Additionally, we will explore corner cases and development tips.
 
 Another focus of this book is user experience.
 The book describes how to make bots easy to use and when common Telegram features have better alternatives.
 
-To sum up — Papercraft Book is my attempt to collect everything you will want to learn but probably won't find
+To sum up — Papercraft Book is my attempt to collect everything you need to learn but probably won't find
 in your library docs or API reference.
-I believe it to be the most complete and practical guide on developing bots for Telegram.
+I believe it to be the most comprehensive and practical guide on developing bots for Telegram.
 
 ## Table of contents
 
-The book is four chapters, each divided into multiple pages:
+The book has four chapters, each divided into multiple pages:
 
 1. [**Development.**](dev/basics)
    Things to note before you start coding: API and libraries, bot configuration, some basic notions and tips.
@@ -75,7 +75,7 @@ This site was previously called Telegram Bot Handbook and was more like a refere
 Now, I've rewritten it so it became — well, a book. What changed:
 - todo
 
-The site is now called Papercraft and contains not only the book but also docs 
+The site is now called Papercraft and contains not only the book but also documentation 
 for TGPy userbot and docs for my new Folds framework.
 
 ## About

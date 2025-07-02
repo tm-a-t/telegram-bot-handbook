@@ -5,7 +5,7 @@ _inline buttons_ appear below the sent message and _keyboard buttons_ are sugges
 near the message input.
 
 Both kinds of buttons may be shown in multiple rows of multiple buttons. 
-You can read more about button layouts in the bottom of this page.
+You can read more about button layouts at the bottom of this page.
 
 ## Inline buttons { #inline }
 
@@ -16,11 +16,11 @@ Inline buttons are shown together with the messages.
 A callback button is simply a button that sends [an update](../dev/updates) to the bot when pressed.
 The bot can handle it in any way.
 
-When a user clicks a callback button, the bot can show a notification or an alert (see the video below.)
-Generally, the bot should edit a message or react in any other way to provide some visual feedback to the user.
-Until it does, the button will show "loading" animation.
+When a user clicks a callback button, the bot can show a notification or an alert (see the video below).
+To provide visual feedback to the user, the bot should typically edit the message or react in some other visible way.
+Until the bot reacts, the button will display a "loading" animation.
 
-When receiving the updates, the program can identify the pressed button by a special parameter which is specified 
+When receiving updates, the program can identify which button was pressed using a special parameter that is specified 
 when creating the button.
 
 <video controls loop muted preload="auto">
@@ -31,16 +31,16 @@ when creating the button.
 
 A URL button acts like a link.
 
-In Bot API, such button turns into a [user mention](./markup#mention) button if you specify `tg://user?ID=123456789` 
-as the URL. In Telegram API, user mention button is built in a separate way.
+In Bot API, a URL button can be converted to a [user mention](./markup#mention) button by specifying `tg://user?ID=123456789` 
+as the URL. In Telegram API, user mention buttons are implemented differently.
 
 ![Link below the message](/pictures/ru/url-button.png)
 
 ### Switch-to-inline button
 
-A switch-to-inline button opens [bot inline mode](../interaction/inline). You can choose whether this button 
-will open inline mode in the same chat or open a chat selection dialog first. You can also choose the text query which 
-will show next to the bot's username after the button is clicked (the user may change it afterwards.)
+A switch-to-inline button opens [bot inline mode](../interaction/inline). 
+You can configure this button to open inline mode in the current chat or display a chat selection dialog first.
+You can also pre-fill a text query that will appear next to the bot's username (which the user can modify).
 
 <video controls loop muted preload="auto">
 <source src="/pictures/ru/switch-inline-button.webm" type="video/mp4">
@@ -48,13 +48,13 @@ will show next to the bot's username after the button is clicked (the user may c
 
 ### Request peer button
 
-A request peer button allows the user to send a bit of info about any of their chats. 
-When clicked, it shows a chat selection dialog.
+A request peer button allows the user to share information about one of their chats. 
+When clicked, it displays a chat selection dialog.
 
 You can configure this button flexibly: for example, the chat selection may include only channels with usernames or groups 
 where the user is an admin.
 
-### Other inline butons
+### Other inline buttons
 
 There are more, rather uncommon, buttons:
 
@@ -69,7 +69,7 @@ There are more, rather uncommon, buttons:
 ## Keyboard buttons
 
 Unlike inline buttons, keyboard buttons are shown below the message input field
-(in web versions they are expanded by clicking on ⌘). When pressing a keyboard button, the user simply sends its text.
+(in web versions they can be accessed by clicking the command button ⌘). When pressing a keyboard button, the user simply sends its text.
 
 In Telegram mobile apps, keyboard buttons replace the keyboard; but the user is able to hide them and see 
 the regular keyboard again.
@@ -95,10 +95,10 @@ Keyboard buttons can be shown only with sending a message.
 A bot can send keyboard buttons that will hide (but not disappear) after use.
 
 In groups, keyboard buttons are visible to all members by default. Alternatively, a bot can show 
-a set of buttons only to mentioned users, that are:
+buttons only to mentioned users, that are:
 
-- The ones whose usernames are included in the message text.
-- The sender of the message to which the bot is replying.
+- Users whose usernames are included in the message text
+- The sender of the message to which the bot is replying
 
 ## Button layouts
 

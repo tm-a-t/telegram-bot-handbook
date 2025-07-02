@@ -9,6 +9,11 @@ hero:
     alt: VitePress
 
 features:
+  - icon: 📘
+    title: Papercraft Book
+    details: Learn to develop user-friendly, featureful, and stable bots.
+    link: /book/
+    linkText: Read
   - icon: 🎨
     title: Folds
     details: Develop elegant and scalable bot apps in Python.
@@ -19,10 +24,5 @@ features:
     details: Run Python code in Telegram chats. Automate your messages and explore Telegram API.
     link: /tgpy/
     linkText: Explore
-  - icon: 📘
-    title: Papercraft Book (Soon)
-    details: Learn to develop user-friendly, featureful, and stable bots.
-#    link: /book/
-#    linkText: Read
 
 ---
