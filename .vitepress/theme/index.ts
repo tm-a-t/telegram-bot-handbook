@@ -9,6 +9,8 @@ import Layout from './layout/Layout.vue'
 import '@nolebase/vitepress-plugin-highlight-targeted-heading/client/style.css'
 import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
 
+import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
+
 export default {
     extends: Theme,
     Layout: Layout,

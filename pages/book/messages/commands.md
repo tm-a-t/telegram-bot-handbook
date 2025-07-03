@@ -30,7 +30,7 @@ For collecting additional information, the bot can simply ask a follow-up questi
 Through BotFather, a bot developer can specify a list of command hints with short descriptions.
 When users start typing a command in a chat with the bot, they will see an autocomplete menu with these commands.
 
-![An example of autocomplete with commands from multiple bots](/pictures/ru/commands-autocomplete.png)
+![An example of autocomplete with commands from multiple bots](/pictures/book/commands-autocomplete.png)
 
 Users will also see a "menu" button in personal dialogs and groups with the bot. 
 This button opens the autocomplete menu with available commands.

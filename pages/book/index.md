@@ -27,17 +27,13 @@ const members = [
 </script>
 
 
-# Papercraft Book <Badge type="info" text="Beta" />
+# Papercraft Book <Badge type="warning" text="Beta" />
 
 Welcome to Papercraft Book!
 This is your guide to developing user-friendly, feature-rich, and stable bots for Telegram messenger.
 The book is independent of any specific programming language or library.
 It includes examples for different libraries,
 and I will gladly accept contributions from readers who add examples for additional libraries.
-
-::: warning
-Hey! This book is incomplete for now.
-:::
 
 [//]: # (It is designed to be used together with library docs and Telegram API reference.)
 

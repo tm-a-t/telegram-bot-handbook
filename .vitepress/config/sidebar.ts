@@ -9,7 +9,7 @@ const sidebar: DefaultTheme.Sidebar = {
                 {text: 'Bots?', link: '/book/dev/basics'},
                 {text: 'Telegram API', link: '/book/dev/api'},
                 {text: 'Libraries', link: '/book/dev/libraries'},
-                {text: 'Usernames', link: '/book/dev/usernames'},
+                {text: 'Bot Usernames', link: '/book/dev/usernames'},
                 {text: 'BotFather', link: '/book/dev/botfather'},
                 {text: 'Updates', link: '/book/dev/updates'},
                 {text: 'Host', link: '/book/dev/host'},

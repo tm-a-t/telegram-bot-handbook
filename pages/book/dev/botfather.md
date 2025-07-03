@@ -10,17 +10,17 @@ You'll choose its name and [username,](./usernames) and then the bot profile wil
 You will obtain the bot token which looks like `1553279091:AAGLECcm23ihHRomX3PrKHc-IMQcIti6afA`.
 The token is a key to control the bot.
 
-![Example of creating a bot](/pictures/ru/botfather.png)
+![Example of creating a bot](/pictures/book/botfather.png)
 
 ## Settings
 
-In BotFather, you can edit bot settings with the `/mybots` command.
+In BotFather, it is easy to edit bot settings using `/mybots` command.
 This is how you customize the bot profile and configure special features, such as
 forbidding being added to groups.
 
 You may register up to 20 bots.
 
-### Customization { #customization }
+## Customization { #customization }
 
 You can open the profile of your bot and click "edit" to change its avatar, name, intro, and "about" text. 
 This feature is relatively new; previously, BotFather commands were the only way to change a bot's profile settings.
@@ -39,7 +39,7 @@ In BotFather, you can also edit [command hints](../messages/commands)
 or [inline mode placeholder.](../interaction/inline)
 :::
 
-### Transferring
+## Transferring
 
 If you need to transfer the ownership to another person, you can do it with BotFather itself.
 This is often useful when you develop a bot for a client or organization.

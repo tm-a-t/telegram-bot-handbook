@@ -12,16 +12,34 @@ pictures, videos, files, polls, voice messages, stickers, and more.
 
 Unlike users, bots can also add [buttons](../messages/buttons) to their messages.
 
-### Examples
-
 ::: tabs key:libraries
-== Telethon & Folds
-One of many ways to send a message with a file:
-
+== aiogram
 ```python
+# Send a message
+await bot.send_message(chat_id=chat_id, text='Hey there')
+
+# Shortcut: send where the message came from
+await message.answer('Hey there')
+
+# Send a file
+document = FSInputFile('path.txt')
+await bot.send_document(
+    chat_id=chat_id,
+    document=document    
+)
+```
+See [How to upload file?](https://docs.aiogram.dev/en/v3.20.0.post0/api/upload_file.html#sending-files)
+== Telethon & Folds
+```python
+# Send a message
+await client.send_message(chat_id, 'Hey there')
+
+# Shortcut: send where the event came from
+await event.respond('Hey there')
+
+# Send a file
 await client.send_message(
     chat_id,
-    'Hello World', 
     file='path.txt'
 )
 ```
@@ -37,22 +55,25 @@ A bot may not send messages in a channel or group where the bot is not a member 
 Premium users can restrict receiving voice messages (including round videos).
 
 ::: tabs key:libraries
+== aiogram
+```python
+try:
+    await client.send_message(chat_id, 'Hey there')
+except TelegramForbiddenError:
+    print('User blocked the bot, bot banned from chat, etc.')
+```
 == Telethon & Folds
 ```python
-from telethon.errors import UserIsBlockedError
-
-...
-
 try:
-    await client.send_message('')
+    await client.send_message(...)
 except UserIsBlockedError:
-    print('Bad :(')    
+    print('User blocked the bot :(')
 ```
 == Other libraries
 <HelpNeeded/>
 :::
 
-### Why are albums so strange?
+### Why do albums behave strangely?
 
 An album is a collection of multiple media messages (such as photos or videos) that are displayed as a single grouped message in Telegram apps.
 
@@ -82,10 +103,27 @@ Developers of popular bots can contact Telegram support to request increased lim
 
 Unlike users' edited messages, when a bot edits a message, the message does not get the "Edited" label.
 
-### Examples
-
 ::: tabs key:libraries
+== aiogram
+```python
+from asyncio import sleep
+
+...
+
+my_message = await bot.send_message(chat_id, 'Loading...')
+await sleep(10)
+await my_message.edit_text('Loaded!')
+```
 == Telethon & Folds
+```python
+from asyncio import sleep
+
+...
+
+my_message = await client.send_message(chat_id, 'Loading...')
+await sleep(10)
+await my_message.edit('Loaded!')
+```
 == Other libraries
 <HelpNeeded/>
 :::
@@ -94,7 +132,8 @@ Unlike users' edited messages, when a bot edits a message, the message does not 
 
 While editing a message, one can edit its media as well as the text.
 A picture, video, or file can be replaced with another picture, video, or file (music counts as files too.)
-However, media can't be added to messages that were originally sent without media.
+~~However, media can't be added to messages that were originally sent without media.~~
+You can now add a media document to a text message.
 
 ## Forwarding
 
@@ -102,17 +141,31 @@ When a user or a bot forwards a music file, it doesn't receive the "Forwarded" l
 
 It is not allowed to forward messages from groups and channels with the "protected content" setting turned on.
 
-### Examples
-
 ::: tabs key:libraries
+== aiogram
+```python
+# With the 'Forwarded' label
+await message.forward(chat_id)
+
+# Without the 'Forwarded' label
+await message.copy_to(chat_id)
+```
 == Telethon & Folds
+```python
+# With the 'Forwarded' label
+await message.forward(chat_id)
+
+# Without the 'Forwarded' label
+await client.send_message(chat_id, message)
+```
 == Other libraries
 <HelpNeeded/>
 :::
 
 ## Interacting with messages
 
-Bots cannot react to messages. They cannot vote in polls either; however, they can send all kinds of polls.
+Bot cannot vote in polls either; however, they can send all kinds of polls.
+They also can react to messages.
 
 ## Related links
 

@@ -12,16 +12,16 @@ This is how I check many usernames but not create a bot until I made my choice.
 ## Username form
 
 Bot usernames are no different from usernames of users, groups and channels.
-The only constraint is that a username of a bot must end with "bot".
+The only constraint is that normally a username of a bot must end with "bot".
 A username can look like this: `@ExampleBot`
 
-There are some official bots with special usernames that don't follow this
-format: [@pic,](https://t.me/pic) [@vid,](https://t.me/vid) [@sticker.](https://t.me/sticker) 
-Also, you can now buy short usernames for bots on [Fragment.](https://fragment.com/)
+You can buy short usernames for bots that don't follow this constraint on [Fragment.](https://fragment.com/)
 
+::: info
 A free username must contain at least 5 characters including "bot".
 However, you can't claim such a short username: all usernames of 5 (and maybe 6) characters are taken.
 Unfortunately, most of these registered bots are inactive, as developers rarely maintain bots for a long time.
+:::
 
 ## Claiming a username through support
 

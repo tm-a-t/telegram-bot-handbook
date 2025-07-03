@@ -15,6 +15,17 @@ In fact, most of the groups you participate in are probably supergroups.
 The main trait of supergroups is that API considers them a special case of channels.
 
 ::: tabs key:libraries
+== aiogram
+```python
+if chat.type == ChatType.SUPERGROUP:
+    print('This is a supergroup')
+if chat.type == ChatType.CHANNEL:
+    print('This is a real channel')
+if chat.type == ChatType.GROUP:
+    print('This is an old-type group')
+if chat.type == ChatType.PRIVATE:
+    print('This is PM')
+```
 == Telethon & Folds
 How to check the type of chat using API types:
 ```python
@@ -25,7 +36,7 @@ if isinstance(chat, Channel) and chat.megagroup:
 if isinstance(chat, Channel) and not chat.megagroup:
     print('This is a real channel')
 if isinstance(chat, Chat):
-    print('This is a regular group')
+    print('This is an old-type group')
 if isinstance(chat, User):
     print('This is PM')
 ```
@@ -55,12 +66,34 @@ As technically the group is replaced with a supegroup (which is a new channel), 
 You may want to handle this event if you store the chats in a database:
 
 ::: tabs key:libraries
+== aiogram
+```python
+@dp.message(F.migrate_to_chat_id)
+async def migrated(message: Message):
+    print(f'{message.chat.title} became a supergroup')
+```
 == Folds
 ```python
-@bot.supergroup_created
-async def _():
+@bot.group_became_supergroup()
+async def handle_supergroup(chat: ThisChat):
+    print(f'{chat.title} became a supergroup')
 ```
 == Telethon
+```python
+def group_became_supergroup(event: events.ChatAction.Event) -> bool:
+    return (
+            isinstance(event, tl_types.UpdateNewChannelMessage)
+            and isinstance(event.message, tl_types.MessageService)
+            and isinstance(
+                event.message.action, tl_types.MessageActionChannelMigrateFrom
+            )
+    )
+
+@client.on(events.ChatAction(func=group_became_supergroup))
+async def handle_supergroup(event: events.ChatAction.Event):
+    chat = await event.get_chat()
+    print(f'{chat.title} became a supergroup')
+```
 == Other libraries
 <HelpNeeded/>
 :::
@@ -71,7 +104,7 @@ A supergroup cannot become a regular group again.
 
 On the next page we will discuss [how group IDs are different for groups and supergroups in Bot API.](id#bot-api)
 In addition, regular groups and supergroups are different in terms of how message ID work
-which we will also [discuss further.](../messages/id)
+as discussed in [Message IDs.](../messages/id)
 
 
 ## Gigagroups (broadcast groups)

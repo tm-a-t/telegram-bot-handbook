@@ -37,7 +37,7 @@ A spoiler is text hidden behind an animated cover that users can tap to reveal.
 
 Pictures can be hidden with a spoiler as well, though this is not related to message markup.
 
-![text and picture behind the spoilers](/pictures/ru/spoiler.png)
+![text and picture behind the spoilers](/pictures/book/spoilers.png)
 
 ## User mentions { #mention }
 

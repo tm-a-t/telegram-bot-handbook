@@ -15,25 +15,39 @@ Group admins can grant the bot permissions for deleting group members or perform
 A group may contain up to 20 bots.
 
 ::: tabs key:libraries
+== aiogram
+```python
+@dp.my_chat_member(ChatMemberUpdatedFilter(IS_NOT_MEMBER >> IS_MEMBER))
+async def handle_join(event: ChatMemberUpdated):
+    await event.answer('Hello ' + event.chat.title)
+```
 == Folds
 ```python
-@bot.added_to_group
-async def _(chat: Chat):
+@bot.added_to_group()
+async def handle_join(chat: Chat):
     return 'Hello ' + chat.title
 ```
 == Telethon
+```python
+@client.on(events.NewMessage(func=lambda e: e.is_group and e.user_added and e.user.is_self))
+async def handle_join(event):
+    chat = await event.get_chat()
+    await event.respond('Hello ' + chat.title)
+```
 == Other libraries
 <HelpNeeded/>
 :::
 
 ## Sending messages to group members
 
-Some examples of sending messages:
+<!-- TODO
+
+Some examples:
 
 ::: tabs key:libraries
 == Folds
 ```python
-@bot.group_message
+@bot.group_message()
 async def _(chat: Chat):
     return 'Hello ' + chat.title
 ```
@@ -42,32 +56,44 @@ async def _(chat: Chat):
 <HelpNeeded/>
 :::
 
-Group messages are visible to all members. A bot cannot send a message that only one person in the group can see.
+-->
+
+
+Group messages are visible to all members. A bot cannot send a message that only one person in the group will see.
 For example, when a bot greets new members, all existing members will also receive this greeting message.
 
-To maintain a clean chat environment, the bot can automatically delete auxiliary messages after a certain period.
+To keep the chat clean, the bot can automatically delete auxiliary messages after a certain period.
 Here is an example of deleting greeting messages after 30 seconds (unless the program is interrupted):
 
 ::: tabs key:libraries
-== Folds
+== aiogram
 ```python
-from asyncio import sleep
-
-    answer = await message.respond(f'Welcome to the group, {user.first_name}')
-    await sleep(30)
+@dp.chat_member(ChatMemberUpdatedFilter(IS_NOT_MEMBER >> IS_MEMBER))
+async def handle_join(event: ChatMemberUpdated):
+    user = event.new_chat_member.user
+    answer = await event.answer('Welcome to the group, {user.first_name}')
+    await asyncio.sleep(30)
     await answer.delete()
 ```
-== Telethon
+== Folds & Telethon
+```python
+@bot.on(events.ChatAction(func=event.group and event.user_added and not event.user.is_self))
+async def greet(event: events.ChatAction.Event):
+    answer = await message.respond(f'Welcome to the group, {event.user.first_name}')
+    await asyncio.sleep(30)
+    await answer.delete()
+```
 == Other libraries
 <HelpNeeded/>
 :::
 
-Note that if your bot needs to send personal messages to users, [join requests](../interaction/join-requests) may be useful to get PM permission.
+Note that if your bot needs to personally contact new group users, join requests may be useful to get PM permission
+— we will explore [join requests](../interaction/join-requests) later in the book.
 
 ## Privacy mode and visible messages { #privacy }
 
-Many bots are designed to react only [to commands](../messages/commands.md).
-For this reason, Telegram protects group privacy by default and doesn't notify bots about non-command messages.
+Many bots are designed to react only [to commands.](../messages/commands.md)
+For this reason, Telegram by default protects group privacy and doesn't notify bots about non-command messages.
 
 If you want your bot to see all chat messages, you need to disable the privacy mode.
 
@@ -127,23 +153,50 @@ Your program should correctly handle messages sent by other entities:
 Determining chat type (e.g. for storing in a database:)
 
 ::: tabs key:libraries
+== aiogram
+```python
+@dp.message(F.chat.type == ChatType.GROUP | F.chat.type == ChatType.SUPERGROUP])
+async def handle_group_message(message: Message):
+    if message.sender_chat is None:
+        print('Message from user')
+    if message.sender_chat is not None and message.sender_chat.type == ChatType.SUPERGROUP:    
+        print('Message from supergroup')
+    elif message.sender_chat is not None and message.sender_chat.type == ChatType.CHANNEL:
+        print('Message from channel')
+
+```
 == Folds
 ```python
-from folds import UseSender
+from folds import ThisSender
 from telethon.tl.types import Chat, Channel, User
 
 ...
 
-@bot.group_message
-async def _(sender: UseSender):
+@bot.group_message()
+async def handle_group_message(sender: ThisSender):
     if isinstance(sender, User):
         print('Message from user')
-    if isinstance(sender, Chat):
-        print('Message from group')
-    if isinstance(sender, Channel):
-        print('Message from channel or supergroup')
+    if isinstance(sender, Channel) and sender.megagroup:
+        print('Message from supergroup')
+    if isinstance(sender, Channel) and not sender.megagroup:
+        print('Message from channel')
 ```
 == Telethon
+```python
+from telethon.tl.types import Chat, Channel, User
+
+...
+
+@client.on(events.NewMessage(func=lambda e: e.is_group))
+async def handle_group_message(event: Message):
+    sender = await event.get_sender()
+    if isinstance(sender, User):
+        print('Message from user')
+    if isinstance(sender, Channel) and sender.megagroup:
+        print('Message from supergroup')
+    if isinstance(sender, Channel) and not sender.megagroup:
+        print('Message from channel')
+```
 == Other libraries
 <HelpNeeded/>
 :::
@@ -151,18 +204,14 @@ async def _(sender: UseSender):
 Getting the sender's name:
 
 ::: tabs key:libraries
-== Folds
+== aiogram
 ```python
-from folds import UseSender
-
-...
-
-@bot.group_commands.hello
-async def _(sender: UseSender):
-    name = sender.first_name or sender.title  # one of these is not None
-    return f'Hello {name}'
+name = message.from_user.first_name if message.from_user else message.sender_chat.title 
 ```
-== Telethon
+== Folds & Telethon
+```python
+name = sender.first_name or sender.title  # one of these is not None
+```
 == Other libraries
 <HelpNeeded/>
 :::

@@ -325,6 +325,13 @@
   resolved "https://registry.yarnpkg.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.0.tgz#3188bcb273a414b0d215fd22a58540b989b9409a"
   integrity sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==
 
+"@nolebase/vitepress-plugin-enhanced-mark@^2.18.0":
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/@nolebase/vitepress-plugin-enhanced-mark/-/vitepress-plugin-enhanced-mark-2.18.0.tgz#5a5946f26a60b811a8cb00add5cca8262c5aee06"
+  integrity sha512-PEAq8ei69wx2yMYTWyuqE3gGelGJ/P0kHbjshwp2WLcrOa3EhK05BJgTfgXgWc+pmb70JG3N+scNtmYKuV/0tg==
+  dependencies:
+    less "^4.3.0"
+
 "@nolebase/vitepress-plugin-highlight-targeted-heading@^2.4.0":
   version "2.17.2"
   resolved "https://registry.yarnpkg.com/@nolebase/vitepress-plugin-highlight-targeted-heading/-/vitepress-plugin-highlight-targeted-heading-2.17.2.tgz#24ecf8ffd2458a2474a8465ddbe10f483256f223"

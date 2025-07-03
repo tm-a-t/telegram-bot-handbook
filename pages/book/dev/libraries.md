@@ -27,10 +27,55 @@ As of alternatives, there are [Pyrogram](https://github.com/pyrogram/pyrogram) f
 
 ## Getting started
 
-::: tabs key:libraries
-== Folds
-```shell
+Here is a simple example of a bot that repeats after the user in DM:
 
+::: tabs key:libraries
+== aiogram
+```python
+import asyncio
+from aiogram import Bot, Dispatcher, F
+from aiogram.types import Message
+
+bot = Bot(token='YOUR_BOT_TOKEN_HERE')
+dp = Dispatcher()
+
+@dp.message(F.chat.type == ChatType.PRIVATE)
+async def echo(message: Message):
+    await message.answer(message.text)
+
+if __name__ == '__main__':
+    asyncio.run(dp.start_polling(bot))
+```
+== Folds
+```python
+from folds import Bot, Message
+
+bot = Bot(bot_token='YOUR_BOT_TOKEN_HERE', api_id=123456, api_hash='YOUR_API_HASH')
+
+@bot.private_message()
+async def echo(text: str):
+    return text
+
+if __name__ == '__main__':
+    bot.run()
 ```
 == Telethon
+```python
+from telethon import TelegramClient, events
+from telethon.tl.custom import Message
+
+client = TelegramClient('mybot', api_id=123456, api_hash='YOUR_API_HASH')
+client.start(bot_token='YOUR_BOT_TOKEN_HERE')
+
+@client.on(events.NewMessage(func=lambda e: e.is_private, incoming=True))
+async def echo(event: Message):
+    await event.respond(event.raw_text)
+
+if __name__ == '__main__':
+    client.run_until_disconnected()
+```
+== Other libraries
+<HelpNeeded/>
 :::
+
+But first, you will need to register a bot and obtain the token.

@@ -25,21 +25,22 @@ which signals that the private chat has begun.
 The bot should respond to this command with a greeting or usage instructions.
 
 ::: tabs key:libraries
+== aiogram
+```python
+@dp.message(CommandStart())
+async def handle_start(message: Message):
+    await message.answer('Hi!')
+```
 == Folds
 ```python
-@bot.private_commands.start
-async def _():
+@bot.private_commands.start()
+async def handle_start():
     return 'Hi!'
 ```
 == Telethon
 ```python
-from telethon import events
-from telethon.tl.custom import Message
-
-...
-
 @client.on(events.NewMessage(pattern='^/start( .+)?$'))
-async def on_start(event: Message):
+async def handle_start(event: Message):
     await event.respond('Hi!')
 ```
 
@@ -73,13 +74,6 @@ This happens in one of the following cases:
 
 When this occurs, the Telegram app shows the user an explanation of why the bot is contacting them.
 
-::: tabs key:libraries
-== Folds
-== Telethon
-== Other libraries
-<HelpNeeded/>
-:::
-
 ## Stopping the dialog { #block }
 
 A user can stop the dialog by blocking the bot. The bot will not be able to send personal messages to the user
@@ -87,15 +81,30 @@ until they unblock it.
 
 ## How to check if the bot may text to a user
 
-If you need to determine whether a user has blocked your bot, you can use this method:
+If you need to determine whether a user has blocked your bot, you can use the following method.
 
-Attempt to show a "Bot is typing..." status in the dialog. If Telegram servers return an error, it indicates that the bot cannot
-send messages to the user. This could mean either that the user has blocked the bot or that a dialog has never been initiated.
+Attempt to show a "Bot is typing..." status in the dialog. 
+If Telegram servers return an error, it means the bot cannot
+send messages to the user — so either the user has blocked the bot or the dialog has never started.
 
 This action has minimal rate limiting, so you can do it frequently.
 
 ::: tabs key:libraries
+== aiogram
+```python
+try:
+    await bot.send_chat_action(chat, 'typing')
+except TelegramForbiddenError:
+    print("Can't send messages")
+```
 == Telethon & Folds
+```python
+try:
+    async with client.action(user, 'typing'):
+        pass
+except UserIsBlockedError:
+    print("Can't send messages")
+```
 == Other libraries
 <HelpNeeded/>
 :::

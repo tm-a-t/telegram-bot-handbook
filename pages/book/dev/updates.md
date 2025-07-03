@@ -8,8 +8,32 @@ There can be an update about an incoming message, an update about a user joining
 We will often use this term further in the book.
 
 ::: tabs key:libraries
+== aiogram
+```python
+@dp.message(F.photo & (F.chat.type == ChatType.PRIVATE))
+async def on_private_photo(message: Message):
+    photo = message.photo[-1]  # highest resolution
+    file_path = f"downloads/photo_{photo.file_id}.jpg"
+    await bot.download(photo, file_path)
+    await message.answer('Got your photo! Saved to ' + file_path)
+```
 == Folds
+```python
+@bot.private_message()
+async def handle_photo(message: Message):
+    if not message.photo: 
+        return
+        
+    file_path = await message.download_media()
+    return 'Got your photo! Saved to ' + file_path
+```
 == Telethon
+```python
+@client.on(events.NewMessage(incoming=True, func=lambda e: e.photo and e.is_private))
+async def handle_photo(event: Message):
+    file_path = await event.download_media()
+    await event.respond('Got your photo! Saved to ' + file_path)
+```
 == Other libraries
 <HelpNeeded/>
 :::
@@ -17,8 +41,6 @@ We will often use this term further in the book.
 ## The main challenge of developing bots { #limitations }
 
 <mark>Updates are almost the only way to get any information about chats, messages, and users.</mark>
-
-[//]: # (todo mark)
 
 Your program may not fetch the latest user's message or the list of chats where the bot belongs. 
 Telegram only provides information about the current user or the current chat in updates:

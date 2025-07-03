@@ -58,7 +58,7 @@ export default defineConfig({
         logo: '/logo.png',
         externalLinkIcon: true,
         footer: {
-            message: 'Created by Art Ivanov'
+            message: 'Art Ivanov'
         },
         editLink: {
             pattern: 'https://github.com/tm-a-t/papercraft/edit/main/:path',
@@ -72,7 +72,7 @@ export default defineConfig({
             },
         },
         nav: [
-            // {text: 'Book', link: '/book/', activeMatch: '/book/'},
+            {text: 'Book', link: '/book/', activeMatch: '/book/'},
             {text: 'Folds', link: '/folds/', activeMatch: '/folds/'},
             {
                 text: 'TGPy',
