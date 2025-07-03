@@ -113,7 +113,7 @@ pipx upgrade tgpy
 To get TGPy running in background, you need to additionally configure systemd, docker compose, or similar.
 Instructions are coming.
 
-## Data storage
+## Storing data
 
 Config, session, and modules are stored in `~/.config/tgpy` directory (unless you’re using Docker.)
 You can change this path via `TGPY_DATA` environment variable.
@@ -136,3 +136,7 @@ If you require proxy to connect to Telegram, do the following:
            password: ...
    ```
 3. Run TGPy normally
+
+## Storing API secrets
+
+It is possible to provide Telegram API ID and hash through environment variables `TGPY_API_ID` and `TGPY_API_HASH`.

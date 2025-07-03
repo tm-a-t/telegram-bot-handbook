@@ -4,7 +4,7 @@
 
 TGPy is a Pythonic swiss knife for Telegram. 
 It runs Python code in your messages and integrates with your Telegram workspace. 
-See the GIF:
+See the video:
 
 <video controls loop muted src="https://user-images.githubusercontent.com/38432588/181266550-c4640ff1-71f2-4868-ab83-6ea3690c01b6.mp4"></video>
 
