@@ -46,7 +46,7 @@ To create a mention using Bot API, you can embed a link in the format `tg://user
 A username automatically becomes a mention when included in a message.
 
 When a group member is mentioned, they receive a notification. 
-However, if a message contains more than five mentions, only the first five users will receive notifications.
+However, if a message contains more than five mentions, only five of those people will receive notifications.
 
 Bot may mention a user through ID only if they participate in the current chat or have turned on linking them 
 while forwarding their messages. Additionally, a bot must [have seen](../chats/pm#seen-users) the user.
