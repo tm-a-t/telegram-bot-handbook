@@ -7,9 +7,40 @@
 
 Я ещё много раз буду использовать это слово на страницах хендбука.
 
+::: tabs key:libraries
+== aiogram
+```python
+@dp.message(F.photo & (F.chat.type == ChatType.PRIVATE))
+async def on_private_photo(message: Message):
+    photo = message.photo[-1]  # highest resolution
+    file_path = f"downloads/photo_{photo.file_id}.jpg"
+    await bot.download(photo, file_path)
+    await message.answer('Got your photo! Saved to ' + file_path)
+```
+== Folds
+```python
+@bot.private_message()
+async def handle_photo(message: Message):
+    if not message.photo: 
+        return
+
+    file_path = await message.download_media()
+    return 'Got your photo! Saved to ' + file_path
+```
+== Telethon
+```python
+@client.on(events.NewMessage(incoming=True, func=lambda e: e.photo and e.is_private))
+async def handle_photo(event: Message):
+    file_path = await event.download_media()
+    await event.respond('Got your photo! Saved to ' + file_path)
+```
+== Другие библиотеки
+<HelpNeeded/>
+:::
+
 ## Главная сложность разработки ботов { #limitations }
 
-Апдейты — почти единственный способ для вашей программы узнать что-то о чатах и сообщениях.
+<mark>Апдейты — почти единственный способ для вашей программы узнать что-то о чатах и сообщениях.</mark>
 
 Например, ваша программа не может спросить у Телеграма, каким было последнее
 сообщение от пользователя или в каких чатах состоит бот. Телеграм даёт такую информацию только вместе с апдейтами:

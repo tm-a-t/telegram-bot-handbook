@@ -1,22 +1,12 @@
 # Ссылки, открывающие Телеграм-бота
 
+Ссылки — это обычный способ перейти к боту и начать диалог.
+Диплинки (deep links) можно использовать, чтобы пользователь начал диалог с ботом с дополнительными параметрами.
+
 ## Обычные ссылки
 
 Ссылки на ботов работают так же, как и ссылки на пользователей, группы и каналы:
 бота с юзернеймом `@examplebot` можно открыть по ссылке [t.me/examplebot](https://t.me/examplebot).
-
-Также можно использовать прямую ссылку:
-[tg://resolve?domain=examplebot](tg://resolve?domain=examplebot)
-
-::: info О ссылках tg://
-
-Ссылки, начинающиеся на tg://, могут не только заменять ссылки t.me.
-Ссылка [tg://settings](tg://settings), например, открывает настройки.
-
-Списки таких ссылок есть [в документации](https://core.telegram.org/api/links) и в неофициальном
-канале [@DeepLink](https://t.me/deeplink).
-
-:::
 
 ## Диплинки
 
@@ -43,8 +33,20 @@
 Ссылка [t.me/examplebot?startgroup=ВАШ_ТЕКСТ](https://t.me/examplebot?startgroup=ВАШ_ТЕКСТ) откроет у пользователя меню
 с выбором группы для добавления бота. Когда пользователь добавит бота, сразу отправится команда `/start ВАШ_ТЕКСТ`.
 
-Прямая ссылка: [tg://resolve?domain=examplebot&startgroup=true](tg://resolve?domain=examplebot&startgroup=true)
+## Использование ссылок `tg://`
 
-## Ссылки по теме
+Все ссылки, которые мы рассмотрели выше, также имеют эквиваленты с `tg://`. 
+Это прямые ссылки, которые можно открыть внутри приложения:
+
+- Обычная ссылка: [tg://resolve?domain=examplebot](tg://resolve?domain=examplebot)
+- Диплинк: [tg://resolve?domain=examplebot&start=ВАШ_ТЕКСТ](tg://resolve?domain=examplebot&start=ВАШ_ТЕКСТ)
+- Диплинк для групп: [tg://resolve?domain=examplebot&startgroup=true](tg://resolve?domain=examplebot&startgroup=true)
+
+Существуют и другие прямые ссылки, которые могут заменять ссылки `t.me` или выполнять специальные действия.
+Например, ссылка [tg://settings](tg://settings) открывает настройки в некоторых приложениях Telegram.
+Списки таких ссылок есть [в документации API](https://core.telegram.org/api/links) и
+в неофициальном канале [@DeepLink](https://t.me/deeplink).
+
+## Ссылки по теме (но не на ботов)
 
 - [О диплинках в документации к API](https://core.telegram.org/bots/features#deep-linking)

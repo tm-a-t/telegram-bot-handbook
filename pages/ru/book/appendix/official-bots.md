@@ -1,7 +1,6 @@
-# List of Official Telegram Bots
+# Список официальных Телеграм-ботов
 
-These are the bots that are known to be made by Telegram or have some connection to the Telegram team.
-The list is collected by @vanutp.
+Это боты, которые созданы Телеграмом или имеют какую-то связь с командой Телеграма. Список собрал @vanutp.
 
 ```
 @asmico_attach_bot
