@@ -12,7 +12,7 @@
 
 Tools and resources for Telegram devs.
 
-**https://handbook.tmat.me/**
+**https://papercraft.tmat.me/**
 
 </div>
 
@@ -31,7 +31,7 @@ Tools and resources for Telegram devs.
 
 ## Repositories
 
-This repo is for the Papercraft website. Other repos: 
+This repo is for the Papercraft website. See also: 
 
 - [Folds](https://github.com/tm-a-t/folds)
 - [TGPy](https://github.com/tm-a-t/tgpy)
