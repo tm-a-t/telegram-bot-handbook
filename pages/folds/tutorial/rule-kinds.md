@@ -1,11 +1,12 @@
 # Rule Kinds
 
 You can declare rules for handling messages, commands, or other actions.
+Note that if an event satisfies multiple rules, all of them will activate.
 
+<!--
 Because Folds’ philosophy is to keep the code pure, the decorators do not take any parameters. 
 If you need to filter events, simply use `if` or `match` within the functions
-
-Note that if an event satisfies multiple rules, all of them will activate.
+-->
 
 #### Receiving messages
 

@@ -1,8 +1,8 @@
 # Examples
 
-Examples for specific Telegram features are coming!
+See [Papercraft Book](/book) for examples of using specific Telegram features.
 
-There are some full project examples though.
+Also, here are some full project examples.
 These are the real bots I've made, so they may be sometimes not polished for demo purposes.
 
 - [Avatar Emoji Bot.](https://github.com/tm-a-t/folds/tree/main/examples/avatar_emoji_bot) 

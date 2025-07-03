@@ -6,7 +6,7 @@ The most common scenario for bot to is to process a user command and reply with 
 So you can just return a string:
 
 ```python
-@bot.private_commands.help
+@bot.private_commands.help()
 async def f():
     return 'I am a tutorial bot'
 ```
@@ -21,7 +21,7 @@ You can instead use `_` or give functions meaningful names.
 If we are interested in the text of the incoming message, we can accept it as an argument:
 
 ```python
-@bot.private_message
+@bot.private_message()
 async def f(text: str):
     if text == 'hi':
         return 'Hello!'
@@ -36,7 +36,7 @@ from folds import Message
 
 ...
 
-@bot.private_message
+@bot.private_message()
 async def f(message: Message):
     if message.photo is not None:
         await message.download_media()

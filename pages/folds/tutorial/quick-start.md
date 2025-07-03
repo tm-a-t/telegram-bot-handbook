@@ -1,7 +1,5 @@
 # Quick Start
 
-## Install Folds
-
 ```python
 pip install folds
 ```
@@ -11,7 +9,7 @@ pip install folds
 1. **Obtain Telegram API keys if you don't have them.**
    Go to https://my.telegram.org and register an app.
    You may fill in any data, it doesn't really matter.
-   I believe you can register an app only once and always reuse it afterwards.
+   You may register an app only once and always reuse it afterwards.
 
 2. **Register a bot.**
    Open [@BotFather](https://t.me/BotFather) and follow the instructions.
@@ -45,4 +43,4 @@ Now, your program will restart every time you change files in the app directory.
 
 ## Session
 
-There is a special Telethon bot session file that is stored in `.folds/bot12345.session` by default.
+There is a special Telethon bot [session file](https://docs.telethon.dev/en/stable/concepts/sessions.html) that is stored in `.folds/bot12345.session` by default.
