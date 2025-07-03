@@ -66,8 +66,8 @@ There is no such limitation in Telegram API. This is because Telegram API is pri
 where a user can have multiple Telegram applications on different devices, each needing to receive new messages.
 The same principle applies to bots: when you run multiple bot programs using Telegram API, they all receive the new updates.
 
-:::: tip
+::: tip
 Moreover, there is a Telegram API technique to fetch old updates.
 For instance, it may be useful to get a list of bot users if it was not saved or the database was lost.
 [Docs](https://core.telegram.org/api/updates#recovering-gaps)
-::::
+:::

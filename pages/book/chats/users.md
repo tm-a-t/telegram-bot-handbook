@@ -19,7 +19,7 @@ User IDs will be explained in more detail [later in the book](../chats/id).
 
 ::: tabs key:libraries
 == aiogram
-A last name isn't always set, so `full_name` is a shortcut for a single string with the first name 
+A last name isn't always set, so `user.full_name` is a shortcut for a single string with the first name 
 and the last name when it exists.
 
 ```python

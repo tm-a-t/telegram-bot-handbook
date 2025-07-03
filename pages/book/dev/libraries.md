@@ -18,7 +18,7 @@ The official site has [a list](https://core.telegram.org/bots/samples) and seems
 
 For Python, the most popular library built with Telegram API is [Telethon.](https://github.com/LonamiWebs/Telethon)
 Since Telethon is not primarily focused on developing bots,
-I started the [Folds](/folds/index) framework, which is built on top of Telethon
+I started the [Folds](/folds/) framework, which is built on top of Telethon
 and is designed to create simple and scalable bot programs.
 
 As of alternatives, there are [Pyrogram](https://github.com/pyrogram/pyrogram) for Python and [GramJS](https://github.com/gram-js/gramjs) for JavaScript.
