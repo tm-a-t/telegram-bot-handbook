@@ -1,35 +1,113 @@
 # Разработка Телеграм-бота для групп
 
-Бота можно добавить в группу; самостоятельно боты вступать в группы не могут. Разработчик может запретить 
-добавление бота в группы в настройках [в BotFather](../dev/botfather).
+Боты для групп могут быть очень полезны:
+они участвуют в пространстве, где люди регулярно общаются друг с другом.
+Однако есть много деталей, которые следует учесть.
 
-В публичную группу — группу с юзернеймом — ботов могут добавлять только админы. Боту можно дать права администратора в
-группе, чтобы он мог выполнять действия админов: например, удалять пользователей.
+## Вступление в группы
+
+Пользователи могут добавлять ботов в группы, но боты не могут вступать в группы самостоятельно.
+Разработчик бота может запретить добавление в группы [в настройках BotFather.](../dev/botfather)
+
+В публичных группах — группах с юзернеймами — ботов могут добавлять только администраторы.
+Администраторы могут предоставить боту права на удаление участников 
+или другие административные действия.
 
 В одной группе может быть до 20 ботов.
 
-![Пример бота для подсветки синтаксиса, работающего в группах](/pictures/ru/highlighter.png)
+::: tabs key:libraries
+== aiogram
+```python
+@dp.my_chat_member(ChatMemberUpdatedFilter(IS_NOT_MEMBER >> IS_MEMBER))
+async def handle_join(event: ChatMemberUpdated):
+    await event.answer('Привет ' + event.chat.title)
+```
+== Folds
+```python
+@bot.added_to_group()
+async def handle_join(chat: Chat):
+    return 'Привет ' + chat.title
+```
+== Telethon
+```python
+@client.on(events.NewMessage(func=lambda e: e.is_group and e.user_added and e.user.is_self))
+async def handle_join(event):
+    chat = await event.get_chat()
+    await event.respond('Привет ' + chat.title)
+```
+== Other libraries
+<HelpNeeded/>
+:::
 
-## Privacy mode — видимость сообщений { #privacy }
+## Отправка сообщений участникам группы
 
-Обычно бот должен реагировать только на [команды](../messages/commands).
-Телеграм не уведомляет бота об остальных сообщениях,
-и это гарантирует приватность переписки для участников чата.
+<!-- TODO
 
-Тем не менее некоторым ботам необходимо видеть другие сообщения в группе: например, если это чатбот или антиспам-бот.
-Разработчики таких ботов могут отключить privacy mode.
+Some examples:
 
-Privacy mode — настройка в BotFather, которая по умолчанию включена. В этом режиме бот в группах видит только
-те сообщения, которые могут быть обращены к нему:
+:::: tabs key:libraries
+== Folds
+```python
+@bot.group_message()
+async def _(chat: Chat):
+    return 'Hello ' + chat.title
+```
+== Telethon
+== Other libraries
+<HelpNeeded/>
+::::
 
-- [команды](../messages/commands);
-- ответы на сообщение бота, ответы на ответы и так далее,
-- сообщения с [упоминанием бота](../messages/markup#упоминание-пользователя);
-- системные сообщения.
+-->
 
-Если бот — админ в группе, то он видит все сообщения, даже если privacy mode включён.
+Сообщения в группе видны всем участникам. Бот не может отправить сообщение, которое увидит только один человек в группе.
+Например, когда бот приветствует новых участников, все существующие участники также получат это приветственное сообщение.
 
-Боты с отключённым privacy mode могут видеть все сообщения в группе, кроме сообщений от других ботов.
+Чтобы не засорять чат, бот может автоматически удалять вспомогательные сообщения через определенное время.
+Вот пример удаления приветственных сообщений через 30 секунд (если программа не прервана):
+
+::: tabs key:libraries
+== aiogram
+```python
+@dp.chat_member(ChatMemberUpdatedFilter(IS_NOT_MEMBER >> IS_MEMBER))
+async def handle_join(event: ChatMemberUpdated):
+    user = event.new_chat_member.user
+    answer = await event.answer(f'Добро пожаловать в группу, {user.first_name}')
+    await asyncio.sleep(30)
+    await answer.delete()
+```
+== Folds & Telethon
+```python
+@bot.on(events.ChatAction(func=event.group and event.user_added and not event.user.is_self))
+async def greet(event: events.ChatAction.Event):
+    answer = await message.respond(f'Добро пожаловать в группу, {event.user.first_name}')
+    await asyncio.sleep(30)
+    await answer.delete()
+```
+== Other libraries
+<HelpNeeded/>
+:::
+
+Обратите внимание, что если вашему боту нужно лично связаться с новыми пользователями группы, запросы на вступление могут быть полезны для получения разрешения на личные сообщения
+— мы рассмотрим [запросы на вступление](../interaction/join-requests) позже в книге.
+
+## Privacy mode и видимые сообщения { #privacy }
+
+Многие боты разработаны так, чтобы реагировать только [на команды.](../messages/commands.md)
+По этой причине Telegram по умолчанию защищает приватность группы и не уведомляет ботов о сообщениях, не являющихся командами.
+
+Если вы хотите, чтобы ваш бот видел все сообщения в чате, вам нужно отключить режим приватности.
+
+Privacy mode — это настройка в BotFather, которая активирована по умолчанию.
+В этом режиме бот получает обновления только о командах и других сообщениях группы, которые могут быть адресованы боту.
+Это включает:
+- Команды
+- Ответы на сообщения бота, ответы на ответы и так далее
+- Сообщения с [упоминанием](../messages/markup#mention) бота
+- Системные сообщения
+
+Когда режим приватности отключен, бот может видеть все сообщения в группах, кроме сообщений от других ботов.
+
+Также, если бот является администратором группы, он видит все сообщения независимо от настройки режима приватности.
 
 ![Пример бота, который видит не все сообщения](/pictures/ru/friedrich.png)
 
@@ -63,14 +141,6 @@ Privacy mode — настройка в BotFather, которая по умолч
 
 ![Выбор прав](/pictures/ru/admin-rights.png)
 
-## Отправка сообщений участникам
-
-Сообщения в группе видны всем. Бот не может показать сообщение только одному пользователю, в том числе
-поприветствовать нового участника.
-
-Чтобы не засорять чат, ваш бот может удалять временные сообщения спустя время. Если же бот должен писать в личку
-вступающим в группу участникам, для этого могут пригодиться [заявки на вступление](../interaction/join-requests).
-
 ## Сообщения от лица групп и каналов
 
 При разработке ботов для групп учитывайте, что сообщения в группах могут приходить не только от лица пользователей, но
@@ -80,7 +150,74 @@ Privacy mode — настройка в BotFather, которая по умолч
 - от лица группы от анонимных администраторов той же группы;
 - от лица публичных каналов от премиум-пользователей.
 
-Корректно обрабатывайте такие случаи.
+
+### Примеры
+
+Определение типа чата (например, чтобы хранить в базе данных):
+
+::: tabs key:libraries
+== aiogram
+```python
+@dp.message(F.chat.type == ChatType.GROUP | F.chat.type == ChatType.SUPERGROUP])
+async def handle_group_message(message: Message):
+    if message.sender_chat is None:
+        print('Сообщение от пользователя')
+    if message.sender_chat is not None and message.sender_chat.type == ChatType.SUPERGROUP:    
+        print('Сообщение от супергруппы')
+    elif message.sender_chat is not None and message.sender_chat.type == ChatType.CHANNEL:
+        print('Сообщение от канала')
+
+```
+== Folds
+```python
+from folds import ThisSender
+from telethon.tl.types import Chat, Channel, User
+
+...
+
+@bot.group_message()
+async def handle_group_message(sender: ThisSender):
+    if isinstance(sender, User):
+        print('Сообщение от пользователя')
+    if isinstance(sender, Channel) and sender.megagroup:
+        print('Сообщение от супергруппы')
+    if isinstance(sender, Channel) and not sender.megagroup:
+        print('Сообщение от канала')
+```
+== Telethon
+```python
+from telethon.tl.types import Chat, Channel, User
+
+...
+
+@client.on(events.NewMessage(func=lambda e: e.is_group))
+async def handle_group_message(event: Message):
+    sender = await event.get_sender()
+    if isinstance(sender, User):
+        print('Сообщение от пользователя')
+    if isinstance(sender, Channel) and sender.megagroup:
+        print('Сообщение от супергруппы')
+    if isinstance(sender, Channel) and not sender.megagroup:
+        print('Сообщение от канала')
+```
+== Other libraries
+<HelpNeeded/>
+:::
+
+Получение имени отправителя:
+
+::: tabs key:libraries
+== aiogram
+```python
+name = message.from_user.first_name if message.from_user else message.sender_chat.title 
+```
+== Folds & Telethon
+```python
+name = sender.first_name or sender.title  # один из них не None
+```
+== Other libraries
+<HelpNeeded/>
+:::
 
 ## Ссылки по теме
 
