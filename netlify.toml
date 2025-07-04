@@ -1,23 +1,20 @@
 [[redirects]]
-from = "/en/*"
+from = "https://handbook.tmat.me/en/*"
 to = "https://papercraft.tmat.me/book/:splat"
 force = true
 status = 301
-conditions = { Host = ["handbook.tmat.me"] }
 
 [[redirects]]
-from = "/ru/*"
+from = "https://handbook.tmat.me/ru/*"
 to = "https://papercraft.tmat.me/ru/book/:splat"
 force = true
 status = 301
-conditions = { Host = ["handbook.tmat.me"] }
 
 [[redirects]]
-from = "*"
-to = "https://papercraft.tmat.me/:splat"
+from = "https://handbook.tmat.me/"
+to = "https://papercraft.tmat.me/"
 force = true
 status = 301
-conditions = { Host = ["handbook.tmat.me"] }
 
 [[redirects]]
 from = "/book/*"
