@@ -2,11 +2,7 @@ import sidebar from './sidebar'
 import {DefaultTheme, LocaleSpecificConfig} from "vitepress";
 
 const ruConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
-    titleTemplate: ':title — хендбук',
-    description: 'Карманное руководство разработчика Телеграм-ботов. Фичи и приёмы',
-    head: [
-
-    ],
+    titleTemplate: ':title — Papercraft',
     themeConfig: {
         logoLink: '/',
         sidebarMenuLabel: 'Меню',

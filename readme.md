@@ -18,7 +18,7 @@ Tools and resources for Telegram devs.
 
 &nbsp;
 
-<a href="https://handbook.tmat.me/">
+<a href="https://papercraft.tmat.me/">
 
 ![](pages/public/screenshot.png)
 
