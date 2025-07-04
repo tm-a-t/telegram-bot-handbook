@@ -1,20 +1,4 @@
 [[redirects]]
-from = "/book/*"
-to = "/ru/book/:splat"
+from = "/"
+to = "/en/"
 force = true
-status = 302
-conditions = { Language = ["ru"] }
-
-[[redirects]]
-from = "/en/*"
-to = "https://papercraft.tmat.me/book/:splat"
-force = true
-status = 301
-conditions = { Host = ["handbook.tmat.me"] }
-
-[[redirects]]
-from = "/ru/*"
-to = "https://papercraft.tmat.me/ru/book/:splat"
-force = true
-status = 301
-conditions = { Host = ["handbook.tmat.me"] }
