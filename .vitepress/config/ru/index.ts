@@ -1,6 +1,5 @@
-import {LocaleSpecificConfig} from 'vitepress/types/shared'
-import {DefaultTheme} from 'vitepress/types/default-theme'
 import sidebar from './sidebar'
+import {DefaultTheme, LocaleSpecificConfig} from "vitepress";
 
 const ruConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
     titleTemplate: ':title — хендбук',
@@ -9,6 +8,7 @@ const ruConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
 
     ],
     themeConfig: {
+        logoLink: '/',
         sidebarMenuLabel: 'Меню',
         returnToTopLabel: 'Наверх',
         darkModeSwitchLabel: 'Тёмная тема',
@@ -20,12 +20,9 @@ const ruConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
             prev: 'Назад',
             next: 'Вперёд',
         },
-        nav: [
-            {text: 'Поделиться', link: 'https://t.me/share?url=handbook.tmat.me/ru/'},
-        ],
         editLink: {
-            pattern: 'https://github.com/tm-a-t/handbook/edit/main/:path',
-            text: 'Изменить',
+            pattern: 'https://github.com/tm-a-t/papercraft/edit/main/:path',
+            text: 'Изменить страницу на Гитхабе',
         },
         lastUpdated: {
             text: 'Обновлено',

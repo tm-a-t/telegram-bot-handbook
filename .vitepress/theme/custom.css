@@ -7,14 +7,30 @@
     border-radius: 8px;
 }
 
-.logo {
-    transform: translateY(-2.5px);
+.vp-doc .code-label {
+    margin-top: -12px;
+    font-size: 14px;
+    line-height: 26px;
+    /*font-weight: 500;*/
+    color: var(--vp-c-text-2);
 }
 
-.vp-doc details tr:nth-child(2n) {
-    background: inherit;
+:root:not(.dark) .VPHero .VPImage {
+    /*filter: drop-shadow(10px 6px 24px #8d8fba);*/
+    filter: drop-shadow(2px 4px 4px #4d4f8e);
 }
 
-.vp-doc details td {
-    border: none;
+
+/* Dirty tweaks for translate button */
+.VPNavBar .VPNavBarSearch {
+    order: -2;
+}
+
+.VPNavBar .translations {
+    order: -1;
+    flex-direction: row-reverse;
+}
+
+.Layout:not(.has-russian-translation) .translations {
+    display: none;
 }
