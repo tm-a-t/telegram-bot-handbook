@@ -23,10 +23,6 @@ pip install folds
 
 4. **Run the app.**
 
-## Asyncio
-
-todo
-
 ## Reload the app when edited
 
 ::: warning

@@ -40,11 +40,12 @@ Folds is built on top of Telethon, a Telegram API library. This means Folds does
 
 - No limitations.
   Folds doesn't have natural limitations that Bot API has:
-  see [the API explanation](/book/dev/api) and [the comparison table](/book/appendix/api-comparison) for details.
+  see [the API explanation](/book/dev/api) and [the comparison table](/book/appendix/api-comparison) 
+  from the Papercraft Book for details.
 - Reuse code for userbots. 
   When you are familiar with Telethon concepts, 
   you can not only program bots with Folds but also program user accounts.
-  In particular, our Telegram script tool named [TGPy](/tgpy/index) is also based on Telethon.
+  In particular, our Telegram script tool named [TGPy](/tgpy/) is also based on Telethon.
 
 #### Cons
 
@@ -52,7 +53,10 @@ Folds is built on top of Telethon, a Telegram API library. This means Folds does
 
 ## Should I use it?
 
-The framework is in its early version, so the features will change. 
+The framework is in its early version, and the features will change, so...
+
+For small hobby bots — yes. For big complex projects — also yes, but better come back later! 
+I will appreciate if you show your interest by leaving a star on the repo.
 
 ## Learn
 
@@ -60,7 +64,10 @@ Here is how to get familiar with Folds:
 - Read these docs, of course. I tried to make them friendly!
 - Read [the Telethon docs](https://docs.telethon.dev) because Folds bases on Telethon. 
   ChatGPT knows Telethon well, apparently.
-- Join the chat and ask questions: [@sdlof](https://t.me/sdlof)
+- For specific features, read [the Papercraft Book,](/book) my book on developing Telegram bots. 
+  It includes code examples for Folds.
+
+[//]: # (- Join the chat and ask questions: [@sdlof]&#40;https://t.me/sdlof&#41;)
 
 ## Getting Started
 
