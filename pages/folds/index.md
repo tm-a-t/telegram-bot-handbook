@@ -64,7 +64,7 @@ Here is how to get familiar with Folds:
 - Read these docs, of course. I tried to make them friendly!
 - Read [the Telethon docs](https://docs.telethon.dev) because Folds bases on Telethon. 
   ChatGPT knows Telethon well, apparently.
-- For specific features, read [the Papercraft Book,](/book) my book on developing Telegram bots. 
+- For specific features, read [the Papercraft Book,](/book/) my book on developing Telegram bots. 
   It includes code examples for Folds.
 
 [//]: # (- Join the chat and ask questions: [@sdlof]&#40;https://t.me/sdlof&#41;)

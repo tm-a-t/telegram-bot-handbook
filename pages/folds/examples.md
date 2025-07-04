@@ -1,6 +1,6 @@
 # Examples
 
-See [Papercraft Book](/book) for examples of using specific Telegram features.
+See [Papercraft Book](/book/) for examples of using specific Telegram features.
 
 Also, here are some full project examples.
 These are the real bots I've made, so they may be sometimes not polished for demo purposes.
