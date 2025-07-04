@@ -1,5 +1,5 @@
 ---
-title: Telegram Bot Handbook
+title: Papercraft
 titleTemplate: false
 sidebar: false
 aside: false
@@ -8,8 +8,10 @@ editLink: false
 next: false
 ---
 
-# Telegram Bot Handbook
+# Papercraft
+
+Hello! In production, this page automatically redirects you to the homepage of your language.
 
 [Russian version →](/ru/)
 
-[English version →](/en/)
+[English version →](/pages/)

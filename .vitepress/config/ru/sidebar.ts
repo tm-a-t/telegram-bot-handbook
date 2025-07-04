@@ -1,50 +1,63 @@
 import {DefaultTheme} from 'vitepress'
 
-const sidebar: DefaultTheme.Sidebar = [
-    {text: 'Начало', link: '/ru/index.md'},
-    {
-        text: 'Разработка',
-        items: [
-            {text: 'Введение', link: '/ru/dev/basics.md'},
-            {text: 'Telegram API', link: '/ru/dev/api.md'},
-            {text: 'Библиотеки', link: '/ru/dev/libraries.md'},
-            {text: 'Юзернеймы', link: '/ru/dev/usernames.md'},
-            {text: 'Настройка', link: '/ru/dev/botfather.md'},
-            {text: 'Апдейты', link: '/ru/dev/updates.md'},
-            {text: 'Хостинг', link: '/ru/dev/host.md'},
-        ],
-    },
-    {
-        text: 'Сообщения', items: [
-            {text: 'Отправка', link: '/ru/messages/sending.md'},
-            {text: 'Разметка', link: '/ru/messages/markup.md'},
-            {text: 'Команды', link: '/ru/messages/commands.md'},
-            {text: 'Кнопки', link: '/ru/messages/buttons.md'},
-            {text: 'ID сообщений', link: '/ru/messages/id.md'},
-        ],
-    },
-    {
-        text: 'Чаты', items: [
-            {text: 'Пользователи', link: '/ru/chats/pm.md'},
-            {text: 'Группы', link: '/ru/chats/groups.md'},
-            {text: 'Каналы', link: '/ru/chats/channels.md'},
-            {text: 'Форумы', link: '/ru/chats/forums.md'},
-            {text: 'О супергруппах', link: '/ru/chats/supergroups.md'},
-            {text: 'ID чатов', link: '/ru/chats/id.md'},
-        ],
-    },
-    {
-        text: 'Интерактивность', items: [
-            {text: 'Заявки', link: '/ru/interaction/join-requests.md'},
-            {text: 'Ссылки на бота', link: '/ru/interaction/links.md'},
-            {text: 'Инлайн-режим', link: '/ru/interaction/inline.md'},
-            {text: 'Стикеры', link: '/ru/interaction/stickers.md'},
-            {text: 'Платежи', link: '/ru/interaction/payments.md'},
-            {text: 'Авторизация на сайте', link: '/ru/interaction/login-widget.md'},
-            {text: 'HTML-игры', link: '/ru/interaction/html-games.md'},
-            {text: 'Мини-приложения', link: '/ru/interaction/mini-apps.md'},
-        ],
-    },
-]
-
+const sidebar: DefaultTheme.Sidebar = {
+    '/ru/book/': [
+        {text: 'Начало', link: '/ru/book/'},
+        {
+            text: 'Разработка',
+            items:
+                [
+                    {text: 'Введение', link: '/ru/book/dev/basics'},
+                    {text: 'Telegram API', link: '/ru/book/dev/api'},
+                    {text: 'Библиотеки', link: '/ru/book/dev/libraries'},
+                    {text: 'Юзернеймы', link: '/ru/book/dev/usernames'},
+                    {text: 'BotFather', link: '/ru/book/dev/botfather'},
+                    {text: 'Апдейты', link: '/ru/book/dev/updates'},
+                    {text: 'Хостинг', link: '/ru/book/dev/host'},
+                ],
+        },
+        {
+            text: 'Сообщения', items:
+                [
+                    {text: 'Отправка', link: '/ru/book/messages/sending'},
+                    {text: 'Разметка', link: '/ru/book/messages/markup'},
+                    {text: 'Команды', link: '/ru/book/messages/commands'},
+                    {text: 'Кнопки', link: '/ru/book/messages/buttons'},
+                    {text: 'ID сообщений', link: '/ru/book/messages/id'},
+                ],
+        },
+        {
+            text: 'Чаты', items:
+                [
+                    {text: 'Пользователи', link: '/ru/book/chats/pm'},
+                    {text: 'Группы', link: '/ru/book/chats/groups'},
+                    {text: 'Каналы', link: '/ru/book/chats/channels'},
+                    {text: 'Форумы', link: '/ru/book/chats/forums'},
+                    {text: 'О супергруппах', link: '/ru/book/chats/supergroups'},
+                    {text: 'ID чатов', link: '/ru/book/chats/id'},
+                ],
+        },
+        {
+            text: 'Интерактивность', items:
+                [
+                    {text: 'Заявки', link: '/ru/book/interaction/join-requests'},
+                    {text: 'Ссылки на бота', link: '/ru/book/interaction/links'},
+                    {text: 'Инлайн-режим', link: '/ru/book/interaction/inline'},
+                    {text: 'Стикеры', link: '/ru/book/interaction/stickers'},
+                    {text: 'Платежи', link: '/ru/book/interaction/payments'},
+                    {text: 'Авторизация на сайте', link: '/ru/book/interaction/login-widget'},
+                    {text: 'HTML-игры', link: '/ru/book/interaction/html-games'},
+                    {text: 'Мини-приложения', link: '/ru/book/interaction/mini-apps'},
+                ],
+        },
+        {
+            text: 'Дополнение',
+            collapsed: true,
+            items: [
+                {text: 'Сравнение API', link: '/ru/book/appendix/api-comparison'},
+                {text: 'Официальные боты', link: '/ru/book/appendix/official-bots'},
+            ],
+        },
+    ],
+}
 export default sidebar
