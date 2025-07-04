@@ -29,13 +29,10 @@ const members = [
 
 # Papercraft Book
 
-Welcome to Papercraft Book!
+Welcome to the Papercraft Book!
 This is your guide to developing user-friendly, feature-rich, and stable bots for Telegram messenger.
-The book is independent of any specific programming language or library.
-It includes examples for different libraries,
-and I will gladly accept contributions from readers who add examples for additional libraries.
-
-[//]: # (It is designed to be used together with library docs and Telegram API reference.)
+The book is independent of any specific programming language or library —
+I will gladly accept contributions from readers who add examples for different libraries.
 
 We will cover all major features of the Telegram bot platform,
 starting from common features like `/commands` and progressing to more specialized ones,
@@ -43,11 +40,9 @@ such as managing join requests and subtopics in groups.
 Additionally, we will explore corner cases and development tips.
 
 Another focus of this book is user experience.
-The book describes how to make bots easy to use and when common Telegram features have better alternatives.
+The book describes how to make bots easy to use and which Telegram features are more suitable in different cases.
 
-To sum up — Papercraft Book is my attempt to collect everything you need to learn but probably won't find
-in your library docs or API reference.
-I believe it to be the most comprehensive and practical guide on developing bots for Telegram.
+I believe the Papercraft Book to be the most comprehensive and practical guide on developing bots for Telegram.
 
 ## Table of contents
 
@@ -70,7 +65,7 @@ Feel free to use navigation on the left or just hit the "Next page" button below
 This site was previously called Telegram Bot Handbook and was more like a reference of Telegram features.
 Now, I've rewritten it so it became — well, a book.
 
-The site is now called Papercraft and also contains the docs for TGPy userbot and my new Folds framework.
+Now the site is called Papercraft and also contains the docs for TGPy userbot and my new Folds framework.
 
 ## About
 
