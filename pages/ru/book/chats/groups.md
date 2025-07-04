@@ -45,7 +45,7 @@ async def handle_join(event):
 
 Some examples:
 
-:::: tabs key:libraries
+::: tabs key:libraries
 == Folds
 ```python
 @bot.group_message()
@@ -55,7 +55,7 @@ async def _(chat: Chat):
 == Telethon
 == Other libraries
 <HelpNeeded/>
-::::
+:::
 
 -->
 
