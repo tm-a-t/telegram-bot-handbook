@@ -27,7 +27,7 @@ const members = [
 </script>
 
 
-# Papercraft Book
+# Papercraft Book <Badge type="info" text="в прошлом — Telegram Bot Handbook"/>
 
 Добро пожаловать в Papercraft Book!
 Это руководство по разработке удобных для пользователей, функциональных и стабильных Телеграм-ботов.

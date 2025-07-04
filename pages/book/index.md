@@ -27,7 +27,7 @@ const members = [
 </script>
 
 
-# Papercraft Book
+# Papercraft Book <Badge type="info" text="ex. Telegram Bot Handbook"/>
 
 Welcome to the Papercraft Book!
 This is your guide to developing user-friendly, feature-rich, and stable bots for Telegram messenger.
@@ -65,7 +65,7 @@ Feel free to use navigation on the left or just hit the "Next page" button below
 This site was previously called Telegram Bot Handbook and was more like a reference of Telegram features.
 Now, I've rewritten it so it became — well, a book.
 
-Now the site is called Papercraft and also contains the docs for TGPy userbot and my new Folds framework.
+The new platform is called Papercraft and also contains the docs for TGPy userbot and my new Folds framework.
 
 ## About
 
