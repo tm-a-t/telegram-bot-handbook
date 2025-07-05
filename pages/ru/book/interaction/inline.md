@@ -14,18 +14,86 @@
 <source src="/pictures/ru/inline.webm" type="video/mp4">
 </video>
 
-Инлайн-режим можно включить в BotFather; там же можно выбрать плейсхолдер вместо стандартного «Search...»
+Вот простой пример реализации — два текстовых результата:
 
-В группе можно запретить использовать инлайн всем или некоторым участникам. В официальных приложениях Телеграма это
+::: tabs key:libraries
+== aiogram
+```python
+@dp.inline_query()
+async def handle_inline(query: InlineQuery):
+    input_text = query.query
+    
+    result1 = InlineQueryResultArticle(
+        id='1',
+        title='Option 1',
+        description='This is the first option',
+        input_message_content=InputTextMessageContent(
+            message_text='If chosen, this text will be sent'
+        )
+    )
+    result2 = InlineQueryResultArticle(
+        id='2',
+        title='Option 2',
+        description='This is the second option',
+        input_message_content=InputTextMessageContent(
+            message_text='If the second option is chosen, this text will be sent'
+        )
+    )
+    await query.answer(results=[result1, result2], cache_time=1)
+
+```
+== Folds
+```python
+@bot.inline_query()
+async def handle_inline(query: InlineQuery):
+    input_text = query.text
+    
+    result1 = query.builder.article(
+        title='Option 1',
+        description='This is the first option',
+        text='If chosen, this text will be sent',
+    )
+    result2 = query.builder.article(
+        title='Option 2',
+        description='This is the second option',
+        text='If the second option is chosen, this text will be sent',
+    )
+    await query.answer([result1, result2])
+```
+== Telethon
+```python
+@client.on(events.InlineQuery())
+async def handle_inline(event):
+    input_text = event.text
+
+    result1 = event.builder.article(
+        title='Option 1',
+        description='This is the first option',
+        text='If chosen, this text will be sent',
+    )
+    result2 = event.builder.article(
+        title='Option 2',
+        description='This is the second option',
+        text='If the second option is chosen, this text will be sent',
+    )
+    await event.answer([result1, result2])
+```
+== Other libraries
+<HelpNeeded/>
+:::
+
+Инлайн-режим можно включить в BotFather; там же можно задать плейсхолдер вместо стандартного «Search...»
+
+В группе админы могут запретить использовать инлайн всем или некоторым участникам. В официальных приложениях Телеграма это
 ограничение объединено с ограничением на отправку стикеров и GIF.
 
 ## Отображение результатов
 
-Результаты можно отображать сеткой (удобно для выдачи картинок) или вертикальным списком (удобно для выдачи текста).
-
-![Сеткой](/pictures/ru/inline-type-1.png)
+Результаты можно отображать вертикальным списком (удобно для выдачи текста) или сеткой (удобно для выдачи картинок).
 
 ![Списком](/pictures/ru/inline-type-2.png)
+
+![Сеткой](/pictures/ru/inline-type-1.png)
 
 Можно показать вместе результаты двух видов, но, кажется, такой вариант отображается корректно только на Telegram
 Desktop.

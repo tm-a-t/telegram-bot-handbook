@@ -10,21 +10,39 @@
 
 ## Диплинки
 
-Ссылка [t.me/examplebot?start=ВАШ_ТЕКСТ](https://t.me/examplebot?start=ВАШ_ТЕКСТ) называется диплинком. С её помощью
-пользователь может запустить бота с каким-то стартовым параметром.
+Диплинк — это ссылка, по которой пользователь может запустить бота с неким параметром.
+Например, для реферальных програм этот параметр может содержать ID поделившегося ссылкой.
+Такая ссылка имеет вид [t.me/examplebot?start=ВАШ_ТЕКСТ](https://t.me/examplebot?start=ВАШ_ТЕКСТ)
 
-Это работает так. Когда пользователь переходит по диплинку, у него открывается переписка с ботом и кнопка «Запустить» —
+::: tabs key:libraries
+== aiogram
+```python
+from aiogram.utils.deep_linking import create_start_link
+
+link = await create_start_link(bot, 'from_ad')
+```
+== Folds
+```python
+from folds.context import client
+
+link = f'https://t.me/{client.me.username}?start=from_ad'
+```
+== Telethon
+```python
+self_user = await client.get_me()
+link = f'https://t.me/{self_user.username}?start=from_ad'
+```
+== Other libraries
+<HelpNeeded/>
+:::
+
+Когда пользователь переходит по диплинку, у него открывается переписка с ботом и кнопка «Запустить» —
 даже если пользователь уже [запускал бота](../chats/pm). Кнопка «Запустить» отправляет команду `/start ВАШ_ТЕКСТ`.
 При этом пользователь увидит только `/start`, как при обычном запуске бота.
 
 <video controls loop muted preload="auto">
 <source src="/pictures/ru/start.webm" type="video/mp4">
 </video>
-
-Часто диплинки используются для реферальных программ: например, в качестве параметра можно передавать ID пользователя,
-поделившегося ссылкой.
-
-Такая же прямая ссылка: [tg://resolve?domain=examplebot&start=ВАШ_ТЕКСТ](tg://resolve?domain=examplebot&start=ВАШ_ТЕКСТ)
 
 ## Диплинки для групп
 
@@ -33,9 +51,31 @@
 Ссылка [t.me/examplebot?startgroup=ВАШ_ТЕКСТ](https://t.me/examplebot?startgroup=ВАШ_ТЕКСТ) откроет у пользователя меню
 с выбором группы для добавления бота. Когда пользователь добавит бота, сразу отправится команда `/start ВАШ_ТЕКСТ`.
 
+::: tabs key:libraries
+== aiogram
+```python
+from aiogram.utils.deep_linking import create_start_link
+
+link = await create_startgroup_link(bot, 'from_ad')
+```
+== Folds
+```python
+from folds.context import client
+
+link = f'https://t.me/{client.me.username}?startgroup=from_ad'
+```
+== Telethon
+```python
+self_user = await client.get_me()
+link = f'https://t.me/{self_user.username}?startgroup=from_ad'
+```
+== Other libraries
+<HelpNeeded/>
+:::
+
 ## Использование ссылок `tg://`
 
-Все ссылки, которые мы рассмотрели выше, также имеют эквиваленты с `tg://`. 
+Все эти ссылки также имеют эквиваленты с `tg://`. 
 Это прямые ссылки, которые можно открыть внутри приложения:
 
 - Обычная ссылка: [tg://resolve?domain=examplebot](tg://resolve?domain=examplebot)
